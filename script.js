@@ -84,3 +84,77 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     },
   );
 });
+
+// Newsletter subscription
+document
+  .getElementById("newsletterForm")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (typeof emailjs === "undefined") {
+      alert("Loading...");
+      return;
+    }
+
+    const serviceID = ""; // Same service
+    const templateID = ""; // Create new template
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+      (result) => {
+        alert("Subscribed! Welcome to YM Events updates.");
+        this.reset();
+      },
+      (error) => {
+        console.error("FAILED...", error);
+        alert("Subscription failed. Try again.");
+      },
+    );
+  });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+const menuOverlay = document.querySelector(".menu-overlay");
+const navLinks = document.querySelectorAll(".nav-link");
+
+menuToggle.addEventListener("click", toggleMenu);
+menuOverlay.addEventListener("click", closeMenu);
+
+// Toggle function
+function toggleMenu() {
+  menuToggle.classList.toggle("active");
+  navMenu.classList.toggle("active");
+  menuOverlay.classList.toggle("active");
+  document.body.classList.toggle("no-scroll");
+}
+
+function closeMenu() {
+  menuToggle.classList.remove("active");
+  navMenu.classList.remove("active");
+  menuOverlay.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+}
+
+// Link clicks - ONLY nav links
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+    const target = document.querySelector(href);
+
+    if (target) {
+      closeMenu(); // Close FIRST
+
+      // Scroll AFTER close animation (100ms)
+      setTimeout(() => {
+        const navHeight = 80;
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
+        });
+      }, 300); // Matches CSS transition
+    }
+  });
+});

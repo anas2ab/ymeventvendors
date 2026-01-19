@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Booth Rental Barrie & Toronto | Your Majesty Events</title>
+    <title>Photo Booth Rental Barrie & GTA | Your Majesty Events</title>
+    <link rel="icon" href="YM.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">YM Event Vendors</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#backdrops">Backdrops</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+<nav class="navbar">
+    <div class="logo">YM Event Vendors</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#backdrops" class="nav-link">Backdrops</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="menu-overlay"></div>
+</nav>
+
     </header>
 
     <section id="home" class="hero">
@@ -273,8 +280,8 @@
         <div class="footer-section">
             <h4>Newsletter</h4>
             <p>Event tips & promos</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email" required>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" name="user_email" placeholder="Your email" required>
                 <button type="submit"><strong>Subscribe</strong></button>
             </form>
         </div>

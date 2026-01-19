@@ -1,11 +1,72 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+    scroll-behavior: smooth;
+}
 body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-
-nav { display: flex; justify-content: space-between; padding: 1rem 5%; background: #13332e; position: fixed; width: 100%; top: 0; z-index: 10; }
-.logo { color: white; font-size: 1.5rem; font-weight: bold; }
-ul { display: flex; list-style: none; }
-ul li { margin-left: 2rem; }
-ul a { color: white; text-decoration: none; }
+body.no-scroll {
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #13332e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    gap: 4px;
+}
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffb000;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu.active {
+    overflow-y: auto; /* Scroll if too many links */
+    max-height: calc(100vh - 100px);
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #ffb000;
+}
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+}
+.logo { color: #ffb000; font-family: 'Playfair-Display'; font-size: 1.5rem; font-weight: bold; }
 
 .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;base64,...'); display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
@@ -44,10 +105,11 @@ textarea { height: 150px; }
 }
 
 .footer-logo {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #ffb000;
     margin-bottom: 1rem;
+    font-family: 'Playfair-Display';
 }
 
 .footer-section p, .footer-section ul {
@@ -517,4 +579,56 @@ textarea { height: 150px; }
 
 #contactForm:success {
     /* Optional green glow */
+}
+
+/* ===== MOBILE NAVIGATION - WORKING VERSION ===== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(19, 51, 46, 0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        padding: 2rem;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: 1000;
+    }
+    
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    
+    .nav-link {
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -5px);
+    }
+    
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }

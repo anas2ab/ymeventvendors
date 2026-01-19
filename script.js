@@ -1,3 +1,8 @@
+// EmailJS Init - MUST be at top of script.js
+(function () {
+  emailjs.init(""); // Your actual public key
+})();
+
 let currentVideoIndex = 0;
 const videoSlides = document.querySelectorAll(".video-slide");
 const videoDots = document.querySelectorAll(".carousel-dots .dot");
@@ -47,11 +52,15 @@ document
     autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
   });
 
-// Replace YOUR_PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID with your EmailJS values
-emailjs.init(""); // Your Public Key
-
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault();
+
+  const btn = this.querySelector('button[type="submit"]');
+
+  // Add spinner
+  btn.innerHTML = '<strong>Sending <span class="spinner"></span></strong>';
+  btn.classList.add("loading");
+  btn.disabled = true;
 
   if (typeof emailjs === "undefined") {
     alert("Email service loading...");
@@ -68,19 +77,35 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       form.reset(); // Clear all fields
       form.querySelector('button[type="submit"]').textContent = "Sent!";
       form.querySelector('button[type="submit"]').style.background = "#13332e";
+      form.querySelector('button[type="submit"]').style.color = "#ffb000";
+      form.querySelector('button[type="submit"]').style.fontWeight = "bold";
+      btn.classList.remove("loading");
+      btn.disabled = false;
 
       // Reset button after 3s
       setTimeout(() => {
         form.querySelector('button[type="submit"]').textContent =
           "Send Inquiry";
         form.querySelector('button[type="submit"]').style.background = "";
+        form.querySelector('button[type="submit"]').style.fontWeight = "bold";
+        form.querySelector('button[type="submit"]').style.color = "#13332e";
       }, 3000);
 
       alert("Thank you! We'll reply within 24 hours.");
     },
     (error) => {
-      console.error("FAILED...", error);
-      alert("Send failed. Try again or email info@ymeventvendors.ca");
+      btn.innerHTML = "Error";
+      btn.style.fontWeight = "bold";
+      btn.style.color = "white";
+      btn.style.background = "red";
+      alert("Send failed! Try again or email contact@ymeventvendors.ca");
+      setTimeout(() => {
+        btn.innerHTML = "Send Inquiry";
+        btn.style.color = "#13332e";
+        btn.style.background = "#ffb000";
+        btn.classList.remove("loading");
+        btn.disabled = false;
+      }, 2000);
     },
   );
 });
@@ -90,6 +115,12 @@ document
   .getElementById("newsletterForm")
   .addEventListener("submit", function (e) {
     e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.textContent;
+    // Add spinner
+    btn.innerHTML = '<strong>Sending <span class="spinner"></span></strong>';
+    btn.classList.add("loading");
+    btn.disabled = true;
 
     if (typeof emailjs === "undefined") {
       alert("Loading...");
@@ -101,12 +132,35 @@ document
 
     emailjs.sendForm(serviceID, templateID, this).then(
       (result) => {
-        alert("Subscribed! Welcome to YM Events updates.");
+        btn.innerHTML = "Subscribed!";
+        btn.style.fontWeight = "bold";
+        btn.style.color = "#ffb000";
+        btn.style.background = "#13332e";
+        btn.classList.remove("loading");
+        btn.disabled = false;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.fontWeight = "bold";
+          btn.style.color = "#13332e";
+          btn.style.background = "#ffb000";
+        }, 2000);
         this.reset();
       },
       (error) => {
-        console.error("FAILED...", error);
-        alert("Subscription failed. Try again.");
+        btn.innerHTML = "Error";
+        btn.style.fontWeight = "bold";
+        btn.style.color = "white";
+        btn.style.background = "red";
+        alert(
+          "Subscription failed! Try again or email contact@ymeventvendors.ca",
+        );
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.color = "#13332e";
+          btn.style.background = "#ffb000";
+          btn.classList.remove("loading");
+          btn.disabled = false;
+        }, 2000);
       },
     );
   });

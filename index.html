@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Booth Rental Barrie & GTA | Your Majesty Events</title>
+    <title>Photo Booth Rental Barrie, Toronto & GTA | Your Majesty Events</title>
+    <meta name="description" content="Premium photo booth rentals for weddings, corporate events & parties in Barrie, Toronto, & the GTA. Instant prints, custom backdrops and templates. From $300. Book now!">
+    <meta name="keywords" content="photo booth rental Toronto, photo booth Barrie, GTA photo booth, wedding photo booth, corporate photo booth rental, event photo booth, birthday photo booth, photobooth rental">
+    <!-- Local SEO -->
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto, Barrie, Vaughan, Ontario">
+    <meta name="geo.position" content="43.6532;-79.3832">
+
+    <!-- Open Graph (Facebook/Instagram) -->
+    <meta property="og:title" content="Photo Booth Rental Barrie, Toronto, Simcoe County & the GTA | Your Majesty Events">
+    <meta property="og:description" content="Premium photo booth rentals from $300. Weddings, corporate events, parties. Instant prints, custom backdrops and templates.">
+    <meta property="og:image" content="https://ymeventvendors.ca/logo.png">
+    <meta property="og:url" content="https://ymeventvendors.ca">
+    <meta property="og:type" content="business.business">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photo Booth Rental Toronto & Barrie">
+    <meta name="twitter:description" content="Premium event photo booths from $300. Book your GTA wedding or corporate event today!">
+    <meta name="twitter:image" content="https://ymeventvendors.ca/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ymeventvendors.ca">
+    
     <link rel="icon" href="YM.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="memories.jpg">
+
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -33,7 +58,7 @@
         <div class="video-carousel-container">
             <div class="video-carousel-track">
                 <div class="video-slide active">
-                    <video autoplay muted loop playsinline class="hero-video">
+                    <video autoplay muted loop playsinline class="hero-video" poster="memories.JPG" alt="Photo booth at Toronto wedding">
                         <source src="movie1.mov" type="video/mp4">
                     </video>
                 </div>
@@ -63,8 +88,8 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Premium Photo Booth Rentals</h1>
-            <p>Barrie, Simcoe Region, Toronto & GTA for Weddings, Corporate Events & Parties</p>
+            <h1>Premium Photo Booth Rental for Toronto, Barrie, Simcoe County & the GTA</h1>
+            <p>Wedding, Corporate & Party Photo Booths | From $300 | Instant Prints, Custom Templates</p>
             <button onclick="document.getElementById('contact').scrollIntoView()"><strong>Book Now</strong></button>
         </div>
     </section>
@@ -152,7 +177,7 @@
                         <li>Online gallery</li>
                         <li>Custom template design</li>
                     </ul>
-                <button class="cta-btn">Select Digital</button>
+                <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView()">Select Digital</button>
             </div>
             <div class="tier-card premium featured">
                 <div class="tier-header">
@@ -167,7 +192,7 @@
                     <li>Video boomerangs/GIFs</li>
                     <li>Audio guestbook ($50 addon for Digital)</li>
                 </ul>
-                <button class="cta-btn popular">Most Popular</button>
+                <button class="cta-btn popular" onclick="document.getElementById('contact').scrollIntoView()">Most Popular</button>
             </div>
         </div>
         <p class="pricing-note">Travel fees apply outside of Simcoe/GTA Regions. <a href="#contact">Get A Custom Quote.</a></p>
@@ -293,5 +318,39 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Your Majesty Event Vendors",
+    "image": "https://ymeventvendors.ca/logo.png",
+    "description": "Premium photo booth rentals for weddings, corporate events and parties across Toronto, Barrie and GTA.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.6532,
+        "longitude": -79.3832
+    },
+    "url": "https://ymeventvendors.ca",
+    "telephone": "647-761-2790",
+    "priceRange": "$$",
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+    },
+    "sameAs": [
+        "https://instagram.com/yourmajestyeventvendors",
+        "https://facebook.com/yourmajestyeventvendors",
+        "https://tiktok.com/@ymeventvendors"
+    ]
+    }
+    </script>
 </body>
 </html>

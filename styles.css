@@ -68,7 +68,7 @@ body.no-scroll {
 }
 .logo { color: #ffb000; font-family: 'Playfair-Display'; font-size: 1.5rem; font-weight: bold; }
 
-.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;base64,...'); display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; }
+.hero { height: 100vh;  display: flex; align-items: center; justify-content: center; text-align: center; color: white; flex-direction: column; }
 .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
 .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
 button { padding: 1rem 2rem; background: #ffb000; color: #13332e; border: none; font-size: 1.2rem; cursor: pointer; border-radius: 5px; }
@@ -631,4 +631,34 @@ textarea { height: 150px; }
         opacity: 1;
         visibility: visible;
     }
+}
+
+/* Loading Spinner */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Button loading state */
+button.loading {
+    opacity: 0.7;
+    cursor: wait;
+    pointer-events: none;
+}
+
+/* Newsletter spinner (darker bg) */
+.newsletter-form .spinner {
+    border: 3px solid rgba(19, 51, 46, 0.3);
+    border-top-color: #13332e;
 }

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ymeventvendors.ca/sitemap.xml

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth Rental Barrie & Toronto | Your Majesty Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YM Event Vendors</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#backdrops">Backdrops</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="video-carousel-container">
+            <div class="video-carousel-track">
+                <div class="video-slide active">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="movie1.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-slide">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="movie2.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-slide">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="movie3.mov" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-slide">
+                    <video autoplay muted loop playsinline class="hero-video">
+                        <source src="movie4.mov" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <button class="carousel-btn prev" onclick="changeHeroVideo(-1)">❮</button>
+            <button class="carousel-btn next" onclick="changeHeroVideo(1)">❯</button>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentHeroVideo(1)"></span>
+                <span class="dot" onclick="currentHeroVideo(2)"></span>
+                <span class="dot" onclick="currentHeroVideo(3)"></span>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Premium Photo Booth Rentals</h1>
+            <p>Barrie, Simcoe Region, Toronto & GTA for Weddings, Corporate Events & Parties</p>
+            <button onclick="document.getElementById('contact').scrollIntoView()"><strong>Book Now</strong></button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="digital.JPEG" alt="A photo of a photobooth in front of a white backdrop.">
+                <h3>Digital Booth</h3>
+                <p>High quality DSLR photos available right away.</p>
+            </div>
+            <div class="card">
+                <img src="print.jpg" alt="A print from a DNP RX1HS printer.">
+                <h3>Print Booth</h3>
+                <p>Unlimited prints plus digital photos.</p>
+            </div>
+            <div class="card">
+                <img src="hero2.jpg" alt="A group of people posing for a photo. Shown in Black and White Glam Style.">
+                <h3>Glam Booth</h3>
+                <p>A touch of timeless elegance. Available in Digital or Print.</p>
+            </div>
+            <div class="card">
+                <img src="studio.jpg" alt="A person posing for a photographer in a studio setting.">
+                <h3>Studio Booth</h3>
+                <p>A professional photographer for a red carpet portrait experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <h2>Easy as 1, 2, 3!</h2>
+      <div class="steps-container">
+          <div class="step">
+              <div class="step-image">
+                  <img src="contact-us.jpg" alt="A person using their phone to get in contact with someone else.">
+                  <div class="image-overlay">
+                      <p>Fill inquiry form or call for custom quote. Our packages are shown below.
+                        We usually do a minimum of 2 hours but for smaller events we can do 1.5 hrs to save cost.</p>
+                  </div>
+              </div>
+              <p class="step-caption">1. Contact & Book</p>
+          </div>
+          <div class="step-arrow">➜</div>
+          
+          <div class="step">
+              <div class="step-image">
+                  <img src="props-backdrop.jpeg" alt="A photobooth setup with a flower wall and prop table.">
+                  <div class="image-overlay">
+                      <p>Choose a template that you want to customize. Want props? Let us know! 
+                        Choose from our wide array of backdrops or request a different one. 
+                        If we don't have it, we'll get it. Additional costs may apply.</p>
+                  </div>
+              </div>
+              <p class="step-caption">2. Get Creative!</p>
+          </div>
+          <div class="step-arrow">➜</div>
+          
+          <div class="step">
+              <div class="step-image">
+                  <img src="pose-2.jpeg" alt="A group of friends in front of a photobooth posing for the photo.">
+                  <div class="image-overlay">
+                      <p>Guests pose, snap photos, get instant prints & digital shares</p>
+                  </div>
+              </div>
+              <p class="step-caption">3. Capture Memories</p>
+          </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Simple Transparent Pricing</h2>
+        <p class="pricing-subtitle">Choose your perfect package. Custom quotes available.</p>
+        <div class="pricing-container">
+            <div class="tier-card basic">
+                <div class="tier-header">
+                    <h3>Digital</h3>
+                    <div class="price">$300</div>
+                    <p>2 Hours | 100$ per extra hour</p>
+                </div>
+                    <ul class="features">
+                        <li>Digital photos/shares</li>
+                        <li>Props & backdrop</li>
+                        <li>Two professional attendants</li>
+                        <li>Online gallery</li>
+                        <li>Custom template design</li>
+                    </ul>
+                <button class="cta-btn">Select Digital</button>
+            </div>
+            <div class="tier-card premium featured">
+                <div class="tier-header">
+                    <h3>Unlimited Prints</h3>
+                    <div class="price">$400</div>
+                    <p>2 Hours | 150$ per extra hour</p>
+                </div>
+                <ul class="features">
+                    <li>Everything in Digital</li>
+                    <li>Unlimited 2x6 or 4x6 prints</li>
+                    <li>Envelopes for photos</li>
+                    <li>Video boomerangs/GIFs</li>
+                    <li>Audio guestbook ($50 addon for Digital)</li>
+                </ul>
+                <button class="cta-btn popular">Most Popular</button>
+            </div>
+        </div>
+        <p class="pricing-note">Travel fees apply outside of Simcoe/GTA Regions. <a href="#contact">Get A Custom Quote.</a></p>
+    </section>
+
+    <section id="backdrops" class="backdrops">
+    <h2>Backdrop Catalogue</h2>
+    <p>From floral designs to beautiful solid colours, elevate your booth with stunning designs. More options available upon request.</p>
+    <br/>
+    <div class="backdrop-grid">
+        <div class="backdrop-item">
+            <img src="backdrops/white.png" alt="White 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>Just White</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/ivory.png" alt="Ivory 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>Dreamy Ivory</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/marble.png" alt="Marble 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>Marble Slab</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/green.png" alt="Green 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>British Racing Green</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/sunset.png" alt="Pink Sunset 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>California Sunset</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/pink.png" alt="Hot pink 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>It's a girl! Pink</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/floral.png" alt="Floral 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>Eden's Garden</h4>
+            </div>
+        </div>
+        <div class="backdrop-item">
+            <img src="backdrops/black.png" alt="Black 8x8 backdrop" loading="lazy">
+            <div class="backdrop-hover">
+                <h4>Black Veil Brides</h4>
+            </div>
+        </div>
+        <!-- Add your real backdrop images -->
+    </div>
+    <div class="backdrop-cta">
+        <button onclick="document.getElementById('contact').scrollIntoView()"><strong>Custom Backdrop</strong></button>
+    </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form id="contactForm" name="contactForm">
+            <input type="text" name="user_name" placeholder="Name" required>
+            <input type="email" name="user_email" placeholder="Email" required>
+            <input type="tel" name="user_phone" placeholder="Phone">
+            <textarea name="message" placeholder="Event details, date, location" required></textarea>
+            <button type="submit"><strong>Send Inquiry</strong></button>
+        </form>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">YM Event Vendors</div>
+            <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank">
+                    <i class="fa-brands fa-instagram fa-lg"></i>Instagram
+                </a>
+                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank">
+                    <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
+                </a>
+                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank">
+                    <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
+                </a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#backdrops">Backdrops</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Simcoe & GTA<br>
+            <i class="fa-regular fa-envelope"></i> contact@ymeventvendors.ca<br>
+            <i class="fa-solid fa-mobile-screen-button"></i> 647-761-2790<br>
+            <i class="fa-regular fa-clock"></i> Bookings 24/7</p>
+        </div>
+        <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Event tips & promos</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit"><strong>Subscribe</strong></button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved. | Serving GTA & Simcoe.</p>
+    </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

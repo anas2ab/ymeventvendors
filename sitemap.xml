@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ymeventvendors.ca</loc>
-    <lastmod>2026-01-19</lastmod>
+    <loc>https://ymeventvendors.ca/</loc>
+    <lastmod>2026-01-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ymeventvendors.ca#pricing</loc>
+    <loc>https://ymeventvendors.ca/barrie</loc>
+    <lastmod>2026-01-24</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ymeventvendors.ca#backdrops</loc>
-    <priority>0.7</priority>
+    <loc>https://ymeventvendors.ca/toronto</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ymeventvendors.ca#templates</loc>
-    <priority>0.7</priority>
+    <loc>https://ymeventvendors.ca/mississauga</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ymeventvendors.ca/vaughan</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ymeventvendors.ca/brampton</loc>
+    <lastmod>2026-01-24</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

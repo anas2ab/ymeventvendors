@@ -1,159 +1,207 @@
-// EmailJS Init - MUST be at top of script.js
+// =======================
+// EmailJS Init
+// =======================
 (function () {
-  emailjs.init(""); // Your actual public key
+  // Only init if the EmailJS SDK is loaded on this page
+  if (typeof emailjs !== "undefined") {
+    emailjs.init(""); // Your public key
+  }
 })();
 
-let currentVideoIndex = 0;
-const videoSlides = document.querySelectorAll(".video-slide");
-const videoDots = document.querySelectorAll(".carousel-dots .dot");
-const totalVideos = videoSlides.length;
+// =======================
+// HERO VIDEO (only on pages that have it)
+// =======================
+const videoCarousel = document.querySelector(".video-carousel-container");
 
-function updateHeroVideo() {
-  document.querySelector(".video-carousel-track").style.transform =
-    `translateX(-${currentVideoIndex * 100}%)`;
-  videoSlides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === currentVideoIndex);
-    const vid = slide.querySelector("video");
-    if (i === currentVideoIndex) {
-      vid.play().catch((e) => console.log("Autoplay prevented"));
-    } else {
-      vid.pause();
-      vid.currentTime = 0;
-    }
-  });
-  videoDots.forEach((dot, i) =>
-    dot.classList.toggle("active", i === currentVideoIndex),
-  );
-}
+if (videoCarousel) {
+  let currentVideoIndex = 0;
 
-function changeHeroVideo(direction) {
-  currentVideoIndex =
-    (currentVideoIndex + direction + totalVideos) % totalVideos;
-  updateHeroVideo();
-}
+  const videoTrack = document.querySelector(".video-carousel-track");
+  const videoSlides = document.querySelectorAll(".video-slide");
+  const videoDots = document.querySelectorAll(".carousel-dots .dot");
+  const totalVideos = videoSlides.length;
 
-function currentHeroVideo(index) {
-  currentVideoIndex = index - 1;
-  updateHeroVideo();
-}
+  function updateHeroVideo() {
+    if (!videoTrack || totalVideos === 0) return;
 
-// Auto-advance every 6 seconds
-setInterval(() => changeHeroVideo(1), 6000);
+    videoTrack.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
 
-// Pause on hover
-document
-  .querySelector(".video-carousel-container")
-  .addEventListener("mouseenter", () => {
-    clearInterval(autoVideoInterval);
-  });
-document
-  .querySelector(".video-carousel-container")
-  .addEventListener("mouseleave", () => {
-    autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
-  });
+    videoSlides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === currentVideoIndex);
 
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+      const vid = slide.querySelector("video");
+      if (!vid) return;
 
-  const btn = this.querySelector('button[type="submit"]');
+      if (i === currentVideoIndex) {
+        vid.play().catch(() => {});
+      } else {
+        vid.pause();
+        vid.currentTime = 0;
+      }
+    });
 
-  // Add spinner
-  btn.innerHTML = '<strong>Sending <span class="spinner"></span></strong>';
-  btn.classList.add("loading");
-  btn.disabled = true;
-
-  if (typeof emailjs === "undefined") {
-    alert("Email service loading...");
-    return;
+    videoDots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentVideoIndex);
+    });
   }
 
-  const serviceID = ""; // Your keys
-  const templateID = "";
-  const form = this;
+  function changeHeroVideo(direction) {
+    currentVideoIndex =
+      (currentVideoIndex + direction + totalVideos) % totalVideos;
+    updateHeroVideo();
+  }
 
-  emailjs.sendForm(serviceID, templateID, form).then(
-    (result) => {
-      console.log("SUCCESS!", result.text);
-      form.reset(); // Clear all fields
-      form.querySelector('button[type="submit"]').textContent = "Sent!";
-      form.querySelector('button[type="submit"]').style.background = "#13332e";
-      form.querySelector('button[type="submit"]').style.color = "#ffb000";
-      form.querySelector('button[type="submit"]').style.fontWeight = "bold";
+  // If your HTML uses onclick="currentHeroVideo(1)" for dots,
+  // this exposes the function globally:
+  window.currentHeroVideo = function (index) {
+    currentVideoIndex = index - 1;
+    updateHeroVideo();
+  };
+
+  // Initialize
+  updateHeroVideo();
+
+  let autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+
+  videoCarousel.addEventListener("mouseenter", () => {
+    clearInterval(autoVideoInterval);
+  });
+
+  videoCarousel.addEventListener("mouseleave", () => {
+    autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+  });
+}
+
+// =======================
+// CONTACT FORM (only if it exists)
+// =======================
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const btn = this.querySelector('button[type="submit"]');
+    if (!btn) return;
+
+    btn.innerHTML = '<strong>Sending <span class="spinner"></span></strong>';
+    btn.classList.add("loading");
+    btn.disabled = true;
+
+    if (typeof emailjs === "undefined") {
+      alert("Email service loading...");
+      btn.innerHTML = "Send Inquiry";
       btn.classList.remove("loading");
       btn.disabled = false;
+      return;
+    }
 
-      // Reset button after 3s
-      setTimeout(() => {
-        form.querySelector('button[type="submit"]').textContent =
-          "Send Inquiry";
-        form.querySelector('button[type="submit"]').style.background = "";
-        form.querySelector('button[type="submit"]').style.fontWeight = "bold";
-        form.querySelector('button[type="submit"]').style.color = "#13332e";
-      }, 3000);
+    const serviceID = "";
+    const templateID = "";
 
-      alert("Thank you! We'll reply within 24 hours.");
-    },
-    (error) => {
-      btn.innerHTML = "Error";
-      btn.style.fontWeight = "bold";
-      btn.style.color = "white";
-      btn.style.background = "red";
-      alert("Send failed! Try again or email contact@ymeventvendors.ca");
-      setTimeout(() => {
-        btn.innerHTML = "Send Inquiry";
-        btn.style.color = "#13332e";
-        btn.style.background = "#ffb000";
+    emailjs.sendForm(serviceID, templateID, this).then(
+      (result) => {
+        console.log("SUCCESS!", result.text);
+
+        this.reset();
+
+        btn.textContent = "Sent!";
+        btn.style.background = "#13332e";
+        btn.style.color = "#ffb000";
+        btn.style.fontWeight = "bold";
         btn.classList.remove("loading");
         btn.disabled = false;
-      }, 2000);
-    },
-  );
-});
 
-// Newsletter subscription
-document
-  .getElementById("newsletterForm")
-  .addEventListener("submit", function (e) {
+        setTimeout(() => {
+          btn.textContent = "Send Inquiry";
+          btn.style.background = "";
+          btn.style.color = "#13332e";
+          btn.style.fontWeight = "bold";
+        }, 3000);
+
+        alert("Thank you! We'll reply within 24 hours.");
+      },
+      (error) => {
+        console.log(error);
+
+        btn.innerHTML = "Error";
+        btn.style.fontWeight = "bold";
+        btn.style.color = "white";
+        btn.style.background = "red";
+
+        alert("Send failed! Try again or email contact@ymeventvendors.ca");
+
+        setTimeout(() => {
+          btn.innerHTML = "Send Inquiry";
+          btn.style.color = "#13332e";
+          btn.style.background = "#ffb000";
+          btn.classList.remove("loading");
+          btn.disabled = false;
+        }, 2000);
+      },
+    );
+  });
+}
+
+// =======================
+// NEWSLETTER FORM (only if it exists)
+// =======================
+const newsletterForm = document.getElementById("newsletterForm");
+
+if (newsletterForm) {
+  newsletterForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const btn = this.querySelector('button[type="submit"]');
+    if (!btn) return;
+
     const originalText = btn.textContent;
-    // Add spinner
+
     btn.innerHTML = '<strong>Sending <span class="spinner"></span></strong>';
     btn.classList.add("loading");
     btn.disabled = true;
 
     if (typeof emailjs === "undefined") {
       alert("Loading...");
+      btn.innerHTML = originalText;
+      btn.classList.remove("loading");
+      btn.disabled = false;
       return;
     }
 
-    const serviceID = ""; // Same service
-    const templateID = ""; // Create new template
+    const serviceID = "";
+    const templateID = "";
 
     emailjs.sendForm(serviceID, templateID, this).then(
-      (result) => {
+      () => {
         btn.innerHTML = "Subscribed!";
         btn.style.fontWeight = "bold";
         btn.style.color = "#ffb000";
         btn.style.background = "#13332e";
         btn.classList.remove("loading");
         btn.disabled = false;
+
         setTimeout(() => {
           btn.innerHTML = originalText;
           btn.style.fontWeight = "bold";
           btn.style.color = "#13332e";
           btn.style.background = "#ffb000";
         }, 2000);
+
         this.reset();
       },
       (error) => {
+        console.log(error);
+
         btn.innerHTML = "Error";
         btn.style.fontWeight = "bold";
         btn.style.color = "white";
         btn.style.background = "red";
+
         alert(
           "Subscription failed! Try again or email contact@ymeventvendors.ca",
         );
+
         setTimeout(() => {
           btn.innerHTML = originalText;
           btn.style.color = "#13332e";
@@ -164,17 +212,18 @@ document
       },
     );
   });
+}
 
+// =======================
+// MOBILE NAV MENU (safe on every page)
+// =======================
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const menuOverlay = document.querySelector(".menu-overlay");
 const navLinks = document.querySelectorAll(".nav-link");
 
-menuToggle.addEventListener("click", toggleMenu);
-menuOverlay.addEventListener("click", closeMenu);
-
-// Toggle function
 function toggleMenu() {
+  if (!menuToggle || !navMenu || !menuOverlay) return;
   menuToggle.classList.toggle("active");
   navMenu.classList.toggle("active");
   menuOverlay.classList.toggle("active");
@@ -182,33 +231,57 @@ function toggleMenu() {
 }
 
 function closeMenu() {
+  if (!menuToggle || !navMenu || !menuOverlay) return;
   menuToggle.classList.remove("active");
   navMenu.classList.remove("active");
   menuOverlay.classList.remove("active");
   document.body.classList.remove("no-scroll");
 }
 
-// Link clicks - ONLY nav links
+if (menuToggle && navMenu && menuOverlay) {
+  menuToggle.addEventListener("click", toggleMenu);
+  menuOverlay.addEventListener("click", closeMenu);
+}
+
+// Smooth-scroll ONLY for same-page hash links (#section)
 navLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
     const href = this.getAttribute("href");
+
+    // Allow normal navigation for links like:
+    // "index.html", "index.html#services", "https://..."
+    if (!href || !href.startsWith("#")) {
+      closeMenu();
+      return;
+    }
+
     const target = document.querySelector(href);
+    if (!target) return;
 
-    if (target) {
-      closeMenu(); // Close FIRST
+    e.preventDefault();
+    closeMenu();
 
-      // Scroll AFTER close animation (100ms)
-      setTimeout(() => {
-        const navHeight = 80;
-        const targetPosition =
-          target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    setTimeout(() => {
+      const navHeight = 80;
+      const targetPosition =
+        target.getBoundingClientRect().top + window.pageYOffset - navHeight;
 
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
-      }, 300); // Matches CSS transition
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }, 300);
+  });
+});
+
+// =======================
+// MOBILE DROPDOWN TOGGLE (only if dropdown exists)
+// =======================
+document.querySelectorAll(".dropdown > .nav-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      this.parentElement.classList.toggle("active");
     }
   });
 });

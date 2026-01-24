@@ -254,7 +254,8 @@ textarea { height: 150px; }
 }
 
 .how-it-works {
-    padding: 5rem 2rem;
+    padding: 1rem 2rem;
+    padding-bottom: 5rem;
     max-width: 1600px; /* Wider container */
     margin: 0 auto;
     overflow: hidden; /* Prevent overflow */
@@ -570,6 +571,10 @@ textarea { height: 150px; }
 }
 
 #contact {
+    background: #fff;
+}
+
+#faq {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
@@ -661,4 +666,211 @@ button.loading {
 .newsletter-form .spinner {
     border: 3px solid rgba(19, 51, 46, 0.3);
     border-top-color: #13332e;
+}
+
+/* Locations Dropdown - FIXED VERSION */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #13332e;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin-top: 0; /* Remove gap - was 0.5rem */
+    padding: 0.5rem 0;
+    z-index: 1001;
+}
+
+/* Add padding to create invisible bridge */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Creates invisible hover area above menu */
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(247, 216, 121, 0.1);
+    color: #ffb000;
+}
+
+/* Mobile dropdown */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.05);
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        font-size: 1.2rem;
+        padding: 0.5rem 2rem;
+    }
+    
+    .dropdown-menu::before {
+        display: none; /* Remove bridge on mobile */
+    }
+}
+
+/* ===== FAQ Section ===== */
+.faq {
+  background: #ffffff;
+}
+
+.faq-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.faq-heading p {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid rgba(19, 51, 46, 0.12);
+  border-radius: 14px;
+  padding: 0.25rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 800;
+  color: #13332e;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus icon */
+.faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: #13332e;
+  background: #ffb000;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* When open, turn plus into x */
+.faq-item[open] summary::after {
+  content: "×";
+  background: rgba(19, 51, 46, 0.12);
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  padding: 0 1.25rem 1.15rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* Nice open animation */
+.faq-item[open] .faq-answer {
+  animation: faqFade 0.18s ease-in;
+}
+
+@keyframes faqFade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .faq-heading p { font-size: 1rem; }
+  .faq-item summary { padding: 1rem 1rem; }
+  .faq-answer { padding: 0 1rem 1rem; }
+}
+
+/* ===== Location Hero Image ===== */
+.hero.location-hero {
+  position: relative;
+  min-height: 90vh;            /* similar to your current full-screen hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay so text is readable */
+.hero.location-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Make sure hero text stays above the overlay */
+.hero.location-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
 }

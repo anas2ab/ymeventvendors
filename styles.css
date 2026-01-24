@@ -874,3 +874,7 @@ button.loading {
   z-index: 1;
   padding: 2rem;
 }
+.footer-bottom a{
+    text-decoration: none;
+    color: white;
+}

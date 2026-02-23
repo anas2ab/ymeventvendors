@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Booth Rental Toronto & GTA | Your Majesty Event Vendors</title>
     <meta name="description" content="Toronto's premium photo booth service. Perfect for downtown weddings, corporate events & parties. Distillery District, Casa Loma & more. Book today!">
-    <meta name="keywords" content="photo booth rental Toronto, Toronto wedding photo booth, GTA event rentals, downtown Toronto photo booth, corporate event photo booth Toronto, Distillery District wedding">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Photo Booth Rental Toronto & GTA | Your Majesty Event Vendors">
@@ -15,39 +14,80 @@
     <meta property="og:type" content="business.business">
     
     <!-- Canonical URL -->
-    <link rel="canonical" content="https://ymeventvendors.ca/toronto.html">
+    <link rel="canonical" href="https://ymeventvendors.ca/toronto.html">
     
     <!-- Your existing CSS -->
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Your Majesty Event Vendors - Toronto",
-      "description": "Premium photo booth rentals in Toronto and the GTA",
-      "url": "https://ymeventvendors.ca/toronto.html",
-      "telephone": "+1-647-761-2790",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.7184",
-        "longitude": "-79.5181"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Toronto"
-      },
-      "priceRange": "$$",
-      "image": "https://ymeventvendors.ca/logo.png"
-    }
-    </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "https://ymeventvendors.ca/toronto.html#localbusiness",
+                    "name": "Your Majesty Event Vendors - Toronto",
+                    "description": "Premium photo booth rentals in Toronto and the GTA",
+                    "url": "https://ymeventvendors.ca/toronto.html",
+                    "telephone": "+1-647-761-2790",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Toronto",
+                        "addressRegion": "ON",
+                        "addressCountry": "CA"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "43.7184",
+                        "longitude": "-79.5181"
+                    },
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "Toronto"
+                    },
+                    "priceRange": "$$",
+                    "image": "https://ymeventvendors.ca/logo.png"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Photo Booth Rental in Toronto",
+                    "serviceType": "Event Photo Booth Rental",
+                    "provider": {
+                        "@id": "https://ymeventvendors.ca/toronto.html#localbusiness"
+                    },
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "Toronto"
+                    },
+                    "url": "https://ymeventvendors.ca/toronto.html",
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "CAD",
+                        "price": "300",
+                        "availability": "https://schema.org/InStock"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://ymeventvendors.ca/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Toronto",
+                            "item": "https://ymeventvendors.ca/toronto.html"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
 </head>
 <body>
     <nav class="navbar">
@@ -160,13 +200,13 @@
             <div class="footer-logo">YM Event Vendors</div>
             <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank">
+                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram fa-lg"></i>Instagram
                 </a>
-                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank">
+                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
                 </a>
-                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank">
+                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
                 </a>
             </div>
@@ -174,10 +214,10 @@
         <div class="footer-section">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#backdrops">Backdrops</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#backdrops">Backdrops</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -198,11 +238,11 @@
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved.
-          Also serving <a href="/barrie">Barrie</a>, <a href="/mississauga">Mississauga</a>, <a href="/vaughan">Vaughan</a>, and <a href="/brampton">Brampton</a>.
+                    Also serving <a href="barrie.html">Barrie</a>, <a href="mississauga.html">Mississauga</a>, <a href="vaughan.html">Vaughan</a>, and <a href="brampton.html">Brampton</a>.
         </p>
     </div>
     </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

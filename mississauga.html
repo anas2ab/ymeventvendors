@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Booth Rental Mississauga | Your Majesty Event Vendors</title>
     <meta name="description" content="Mississauga's premium photo booth service. Weddings at Pearson Convention Centre, corporate events & parties. From $300. Book today!">
-    <meta name="keywords" content="photo booth rental Mississauga, Mississauga wedding photo booth, Port Credit photo booth, corporate event photo booth Mississauga, Peel Region event rentals, Square One area photo booth">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Photo Booth Rental Mississauga | Your Majesty Event Vendors">
@@ -15,39 +14,80 @@
     <meta property="og:type" content="business.business">
     
     <!-- Canonical URL -->
-    <link rel="canonical" content="https://ymeventvendors.ca/mississauga.html">
+    <link rel="canonical" href="https://ymeventvendors.ca/mississauga.html">
     
     <!-- Your existing CSS -->
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Your Majesty Event Vendors - Mississauga",
-      "description": "Premium photo booth rentals in Mississauga and Peel Region",
-      "url": "https://ymeventvendors.ca/mississauga.html",
-      "telephone": "+1-647-761-2790",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Mississauga",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "43.5890",
-        "longitude": "-79.6441"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Mississauga"
-      },
-      "priceRange": "$$",
-      "image": "https://ymeventvendors.ca/logo.png"
-    }
-    </script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "https://ymeventvendors.ca/mississauga.html#localbusiness",
+                    "name": "Your Majesty Event Vendors - Mississauga",
+                    "description": "Premium photo booth rentals in Mississauga and Peel Region",
+                    "url": "https://ymeventvendors.ca/mississauga.html",
+                    "telephone": "+1-647-761-2790",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Mississauga",
+                        "addressRegion": "ON",
+                        "addressCountry": "CA"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "43.5890",
+                        "longitude": "-79.6441"
+                    },
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "Mississauga"
+                    },
+                    "priceRange": "$$",
+                    "image": "https://ymeventvendors.ca/logo.png"
+                },
+                {
+                    "@type": "Service",
+                    "name": "Photo Booth Rental in Mississauga",
+                    "serviceType": "Event Photo Booth Rental",
+                    "provider": {
+                        "@id": "https://ymeventvendors.ca/mississauga.html#localbusiness"
+                    },
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "Mississauga"
+                    },
+                    "url": "https://ymeventvendors.ca/mississauga.html",
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "CAD",
+                        "price": "300",
+                        "availability": "https://schema.org/InStock"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://ymeventvendors.ca/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Mississauga",
+                            "item": "https://ymeventvendors.ca/mississauga.html"
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
 </head>
 <body>
     <nav class="navbar">
@@ -163,13 +203,13 @@
             <div class="footer-logo">YM Event Vendors</div>
             <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank">
+                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram fa-lg"></i>Instagram
                 </a>
-                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank">
+                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
                 </a>
-                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank">
+                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
                 </a>
             </div>
@@ -177,10 +217,10 @@
         <div class="footer-section">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#backdrops">Backdrops</a></li>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#backdrops">Backdrops</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -201,11 +241,11 @@
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved.
-          Also serving <a href="/toronto">Toronto</a>, <a href="/barrie">Barrie</a>, <a href="/vaughan">Vaughan</a>, and <a href="/brampton">Brampton</a>.
+                    Also serving <a href="toronto.html">Toronto</a>, <a href="barrie.html">Barrie</a>, <a href="vaughan.html">Vaughan</a>, and <a href="brampton.html">Brampton</a>.
         </p>
     </div>
     </footer>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

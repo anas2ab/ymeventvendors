@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Booth Rental Barrie, Toronto & GTA | YM Events</title>
     <meta name="description" content="Premium photo booth rentals for weddings, corporate events & parties in Barrie, Toronto, & GTA. Instant prints, backdrops & templates. From $300. Book now!">
-    <meta name="keywords" content="photo booth rental Toronto, photo booth Barrie, GTA photo booth, wedding photo booth, corporate photo booth rental, event photo booth, birthday photo booth, photobooth rental">
     <!-- Local SEO -->
     <meta name="geo.region" content="CA-ON">
     <meta name="geo.placename" content="Toronto, Barrie, Vaughan, Ontario">
@@ -29,9 +28,9 @@
     
     <link rel="icon" href="YM.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" as="image" href="memories.jpg">
+    <link rel="preload" as="image" href="memories.JPG" fetchpriority="high">
 
-    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <header>
@@ -69,22 +68,22 @@
         <div class="video-carousel-container">
             <div class="video-carousel-track">
                 <div class="video-slide active">
-                    <video autoplay muted loop playsinline class="hero-video" poster="memories.JPG" alt="Photo booth at Toronto wedding">
+                    <video autoplay muted loop playsinline preload="auto" class="hero-video" poster="memories.JPG" alt="Photo booth at Toronto wedding">
                         <source src="movie1.mov" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
-                    <video autoplay muted loop playsinline class="hero-video">
+                    <video autoplay muted loop playsinline preload="none" class="hero-video">
                         <source src="movie2.mov" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
-                    <video autoplay muted loop playsinline class="hero-video">
+                    <video autoplay muted loop playsinline preload="none" class="hero-video">
                         <source src="movie3.mov" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
-                    <video autoplay muted loop playsinline class="hero-video">
+                    <video autoplay muted loop playsinline preload="none" class="hero-video">
                         <source src="movie4.mov" type="video/mp4">
                     </video>
                 </div>
@@ -109,22 +108,22 @@
         <h2>Our Services</h2>
         <div class="grid">
             <div class="card">
-                <img src="digital.JPEG" alt="A photo of a photobooth in front of a white backdrop.">
+                <img src="digital.JPEG" alt="A photo of a photobooth in front of a white backdrop." width="1200" height="1200" loading="lazy" decoding="async">
                 <h3>Digital Booth</h3>
                 <p>High quality DSLR photos available right away.</p>
             </div>
             <div class="card">
-                <img src="print.jpg" alt="A print from a DNP RX1HS printer.">
+                <img src="print.jpg" alt="A print from a DNP RX1HS printer." width="1200" height="1200" loading="lazy" decoding="async">
                 <h3>Print Booth</h3>
                 <p>Unlimited prints plus digital photos.</p>
             </div>
             <div class="card">
-                <img src="hero2.jpg" alt="A group of people posing for a photo. Shown in Black and White Glam Style.">
+                <img src="hero2.jpg" alt="A group of people posing for a photo. Shown in Black and White Glam Style." width="1200" height="1200" loading="lazy" decoding="async">
                 <h3>Glam Booth</h3>
                 <p>A touch of timeless elegance. Available in Digital or Print.</p>
             </div>
             <div class="card">
-                <img src="studio.jpg" alt="A person posing for a photographer in a studio setting.">
+                <img src="studio.jpg" alt="A person posing for a photographer in a studio setting." width="1200" height="1200" loading="lazy" decoding="async">
                 <h3>Studio Booth</h3>
                 <p>A professional photographer for a red carpet portrait experience.</p>
             </div>
@@ -136,7 +135,7 @@
       <div class="steps-container">
           <div class="step">
               <div class="step-image">
-                  <img src="contact-us.jpg" alt="A person using their phone to get in contact with someone else.">
+                  <img src="contact-us.jpg" alt="A person using their phone to get in contact with someone else." width="700" height="700" loading="lazy" decoding="async">
                   <div class="image-overlay">
                       <p>Fill inquiry form or call for custom quote. Our packages are shown below.
                         We usually do a minimum of 2 hours but for smaller events we can do 1.5 hrs to save cost.</p>
@@ -148,7 +147,7 @@
           
           <div class="step">
               <div class="step-image">
-                  <img src="props-backdrop.jpeg" alt="A photobooth setup with a flower wall and prop table.">
+                  <img src="props-backdrop.jpeg" alt="A photobooth setup with a flower wall and prop table." width="700" height="700" loading="lazy" decoding="async">
                   <div class="image-overlay">
                       <p>Choose a template that you want to customize. Want props? Let us know! 
                         Choose from our wide array of backdrops or request a different one. 
@@ -161,7 +160,7 @@
           
           <div class="step">
               <div class="step-image">
-                  <img src="pose-2.jpeg" alt="A group of friends in front of a photobooth posing for the photo.">
+                  <img src="pose-2.jpeg" alt="A group of friends in front of a photobooth posing for the photo." width="700" height="700" loading="lazy" decoding="async">
                   <div class="image-overlay">
                       <p>Guests pose, snap photos, get instant prints & digital shares</p>
                   </div>
@@ -179,7 +178,7 @@
                 <div class="tier-header">
                     <h3>Digital</h3>
                     <div class="price">$300</div>
-                    <p>2 Hours | 100$ per extra hour</p>
+                    <p>2 Hours | 50$ per extra hour</p>
                 </div>
                     <ul class="features">
                         <li>Digital photos/shares</li>
@@ -194,11 +193,11 @@
                 <div class="tier-header">
                     <h3>Unlimited Prints</h3>
                     <div class="price">$400</div>
-                    <p>2 Hours | 150$ per extra hour</p>
+                    <p>2 Hours | 100$ per extra hour</p>
                 </div>
                 <ul class="features">
                     <li>Everything in Digital</li>
-                    <li>Unlimited 2x6 or 4x6 prints</li>
+                    <li>Unlimited 2x6 (4x6 prints an extra 25$ an hour)</li>
                     <li>Envelopes for photos</li>
                     <li>Video boomerangs/GIFs</li>
                     <li>Audio guestbook ($50 addon for Digital)</li>
@@ -215,49 +214,49 @@
     <br/>
     <div class="backdrop-grid">
         <div class="backdrop-item">
-            <img src="backdrops/white.png" alt="White 8x8 backdrop" loading="lazy">
+            <img src="backdrops/white.png" alt="White 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>Just White</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/ivory.png" alt="Ivory 8x8 backdrop" loading="lazy">
+            <img src="backdrops/ivory.png" alt="Ivory 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>Dreamy Ivory</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/marble.png" alt="Marble 8x8 backdrop" loading="lazy">
+            <img src="backdrops/marble.png" alt="Marble 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>Marble Slab</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/green.png" alt="Green 8x8 backdrop" loading="lazy">
+            <img src="backdrops/green.png" alt="Green 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>British Racing Green</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/sunset.png" alt="Pink Sunset 8x8 backdrop" loading="lazy">
+            <img src="backdrops/sunset.png" alt="Pink Sunset 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>California Sunset</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/pink.png" alt="Hot pink 8x8 backdrop" loading="lazy">
+            <img src="backdrops/pink.png" alt="Hot pink 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>It's a girl! Pink</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/floral.png" alt="Floral 8x8 backdrop" loading="lazy">
+            <img src="backdrops/floral.png" alt="Floral 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>Eden's Garden</h4>
             </div>
         </div>
         <div class="backdrop-item">
-            <img src="backdrops/black.png" alt="Black 8x8 backdrop" loading="lazy">
+            <img src="backdrops/black.png" alt="Black 8x8 backdrop" width="1200" height="1200" loading="lazy" decoding="async">
             <div class="backdrop-hover">
                 <h4>Black Veil Brides</h4>
             </div>
@@ -340,13 +339,13 @@
             <div class="footer-logo">YM Event Vendors</div>
             <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
             <div class="social-links">
-                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank">
+                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-instagram fa-lg"></i>Instagram
                 </a>
-                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank">
+                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
                 </a>
-                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank">
+                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
                 </a>
             </div>
@@ -390,95 +389,135 @@
     </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Your Majesty Event Vendors",
-    "image": "https://ymeventvendors.ca/logo.png",
-    "description": "Premium photo booth rentals for weddings, corporate events and parties across Toronto, Barrie and GTA.",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Toronto",
-        "addressRegion": "ON",
-        "addressCountry": "CA"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 43.6532,
-        "longitude": -79.3832
-    },
-    "url": "https://ymeventvendors.ca",
-    "telephone": "647-761-2790",
-    "priceRange": "$$",
-    "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-    },
-    "sameAs": [
-        "https://instagram.com/yourmajestyeventvendors",
-        "https://facebook.com/yourmajestyeventvendors",
-        "https://tiktok.com/@ymeventvendors"
-    ]
-    },
-    {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What’s included in your photo booth rental?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Setup + takedown, high-quality DSLR photos, unlimited sessions, a digital gallery, and an attendant (if included in your package). Prints, props, and custom templates depend on the package you choose."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much space and power do you need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Typically we need a small area (about 8x8 ft is great) and a standard electrical outlet within reach. If your venue has restrictions, tell us and we’ll plan accordingly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can you customize the print template to match my event?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes—templates can include names, dates, monograms, colors, themes, and corporate logos. We’ll confirm your design before the event."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide props and backdrops?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes—props and backdrops are available depending on your package. You can also choose from our backdrop catalogue and request custom options."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How far in advance should I book?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Earlier is better—popular weekends book up fast. If your date is soon, still reach out; we sometimes have last‑minute availability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you charge travel fees?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Travel fees can apply outside your included service area. Tell us your venue location and we’ll confirm any travel cost upfront."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="script.js" defer></script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://ymeventvendors.ca/#website",
+                    "url": "https://ymeventvendors.ca",
+                    "name": "Your Majesty Event Vendors"
+                },
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "https://ymeventvendors.ca/#business",
+                    "name": "Your Majesty Event Vendors",
+                    "image": "https://ymeventvendors.ca/logo.png",
+                    "description": "Premium photo booth rentals for weddings, corporate events and parties across Toronto, Barrie and GTA.",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Toronto",
+                        "addressRegion": "ON",
+                        "addressCountry": "CA"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 43.6532,
+                        "longitude": -79.3832
+                    },
+                    "url": "https://ymeventvendors.ca",
+                    "telephone": "647-761-2790",
+                    "priceRange": "$$",
+                    "openingHoursSpecification": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                        "opens": "00:00",
+                        "closes": "23:59"
+                    },
+                    "sameAs": [
+                        "https://instagram.com/yourmajestyeventvendors",
+                        "https://facebook.com/yourmajestyeventvendors",
+                        "https://tiktok.com/@ymeventvendors"
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://ymeventvendors.ca/#service-photobooth",
+                    "name": "Photo Booth Rental",
+                    "serviceType": "Event Photo Booth Rental",
+                    "provider": {
+                        "@id": "https://ymeventvendors.ca/#business"
+                    },
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Toronto"
+                        },
+                        {
+                            "@type": "City",
+                            "name": "Barrie"
+                        },
+                        {
+                            "@type": "AdministrativeArea",
+                            "name": "Greater Toronto Area"
+                        }
+                    ],
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "CAD",
+                        "price": "300",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://ymeventvendors.ca/#pricing"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "What’s included in your photo booth rental?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Setup + takedown, high-quality DSLR photos, unlimited sessions, a digital gallery, and an attendant (if included in your package). Prints, props, and custom templates depend on the package you choose."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How much space and power do you need?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Typically we need a small area (about 8x8 ft is great) and a standard electrical outlet within reach. If your venue has restrictions, tell us and we’ll plan accordingly."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Can you customize the print template to match my event?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes—templates can include names, dates, monograms, colors, themes, and corporate logos. We’ll confirm your design before the event."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Do you provide props and backdrops?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Yes—props and backdrops are available depending on your package. You can also choose from our backdrop catalogue and request custom options."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How far in advance should I book?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Earlier is better—popular weekends book up fast. If your date is soon, still reach out; we sometimes have last‑minute availability."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "Do you charge travel fees?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Travel fees can apply outside your included service area. Tell us your venue location and we’ll confirm any travel cost upfront."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+        </script>
 </body>
 </html>

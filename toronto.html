@@ -110,46 +110,46 @@
 
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="margin-top:4rem;background-image: url('hero2.JPG');">
-        <div style="position: relative; z-index: 1; padding: 2rem;">
+        <div class="location-hero-content">
             <h1>Photo Booth Rental Toronto & GTA</h1>
             <p>Elegant Photo Booth Experiences for Toronto's Finest Events</p>
             <button onclick="window.location.href='index.html#contact'"><strong>Book Your Toronto Event</strong></button></div>
     </section>
 
     <!-- Location-Specific Introduction -->
-    <section style="padding: 4rem 5%; background: white;">
-        <div style="max-width: 800px; margin: 0 auto;">
+    <section class="location-section">
+        <div class="location-container location-container-narrow">
             <h2>Premium Photo Booth Rentals in Toronto</h2>
-            <p style="font-size: 1.1rem; line-height: 1.8; text-align: left; margin-bottom: 2rem;">
+            <p class="location-lead">
                 Elevate your Toronto event with Your Majesty Event Vendors' premium photo booth rentals. Whether you're hosting a downtown wedding at historic venues like Casa Loma or a modern corporate event at the Toronto Convention Centre, we bring the perfect blend of elegance and fun to Toronto's most memorable occasions.
             </p>
-            <p style="font-size: 1.1rem; line-height: 1.8; text-align: left;">
+            <p class="location-lead">
                 Our sophisticated DSLR photo booths are designed for Toronto's upscale events—from intimate Distillery District weddings to large corporate galas. We navigate downtown logistics seamlessly, offering compact setups perfect for space-conscious venues while maintaining the premium quality Toronto clients expect.
             </p>
         </div>
     </section>
 
     <!-- Toronto-specific venues section -->
-    <section id="toronto-venues" style="padding: 4rem 5%; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-        <div style="max-width: 1000px; margin: 0 auto;">
+    <section id="toronto-venues" class="location-section location-section-alt">
+        <div class="location-container">
             <h2>Iconic Toronto Venues We Serve</h2>
-            <div class="grid" style="text-align: left;">
+            <div class="grid location-grid-left">
                 <div class="card">
-                    <h3 style="color: #13332e; margin-bottom: 1rem;">Historic Venues</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 Casa Loma</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 The Distillery District</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 Royal York Hotel</li>
-                        <li style="padding: 0.5rem 0;">📍 Liberty Grand</li>
+                    <h3 class="location-card-title">Historic Venues</h3>
+                    <ul class="location-venue-list">
+                        <li>📍 Casa Loma</li>
+                        <li>📍 The Distillery District</li>
+                        <li>📍 Royal York Hotel</li>
+                        <li>📍 Liberty Grand</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3 style="color: #13332e; margin-bottom: 1rem;">Modern Spaces</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 Toronto Convention Centre</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 Evergreen Brick Works</li>
-                        <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">📍 Downtown Lofts & Galleries</li>
-                        <li style="padding: 0.5rem 0;">📍 Waterfront Venues</li>
+                    <h3 class="location-card-title">Modern Spaces</h3>
+                    <ul class="location-venue-list">
+                        <li>📍 Toronto Convention Centre</li>
+                        <li>📍 Evergreen Brick Works</li>
+                        <li>📍 Downtown Lofts & Galleries</li>
+                        <li>📍 Waterfront Venues</li>
                     </ul>
                 </div>
             </div>
@@ -158,20 +158,20 @@
 
 
     <!-- Why Choose Us for Toronto Events -->
-    <section style="padding: 4rem 5%; background: white;">
-        <div style="max-width: 1000px; margin: 0 auto;">
+    <section class="location-section">
+        <div class="location-container">
             <h2>Why Toronto Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 style="color: #13332e;">🏙️ Downtown Expertise</h3>
+                    <h3 class="location-card-title">🏙️ Downtown Expertise</h3>
                     <p>Experienced navigating Toronto's downtown venues, parking, and logistics. We handle the complexities so you don't have to.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color: #13332e;">🎨 Upscale Sophistication</h3>
+                    <h3 class="location-card-title">🎨 Upscale Sophistication</h3>
                     <p>Premium equipment and elegant backdrops that match Toronto's high-end wedding and corporate event standards.</p>
                 </div>
                 <div class="card">
-                    <h3 style="color: #13332e;">🚚 Space-Conscious Setup</h3>
+                    <h3 class="location-card-title">🚚 Space-Conscious Setup</h3>
                     <p>Compact booth options perfect for Toronto's lofts, galleries, and venues where space is at a premium.</p>
                 </div>
             </div>
@@ -179,20 +179,23 @@
     </section>
 
     <!-- Embedded Google Map -->
-    <section style="padding: 4rem 5%; background: #f8f9fa;">
-        <div style="max-width: 1000px; margin: 0 auto;">
+    <section class="location-section location-section-alt">
+        <div class="location-container">
             <h2>Serving All of Toronto & the GTA</h2>
-            <p style="margin-bottom: 2rem;">Delivering throughout Toronto, North York, Etobicoke, Scarborough, and the Greater Toronto Area.</p>
+            <p class="location-section-copy">Delivering throughout Toronto, North York, Etobicoke, Scarborough, and the Greater Toronto Area.</p>
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.30943582457!2d-79.51814074999999!3d43.718371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON!5e0!3m2!1sen!2sca!4v1234567890"
-                width="100%" 
-                height="400" 
-                style="border:0; border-radius: 10px;" 
+                class="location-map"
                 allowfullscreen="" 
                 loading="lazy">
             </iframe>
         </div>
     </section>
+
+    <div class="mobile-cta-bar" aria-label="Quick contact actions">
+        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
+    </div>
 
     <footer class="footer">
     <div class="footer-content">

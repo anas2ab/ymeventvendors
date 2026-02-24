@@ -1,10 +1,12 @@
 // =======================
 // EmailJS Init
 // =======================
+const emailJsConfig = window.EMAILJS_CONFIG || {};
+
 (function () {
   // Only init if the EmailJS SDK is loaded on this page
-  if (typeof emailjs !== "undefined") {
-    emailjs.init(""); // Your public key
+  if (typeof emailjs !== "undefined" && emailJsConfig.publicKey) {
+    emailjs.init(emailJsConfig.publicKey);
   }
 })();
 
@@ -142,10 +144,20 @@ if (contactForm) {
       return;
     }
 
-    const serviceID = "";
-    const templateID = "";
+    const serviceID = emailJsConfig.serviceID || "";
+    const contactFormTemplateID = emailJsConfig.contactFormTemplateID || "";
 
-    emailjs.sendForm(serviceID, templateID, this).then(
+    if (!serviceID || !contactFormTemplateID) {
+      alert(
+        "Email form is not configured yet. Please add your EmailJS config.",
+      );
+      btn.innerHTML = "Send Inquiry";
+      btn.classList.remove("loading");
+      btn.disabled = false;
+      return;
+    }
+
+    emailjs.sendForm(serviceID, contactFormTemplateID, this).then(
       (result) => {
         console.log("SUCCESS!", result.text);
 
@@ -215,10 +227,20 @@ if (newsletterForm) {
       return;
     }
 
-    const serviceID = "";
-    const templateID = "";
+    const serviceID = emailJsConfig.serviceID || "";
+    const newsletterTemplateID = emailJsConfig.newsletterTemplateID || "";
 
-    emailjs.sendForm(serviceID, templateID, this).then(
+    if (!serviceID || !newsletterTemplateID) {
+      alert(
+        "Newsletter form is not configured yet. Please add your EmailJS config.",
+      );
+      btn.innerHTML = originalText;
+      btn.classList.remove("loading");
+      btn.disabled = false;
+      return;
+    }
+
+    emailjs.sendForm(serviceID, newsletterTemplateID, this).then(
       () => {
         btn.innerHTML = "Subscribed!";
         btn.style.fontWeight = "bold";

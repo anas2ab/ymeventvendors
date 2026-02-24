@@ -661,7 +661,7 @@ textarea:focus {
     .how-it-works.mobile-step-scroll {
         position: relative;
         overflow: visible;
-        min-height: calc(92vh + (var(--step-count, 3) - 1) * 36vh);
+        min-height: calc(104vh + (var(--step-count, 3) - 1) * 52vh);
         padding-bottom: 0.75rem;
     }
 

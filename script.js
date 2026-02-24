@@ -647,7 +647,10 @@ const howItWorksStepsContainer = document.querySelector(".steps-container");
 if (howItWorksSection && howItWorksStepsContainer) {
   const mobileStepsQuery = window.matchMedia("(max-width: 768px)");
   const steps = Array.from(howItWorksStepsContainer.querySelectorAll(".step"));
+  const stepHoldDuration = 1000;
   let activeIndex = -1;
+  let pendingIndex = null;
+  let lastStepChangeAt = 0;
   let rafPending = false;
 
   function setActiveStep(index) {
@@ -668,12 +671,44 @@ if (howItWorksSection && howItWorksStepsContainer) {
     const scrollDistance = Math.max(rect.height - window.innerHeight, 1);
     const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
     const maxIndex = Math.max(steps.length - 1, 0);
-    const index = Math.min(
+    let targetIndex = Math.min(
       maxIndex,
-      Math.max(0, Math.round(progress * maxIndex)),
+      Math.max(0, Math.floor(progress * (maxIndex + 1))),
     );
 
-    setActiveStep(index);
+    if (activeIndex >= 0) {
+      if (targetIndex > activeIndex + 1) {
+        targetIndex = activeIndex + 1;
+      } else if (targetIndex < activeIndex - 1) {
+        targetIndex = activeIndex - 1;
+      }
+    }
+
+    if (targetIndex === activeIndex) {
+      pendingIndex = null;
+      return;
+    }
+
+    const now = Date.now();
+    if (now - lastStepChangeAt < stepHoldDuration) {
+      pendingIndex = targetIndex;
+      return;
+    }
+
+    pendingIndex = null;
+    setActiveStep(targetIndex);
+    lastStepChangeAt = now;
+  }
+
+  function flushPendingStep() {
+    if (pendingIndex === null) return;
+
+    const now = Date.now();
+    if (now - lastStepChangeAt < stepHoldDuration) return;
+
+    setActiveStep(pendingIndex);
+    pendingIndex = null;
+    lastStepChangeAt = now;
   }
 
   function scheduleScrollUpdate() {
@@ -682,6 +717,7 @@ if (howItWorksSection && howItWorksStepsContainer) {
     rafPending = true;
     window.requestAnimationFrame(() => {
       updateStepFromScroll();
+      flushPendingStep();
       rafPending = false;
     });
   }
@@ -691,11 +727,15 @@ if (howItWorksSection && howItWorksStepsContainer) {
       howItWorksSection.classList.add("mobile-step-scroll");
       howItWorksSection.style.setProperty("--step-count", String(steps.length));
       setActiveStep(0);
+      pendingIndex = null;
+      lastStepChangeAt = Date.now();
       updateStepFromScroll();
     } else {
       howItWorksSection.classList.remove("mobile-step-scroll", "step-end");
       howItWorksSection.style.removeProperty("--step-count");
       activeIndex = -1;
+      pendingIndex = null;
+      lastStepChangeAt = 0;
       steps.forEach((step) => {
         step.classList.remove("step-active");
       });

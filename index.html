@@ -28,7 +28,7 @@
     
     <link rel="icon" href="YM.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" as="image" href="memories.JPG" fetchpriority="high">
+    <link rel="preload" as="image" href="optimized/memories-1600.jpg" fetchpriority="high">
 
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
 </head>
@@ -69,23 +69,23 @@
         <div class="video-carousel-container">
             <div class="video-carousel-track">
                 <div class="video-slide active">
-                    <video autoplay muted loop playsinline preload="auto" class="hero-video" poster="memories.JPG" alt="Photo booth at Toronto wedding">
-                        <source src="movie1.mov" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="metadata" class="hero-video" poster="optimized/memories-1600.jpg" alt="Photo booth at Toronto wedding">
+                        <source src="optimized/movie1-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="movie2.mov" type="video/mp4">
+                        <source src="optimized/movie2-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="movie3.mov" type="video/mp4">
+                        <source src="optimized/movie3-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="movie4.mov" type="video/mp4">
+                        <source src="optimized/movie4-web.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -149,17 +149,26 @@
         <h2>Our Services</h2>
         <div class="grid">
             <div class="card">
-                <img src="digital.JPEG" alt="A photo of a photobooth in front of a white backdrop." width="1200" height="1200" loading="lazy" decoding="async">
+                <picture>
+                    <source srcset="optimized/digital-900.webp" type="image/webp">
+                    <img src="optimized/digital-900.jpg" alt="A photo of a photobooth in front of a white backdrop." width="1200" height="1200" loading="lazy" decoding="async">
+                </picture>
                 <h3>Digital Booth</h3>
                 <p>High quality DSLR photos available right away.</p>
             </div>
             <div class="card">
-                <img src="print.jpg" alt="A print from a DNP RX1HS printer." width="1200" height="1200" loading="lazy" decoding="async">
+                <picture>
+                    <source srcset="optimized/print-900.webp" type="image/webp">
+                    <img src="optimized/print-900.jpg" alt="A print from a DNP RX1HS printer." width="1200" height="1200" loading="lazy" decoding="async">
+                </picture>
                 <h3>Print Booth</h3>
                 <p>Unlimited prints plus digital photos.</p>
             </div>
             <div class="card">
-                <img src="hero2.jpg" alt="A group of people posing for a photo. Shown in Black and White Glam Style." width="1200" height="1200" loading="lazy" decoding="async">
+                <picture>
+                    <source srcset="optimized/hero2-900.webp" type="image/webp">
+                    <img src="optimized/hero2-900.jpg" alt="A group of people posing for a photo. Shown in Black and White Glam Style." width="1200" height="1200" loading="lazy" decoding="async">
+                </picture>
                 <h3>Glam Booth</h3>
                 <p>A touch of timeless elegance. Available in Digital or Print.</p>
             </div>
@@ -188,7 +197,10 @@
           
           <div class="step">
               <div class="step-image">
-                  <img src="props-backdrop.jpeg" alt="A photobooth setup with a flower wall and prop table." width="700" height="700" loading="lazy" decoding="async">
+                  <picture>
+                      <source srcset="optimized/props-backdrop-900.webp" type="image/webp">
+                      <img src="optimized/props-backdrop-900.jpg" alt="A photobooth setup with a flower wall and prop table." width="700" height="700" loading="lazy" decoding="async">
+                  </picture>
                   <div class="image-overlay">
                       <p>Choose a template that you want to customize. Want props? Let us know! 
                         Choose from our wide array of backdrops or request a different one. 
@@ -201,7 +213,10 @@
           
           <div class="step">
               <div class="step-image">
-                  <img src="pose-2.jpeg" alt="A group of friends in front of a photobooth posing for the photo." width="700" height="700" loading="lazy" decoding="async">
+                  <picture>
+                      <source srcset="optimized/pose-2-900.webp" type="image/webp">
+                      <img src="optimized/pose-2-900.jpg" alt="A group of friends in front of a photobooth posing for the photo." width="700" height="700" loading="lazy" decoding="async">
+                  </picture>
                   <div class="image-overlay">
                       <p>Guests pose, snap photos, get instant prints & digital shares</p>
                   </div>
@@ -309,7 +324,7 @@
     </div>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq" class="faq faq-home">
     <div class="faq-container">
         <div class="faq-heading">
         <h2>Frequently Asked Questions</h2>
@@ -359,6 +374,7 @@
             </div>
         </details>
         </div>
+        <p class="faq-more-link"><a href="faq.html" class="cta-btn">View All FAQs</a></p>
     </div>
     </section>
 
@@ -366,19 +382,19 @@
         <h2>Planning Tips From Our Blog</h2>
         <p class="pricing-subtitle">Helpful guides for weddings, corporate events, and parties across Toronto, Barrie, and the GTA.</p>
         <div class="grid">
-            <article class="card blog-preview-card">
+            <article class="card blog-preview-card" data-published="2026-02-22">
                 <p class="blog-tag">Mississauga Corporate Events</p>
                 <h3>Corporate Event Photo Booth Ideas in Mississauga That Actually Engage Guests</h3>
                 <p>Discover practical ideas to boost participation and deliver stronger branded moments at corporate events.</p>
                 <a href="blog/corporate-event-photo-booth-ideas-mississauga.html" class="blog-read-more">Read the guide →</a>
             </article>
-            <article class="card blog-preview-card">
+            <article class="card blog-preview-card" data-published="2026-02-22">
                 <p class="blog-tag">Barrie Venue Guide</p>
                 <h3>Best Barrie Wedding Venues for Photo Booth Setups (2026 Guide)</h3>
                 <p>A local guide to venue layout, guest flow, and setup planning so your Barrie wedding booth runs smoothly and looks premium.</p>
                 <a href="blog/best-barrie-wedding-venues-photo-booth-2026.html" class="blog-read-more">Read the guide →</a>
             </article>
-            <article class="card blog-preview-card">
+            <article class="card blog-preview-card" data-published="2026-02-22">
                 <p class="blog-tag">Toronto Wedding Guide</p>
                 <h3>Ultimate Wedding Photo Booth Checklist for Toronto Couples</h3>
                 <p>Learn the exact setup, timeline, and design decisions that create a smooth guest experience and better photos.</p>

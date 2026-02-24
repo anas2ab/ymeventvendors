@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://ymeventvendors.ca/blog/</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-23</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -51,6 +51,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ymeventvendors.ca/blog/photo-booth-business-tips-for-new-owners-2026.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ymeventvendors.ca/blog/photo-booth-equipment-checklist-for-beginners-2026.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ymeventvendors.ca/privacy-policy.html</loc>
     <lastmod>2026-02-22</lastmod>
     <priority>0.4</priority>
@@ -59,5 +69,10 @@
     <loc>https://ymeventvendors.ca/terms.html</loc>
     <lastmod>2026-02-22</lastmod>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ymeventvendors.ca/faq.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>

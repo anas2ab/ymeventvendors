@@ -19,11 +19,33 @@ const videoCarousel = document.querySelector(".video-carousel-container");
 
 if (videoCarousel) {
   let currentVideoIndex = 0;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const prefersReducedData =
+    navigator.connection && navigator.connection.saveData;
+  const lowBandwidthConnection =
+    navigator.connection &&
+    /(^|\b)(slow-2g|2g)(\b|$)/.test(navigator.connection.effectiveType || "");
+  const shouldMinimizeVideoLoad =
+    prefersReducedMotion || prefersReducedData || lowBandwidthConnection;
 
   const videoTrack = document.querySelector(".video-carousel-track");
   const videoSlides = document.querySelectorAll(".video-slide");
   const videoDots = document.querySelectorAll(".carousel-dots .dot");
   const totalVideos = videoSlides.length;
+
+  function ensureVideoSource(videoElement) {
+    if (!videoElement) return;
+
+    const source = videoElement.querySelector("source[data-src]");
+    if (!source) return;
+
+    if (!source.getAttribute("src")) {
+      source.setAttribute("src", source.getAttribute("data-src") || "");
+      videoElement.load();
+    }
+  }
 
   function updateHeroVideo() {
     if (!videoTrack || totalVideos === 0) return;
@@ -37,6 +59,7 @@ if (videoCarousel) {
       if (!vid) return;
 
       if (i === currentVideoIndex) {
+        ensureVideoSource(vid);
         vid.play().catch(() => {});
       } else {
         vid.pause();
@@ -63,16 +86,35 @@ if (videoCarousel) {
   };
 
   // Initialize
-  updateHeroVideo();
+  if (shouldMinimizeVideoLoad) {
+    videoTrack.style.transform = "translateX(0%)";
+    videoSlides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === 0);
+    });
+    videoDots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === 0);
+    });
+  } else if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(updateHeroVideo, { timeout: 1200 });
+  } else {
+    window.addEventListener("load", updateHeroVideo, { once: true });
+  }
 
-  let autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+  let autoVideoInterval = null;
+  if (!shouldMinimizeVideoLoad) {
+    autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+  }
 
   videoCarousel.addEventListener("mouseenter", () => {
-    clearInterval(autoVideoInterval);
+    if (autoVideoInterval) {
+      clearInterval(autoVideoInterval);
+    }
   });
 
   videoCarousel.addEventListener("mouseleave", () => {
-    autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+    if (!shouldMinimizeVideoLoad) {
+      autoVideoInterval = setInterval(() => changeHeroVideo(1), 6000);
+    }
   });
 }
 

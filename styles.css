@@ -94,6 +94,10 @@ button {
 }
 
 section { padding: clamp(4.25rem, 6vw, 6rem) 5%; text-align: center; }
+section:not(.hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+}
 h2 { font-size: 2.2rem; margin-bottom: 2.2rem; line-height: 1.2; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .card {

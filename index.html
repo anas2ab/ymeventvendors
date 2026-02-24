@@ -28,7 +28,7 @@
     
     <link rel="icon" href="YM.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preload" as="image" href="optimized/memories-1600.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="optimized/memories-1600.webp" type="image/webp" fetchpriority="high">
 
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
 </head>
@@ -69,23 +69,23 @@
         <div class="video-carousel-container">
             <div class="video-carousel-track">
                 <div class="video-slide active">
-                    <video autoplay muted loop playsinline preload="metadata" class="hero-video" poster="optimized/memories-1600.jpg" alt="Photo booth at Toronto wedding">
-                        <source src="optimized/movie1-web.mp4" type="video/mp4">
+                    <video autoplay muted loop playsinline preload="none" class="hero-video" poster="optimized/memories-1600.webp" aria-label="Photo booth at Toronto wedding">
+                        <source data-src="optimized/movie1-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="optimized/movie2-web.mp4" type="video/mp4">
+                        <source data-src="optimized/movie2-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="optimized/movie3-web.mp4" type="video/mp4">
+                        <source data-src="optimized/movie3-web.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-slide">
                     <video autoplay muted loop playsinline preload="none" class="hero-video">
-                        <source src="optimized/movie4-web.mp4" type="video/mp4">
+                        <source data-src="optimized/movie4-web.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>

@@ -419,112 +419,143 @@
         stunning designs. More options available upon request.
       </p>
       <br />
+      <!-- Optimized Backdrop Gallery HTML -->
       <div class="backdrop-grid">
         <div class="backdrop-item">
-          <img
-            src="backdrops/white.png"
-            alt="White 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/white.webp" type="image/webp" />
+            <img
+              src="backdrops/white.jpg"
+              alt="White 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>Just White</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/ivory.png"
-            alt="Ivory 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/ivory.webp" type="image/webp" />
+            <img
+              src="backdrops/ivory.jpg"
+              alt="Ivory 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>Dreamy Ivory</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/marble.png"
-            alt="Marble 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/marble.webp" type="image/webp" />
+            <img
+              src="backdrops/marble.jpg"
+              alt="Marble 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>Marble Slab</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/green.png"
-            alt="Green 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/green.webp" type="image/webp" />
+            <img
+              src="backdrops/green.jpg"
+              alt="Green 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>British Racing Green</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/sunset.png"
-            alt="Pink Sunset 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/sunset.webp" type="image/webp" />
+            <img
+              src="backdrops/sunset.jpg"
+              alt="Pink Sunset 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>California Sunset</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/pink.png"
-            alt="Hot pink 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/pink.webp" type="image/webp" />
+            <img
+              src="backdrops/pink.jpg"
+              alt="Hot pink 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>It's a girl! Pink</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/floral.png"
-            alt="Floral 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/floral.webp" type="image/webp" />
+            <img
+              src="backdrops/floral.jpg"
+              alt="Floral 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>Eden's Garden</h4>
           </div>
         </div>
+
         <div class="backdrop-item">
-          <img
-            src="backdrops/black.png"
-            alt="Black 8x8 backdrop"
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
+          <picture>
+            <source srcset="backdrops/black.webp" type="image/webp" />
+            <img
+              src="backdrops/black.jpg"
+              alt="Black 8x8 backdrop"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
           <div class="backdrop-hover">
             <h4>Black Veil Brides</h4>
           </div>
         </div>
-        <!-- Add your real backdrop images -->
       </div>
       <div class="backdrop-cta">
         <button onclick="document.getElementById('contact').scrollIntoView()">
@@ -806,17 +837,20 @@
             "description": "Premium photo booth rentals for weddings, corporate events and parties across Toronto, Barrie and GTA.",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Toronto",
+              "streetAddress": "681 Yonge Street",
+              "addressLocality": "Barrie",
               "addressRegion": "ON",
+              "postalCode": "L9J 0K1",
               "addressCountry": "CA"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 43.6532,
-              "longitude": -79.3832
+              "latitude": 44.3554,
+              "longitude": -79.6419
             },
             "url": "https://ymeventvendors.ca",
             "telephone": "647-761-2790",
+            "email": "contact@ymeventvendors.ca",
             "priceRange": "$$",
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
@@ -836,7 +870,15 @@
               "https://instagram.com/yourmajestyeventvendors",
               "https://facebook.com/yourmajestyeventvendors",
               "https://tiktok.com/@ymeventvendors"
-            ]
+            ],
+            "paymentAccepted": ["Cash", "Credit Card", "Interac"],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "3",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
           },
           {
             "@type": "Service",
@@ -860,64 +902,24 @@
                 "name": "Greater Toronto Area"
               }
             ],
-            "offers": {
-              "@type": "Offer",
-              "priceCurrency": "CAD",
-              "price": "300",
-              "availability": "https://schema.org/InStock",
-              "url": "https://ymeventvendors.ca/#pricing"
-            }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
+            "offers": [
               {
-                "@type": "Question",
-                "name": "What’s included in your photo booth rental?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Setup + takedown, high-quality DSLR photos, unlimited sessions, a digital gallery, and an attendant (if included in your package). Prints, props, and custom templates depend on the package you choose."
-                }
+                "@type": "Offer",
+                "name": "Digital Package",
+                "priceCurrency": "CAD",
+                "price": "300",
+                "availability": "https://schema.org/InStock",
+                "url": "https://ymeventvendors.ca/#pricing",
+                "description": "Digital photos, props, backdrop, two attendants, online gallery, custom template design"
               },
               {
-                "@type": "Question",
-                "name": "How much space and power do you need?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Typically we need a small area (about 8x8 ft is great) and a standard electrical outlet within reach. If your venue has restrictions, tell us and we’ll plan accordingly."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can you customize the print template to match my event?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes—templates can include names, dates, monograms, colors, themes, and corporate logos. We’ll confirm your design before the event."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you provide props and backdrops?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes—props and backdrops are available depending on your package. You can also choose from our backdrop catalogue and request custom options."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How far in advance should I book?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Earlier is better—popular weekends book up fast. If your date is soon, still reach out; we sometimes have last‑minute availability."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you charge travel fees?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Travel fees can apply outside your included service area. Tell us your venue location and we’ll confirm any travel cost upfront."
-                }
+                "@type": "Offer",
+                "name": "Unlimited Prints Package",
+                "priceCurrency": "CAD",
+                "price": "400",
+                "availability": "https://schema.org/InStock",
+                "url": "https://ymeventvendors.ca/#pricing",
+                "description": "Everything in Digital plus unlimited 2x6 prints, envelopes, video boomerangs/GIFs, audio guestbook"
               }
             ]
           }

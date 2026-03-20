@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
 </head>
-<body>
+<body class="blog-page">
     <nav class="navbar">
         <div class="logo">YM Event Vendors</div>
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -24,50 +24,76 @@
         </button>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="services.html" class="nav-link">Packages</a></li>
             <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-            <li><a href="blog/index.html" class="nav-link">Blog</a></li>
-            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="index.html#backdrops" class="nav-link">Backdrops</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Locations ▾</a>
+                <div class="dropdown-menu">
+                    <a href="barrie.html">Barrie</a>
+                    <a href="toronto.html">Toronto</a>
+                    <a href="vaughan.html">Vaughan</a>
+                    <a href="brampton.html">Brampton</a>
+                    <a href="mississauga.html">Mississauga</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">More ▾</a>
+                <div class="dropdown-menu">
+                    <a href="about.html">About</a>
+                    <a href="blog/index.html">Blog</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
         </ul>
     </nav>
     <div class="menu-overlay"></div>
 
-    <section class="legal-page">
-        <div class="legal-content">
-            <h1>Terms & Conditions</h1>
-            <p><strong>Effective date:</strong> February 22, 2026</p>
+    <article class="blog-post">
+      <header class="blog-post-header">
+        <p class="blog-tag">Legal</p>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="blog-meta"><span>Effective date: February 22, 2026</span></p>
+        <p class="blog-intro">Please read these terms carefully before booking or using our services.</p>
+      </header>
 
-            <h2>1. Services</h2>
-            <p>Your Majesty Event Vendors provides photo booth rental services for private and corporate events, subject to availability and written confirmation.</p>
+      <section class="blog-post-section">
+        <h2>1. Services</h2>
+        <p>Your Majesty Event Vendors provides photo booth rental services for private and corporate events, subject to availability and written confirmation.</p>
 
-            <h2>2. Booking and payments</h2>
-            <p>A booking is confirmed once required payment terms are accepted and any required deposit is received. Remaining balances are due as agreed in your quote or invoice.</p>
+        <h2>2. Booking and payments</h2>
+        <p>A booking is confirmed once required payment terms are accepted and any required deposit is received. Remaining balances are due as agreed in your quote or invoice.</p>
 
-            <h2>3. Cancellations and rescheduling</h2>
-            <p>Cancellation and rescheduling terms are provided at booking and may vary based on notice period, date availability, and event scope.</p>
+        <h2>3. Cancellations and rescheduling</h2>
+        <p>Cancellation and rescheduling terms are provided at booking and may vary based on notice period, date availability, and event scope.</p>
 
-            <h2>4. Client responsibilities</h2>
-            <p>Clients are responsible for providing accurate event details, access to venue space, power access, and a safe operating environment for equipment and staff.</p>
+        <h2>4. Client responsibilities</h2>
+        <p>Clients are responsible for providing accurate event details, access to venue space, power access, and a safe operating environment for equipment and staff.</p>
 
-            <h2>5. Equipment and liability</h2>
-            <p>We are not responsible for delays or interruptions caused by venue restrictions, force majeure events, or conditions outside our reasonable control. Clients may be responsible for damage caused by misuse or negligence.</p>
+        <h2>5. Equipment and liability</h2>
+        <p>We are not responsible for delays or interruptions caused by venue restrictions, force majeure events, or conditions outside our reasonable control. Clients may be responsible for damage caused by misuse or negligence.</p>
 
-            <h2>6. Media usage</h2>
-            <p>Unless otherwise agreed in writing, we may use non-sensitive event media for portfolio and promotional purposes. You can request exclusion in writing before your event.</p>
+        <h2>6. Media usage</h2>
+        <p>Unless otherwise agreed in writing, we may use non-sensitive event media for portfolio and promotional purposes. You can request exclusion in writing before your event.</p>
 
-            <h2>7. Limitation of liability</h2>
-            <p>To the maximum extent permitted by law, our liability is limited to the amount paid for the affected services.</p>
+        <h2>7. Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, our liability is limited to the amount paid for the affected services.</p>
 
-            <h2>8. Contact</h2>
-            <p>Questions about these terms can be sent to <a href="mailto:contact@ymeventvendors.ca">contact@ymeventvendors.ca</a> or by phone at <a href="tel:6477612790">647-761-2790</a>.</p>
-        </div>
-    </section>
+        <h2>8. Contact</h2>
+        <p>Questions about these terms can be sent to <a href="mailto:contact@ymeventvendors.ca">contact@ymeventvendors.ca</a> or by phone at <a href="tel:6477612790">647-761-2790</a>.</p>
+      </section>
 
-    <footer class="footer">
-        <div class="footer-bottom">
-            <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
-        </div>
-    </footer>
+      <nav class="blog-post-nav" aria-label="Page navigation">
+        <a href="index.html">&larr; Back to Home</a>
+        <a href="privacy-policy.html">Privacy Policy &rarr;</a>
+      </nav>
+    </article>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
+    </div>
 
     <script src="emailjs.config.js" defer></script>
     <script src="script.js" defer></script>

@@ -454,10 +454,120 @@ function closeMenu() {
   document.body.classList.remove("no-scroll");
 }
 
+function clearCurrentNavState() {
+  document
+    .querySelectorAll('.nav-link[aria-current], .dropdown-menu a[aria-current]')
+    .forEach((link) => link.removeAttribute("aria-current"));
+}
+
+function setCurrentNavState(link, value = "page") {
+  if (!link) return;
+  link.setAttribute("aria-current", value);
+}
+
+function getNormalizedPathname() {
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  const last = segments[segments.length - 1] || "index.html";
+  const parent = segments[segments.length - 2] || "";
+
+  if (parent === "blog") {
+    return `blog/${last}`;
+  }
+
+  return last;
+}
+
+function updatePageNavState() {
+  clearCurrentNavState();
+
+  const currentPath = getNormalizedPathname();
+  const currentLinks = Array.from(document.querySelectorAll(".nav-link"));
+  const dropdownLinks = Array.from(document.querySelectorAll(".dropdown-menu a"));
+  const locationTrigger = document.querySelector(
+    '.dropdown:first-of-type > .nav-link',
+  );
+  const moreTrigger = document.querySelector(
+    '.dropdown:last-of-type > .nav-link',
+  );
+
+  const directMatch = currentLinks.find((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return false;
+    return href.split("#")[0] === currentPath;
+  });
+
+  if (directMatch && currentPath !== "index.html") {
+    setCurrentNavState(directMatch);
+    return;
+  }
+
+  const locationPages = new Set([
+    "barrie.html",
+    "toronto.html",
+    "vaughan.html",
+    "brampton.html",
+    "mississauga.html",
+  ]);
+  const morePages = new Set([
+    "about.html",
+    "blog/index.html",
+    "faq.html",
+    "contact.html",
+  ]);
+
+  const currentDropdownLink = dropdownLinks.find((link) => {
+    const href = link.getAttribute("href");
+    return href === currentPath;
+  });
+
+  if (currentDropdownLink) {
+    setCurrentNavState(currentDropdownLink);
+  }
+
+  if (locationPages.has(currentPath)) {
+    setCurrentNavState(locationTrigger);
+    return;
+  }
+
+  if (morePages.has(currentPath)) {
+    setCurrentNavState(moreTrigger);
+    return;
+  }
+
+  if (currentPath === "index.html") {
+    updateSectionNavState();
+  }
+}
+
+function updateSectionNavState() {
+  if (getNormalizedPathname() !== "index.html") return;
+
+  const sectionLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+  if (sectionLinks.length === 0) return;
+
+  const activeSectionLink = sectionLinks.find((link) => {
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return false;
+    const rect = target.getBoundingClientRect();
+    return rect.top <= 140 && rect.bottom >= 140;
+  });
+
+  document
+    .querySelectorAll('.nav-link[href^="#"]')
+    .forEach((link) => link.removeAttribute("aria-current"));
+
+  if (activeSectionLink) {
+    setCurrentNavState(activeSectionLink);
+  }
+}
+
 if (menuToggle && navMenu && menuOverlay) {
   menuToggle.addEventListener("click", toggleMenu);
   menuOverlay.addEventListener("click", closeMenu);
 }
+
+updatePageNavState();
+window.addEventListener("scroll", updateSectionNavState, { passive: true });
 
 // Smooth-scroll ONLY for same-page hash links (#section)
 navLinks.forEach((link) => {
@@ -489,6 +599,24 @@ navLinks.forEach((link) => {
     }, 300);
   });
 });
+
+// =======================
+// FIX HASH SCROLL OFFSET ON PAGE LOAD (cross-page links)
+// =======================
+if (window.location.hash) {
+  // Wait for the page to fully render, then re-scroll with navbar offset
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      var target = document.querySelector(window.location.hash);
+      if (target) {
+        var navHeight = 100;
+        var targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      }
+    }, 100);
+  }, { once: true });
+}
 
 // =======================
 // MOBILE DROPDOWN TOGGLE (only if dropdown exists)
@@ -661,116 +789,6 @@ if (backdropDeck) {
 }
 
 // =======================
-// MOBILE HOW-IT-WORKS SCROLL STEPPER (index page)
-// =======================
-const howItWorksSection = document.querySelector(".how-it-works");
-const howItWorksStepsContainer = document.querySelector(".steps-container");
-
-if (howItWorksSection && howItWorksStepsContainer) {
-  const mobileStepsQuery = window.matchMedia("(max-width: 768px)");
-  const steps = Array.from(howItWorksStepsContainer.querySelectorAll(".step"));
-  const stepHoldDuration = 1000;
-  let activeIndex = -1;
-  let pendingIndex = null;
-  let lastStepChangeAt = 0;
-  let rafPending = false;
-
-  function setActiveStep(index) {
-    if (activeIndex === index) return;
-
-    activeIndex = index;
-    steps.forEach((step, stepIndex) => {
-      step.classList.toggle("step-active", stepIndex === index);
-    });
-
-    howItWorksSection.classList.toggle("step-end", index >= steps.length - 1);
-  }
-
-  function updateStepFromScroll() {
-    if (!mobileStepsQuery.matches || steps.length === 0) return;
-
-    const rect = howItWorksSection.getBoundingClientRect();
-    const scrollDistance = Math.max(rect.height - window.innerHeight, 1);
-    const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
-    const maxIndex = Math.max(steps.length - 1, 0);
-    let targetIndex = Math.min(
-      maxIndex,
-      Math.max(0, Math.floor(progress * (maxIndex + 1))),
-    );
-
-    if (activeIndex >= 0) {
-      if (targetIndex > activeIndex + 1) {
-        targetIndex = activeIndex + 1;
-      } else if (targetIndex < activeIndex - 1) {
-        targetIndex = activeIndex - 1;
-      }
-    }
-
-    if (targetIndex === activeIndex) {
-      pendingIndex = null;
-      return;
-    }
-
-    const now = Date.now();
-    if (now - lastStepChangeAt < stepHoldDuration) {
-      pendingIndex = targetIndex;
-      return;
-    }
-
-    pendingIndex = null;
-    setActiveStep(targetIndex);
-    lastStepChangeAt = now;
-  }
-
-  function flushPendingStep() {
-    if (pendingIndex === null) return;
-
-    const now = Date.now();
-    if (now - lastStepChangeAt < stepHoldDuration) return;
-
-    setActiveStep(pendingIndex);
-    pendingIndex = null;
-    lastStepChangeAt = now;
-  }
-
-  function scheduleScrollUpdate() {
-    if (!mobileStepsQuery.matches || rafPending) return;
-
-    rafPending = true;
-    window.requestAnimationFrame(() => {
-      updateStepFromScroll();
-      flushPendingStep();
-      rafPending = false;
-    });
-  }
-
-  function initializeHowItWorksMobile() {
-    if (mobileStepsQuery.matches) {
-      howItWorksSection.classList.add("mobile-step-scroll");
-      howItWorksSection.style.setProperty("--step-count", String(steps.length));
-      setActiveStep(0);
-      pendingIndex = null;
-      lastStepChangeAt = Date.now();
-      updateStepFromScroll();
-    } else {
-      howItWorksSection.classList.remove("mobile-step-scroll", "step-end");
-      howItWorksSection.style.removeProperty("--step-count");
-      activeIndex = -1;
-      pendingIndex = null;
-      lastStepChangeAt = 0;
-      steps.forEach((step) => {
-        step.classList.remove("step-active");
-      });
-    }
-  }
-
-  window.addEventListener("scroll", scheduleScrollUpdate, { passive: true });
-  window.addEventListener("resize", scheduleScrollUpdate);
-  mobileStepsQuery.addEventListener("change", initializeHowItWorksMobile);
-  initializeHowItWorksMobile();
-}
-
-// =======================
 // HOMEPAGE BLOG PREVIEW SORT (newest first)
 // =======================
 const blogPreviewGrid = document.querySelector(".blog-preview .grid");
@@ -792,4 +810,94 @@ if (blogPreviewGrid) {
     .forEach((card) => {
       blogPreviewGrid.appendChild(card);
     });
+}
+
+// =======================
+// BENTO GALLERY (CSS Grid Based)
+// =======================
+const bentoGalleryContainer = document.getElementById("bentoGallery");
+
+if (bentoGalleryContainer) {
+  // Gallery data — jpg is full-quality fallback, webp is preferred format
+  const galleryItems = [
+    { id: 1, jpg: "gallery/pic1.jpg", webp: "gallery/pic1.webp", alt: "Family posing at the photobooth" },
+    { id: 2, jpg: "gallery/pic2.jpg", webp: "gallery/pic2.webp", alt: "Four friends enjoying the event" },
+    { id: 3, jpg: "gallery/pic3.jpg", webp: "gallery/pic3.webp", alt: "Baby pointing at a baby bump" },
+    { id: 4, jpg: "gallery/pic4.jpg", webp: "gallery/pic4.webp", alt: "Couple posing in a glam booth" },
+    { id: 5, jpg: "gallery/pic5.jpg", webp: "gallery/pic5.webp", alt: "Christmas family fun with grandpa" },
+    { id: 6, jpg: "gallery/pic6.jpg", webp: "gallery/pic6.webp", alt: "Desi wedding photo of the bride and groom" },
+    { id: 7, jpg: "gallery/pic7.jpg", webp: "gallery/pic7.webp", alt: "Scenic outdoor shot by the lake" },
+  ];
+
+  // Populate gallery
+  function initializeBentoGallery() {
+    bentoGalleryContainer.innerHTML = galleryItems
+      .map(
+        (item, index) => `
+      <div class="bento-item" tabindex="0" data-id="${item.id}" data-index="${index}">
+        <picture>
+          <source srcset="${item.webp}" type="image/webp" />
+          <img
+            src="${item.jpg}"
+            alt="${item.alt}"
+            class="bento-item-image"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </div>
+    `,
+      )
+      .join("");
+  }
+
+  // Initialize gallery
+  initializeBentoGallery();
+
+  // Modal elements
+  const modalOverlay = document.getElementById("bentoModalOverlay");
+  const modalImage = document.getElementById("bentoModalImage");
+  const modalClose = document.getElementById("bentoModalClose");
+
+  // Open modal — show full-quality jpg on expand
+  function openModal(item) {
+    modalImage.src = item.jpg;
+    modalImage.alt = item.alt;
+    modalOverlay.classList.add("active");
+  }
+
+  // Close modal
+  function closeModal() {
+    modalOverlay.classList.remove("active");
+  }
+
+  // Gallery item interactions — use delegation so elements exist when handler fires
+  bentoGalleryContainer.addEventListener("click", (e) => {
+    const item = e.target.closest(".bento-item");
+    if (!item) return;
+    openModal(galleryItems[parseInt(item.dataset.index, 10)]);
+  });
+
+  bentoGalleryContainer.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const item = e.target.closest(".bento-item");
+    if (!item) return;
+    e.preventDefault();
+    openModal(galleryItems[parseInt(item.dataset.index, 10)]);
+  });
+
+  // Modal close handlers
+  modalClose.addEventListener("click", closeModal);
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  // Keyboard close (Escape)
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("active")) {
+      closeModal();
+    }
+  });
 }

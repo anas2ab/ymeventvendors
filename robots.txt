@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /blog/post-template.html
 Sitemap: https://ymeventvendors.ca/sitemap.xml
+Sitemap: https://ymeventvendors.ca/image-sitemap.xml

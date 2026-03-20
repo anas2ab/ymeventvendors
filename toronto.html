@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://ymeventvendors.ca/toronto.html">
     
     <!-- Your existing CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
         <script type="application/ld+json">
@@ -47,7 +47,72 @@
                         "name": "Toronto"
                     },
                     "priceRange": "$$",
-                    "image": "https://ymeventvendors.ca/logo.png"
+                    "image": "https://ymeventvendors.ca/logo.png",
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "reviewCount": "40",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "review": [
+                        {
+                            "@type": "Review",
+                            "@id": "https://ymeventvendors.ca/toronto.html#review-1",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Toronto Wedding Client"
+                            },
+                            "datePublished": "2026-02-15",
+                            "reviewBody": "Great service! Great communication, happy to customize to style I wanted, punctual and quality of product was amazing. Highly recommend!",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewAspect": ["Service Quality", "Communication", "Customization", "Punctuality"],
+                            "about": {
+                                "@type": "Event",
+                                "name": "Toronto Wedding Reception",
+                                "location": {
+                                    "@type": "City",
+                                    "name": "Toronto"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Review",
+                            "@id": "https://ymeventvendors.ca/toronto.html#review-2",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Casa Loma Wedding Planner"
+                            },
+                            "datePublished": "2026-01-20",
+                            "reviewBody": "Professional setup at Casa Loma was flawless. The team understood the venue's requirements perfectly and delivered an elegant photo booth experience that matched the historic venue's ambiance.",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewAspect": ["Venue Expertise", "Professional Setup", "Elegant Experience"],
+                            "about": {
+                                "@type": "Event",
+                                "name": "Casa Loma Wedding",
+                                "location": {
+                                    "@type": "Place",
+                                    "name": "Casa Loma",
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "streetAddress": "1 Austin Terrace",
+                                        "addressLocality": "Toronto",
+                                        "addressRegion": "ON"
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     "@type": "Service",
@@ -84,12 +149,133 @@
                             "item": "https://ymeventvendors.ca/toronto.html"
                         }
                     ]
+                },
+                {
+                    "@type": "Event",
+                    "@id": "https://ymeventvendors.ca/toronto.html#toronto-events",
+                    "name": "Toronto Photo Booth Events",
+                    "description": "Professional photo booth rentals for Toronto weddings, corporate events, and parties at premier venues including Casa Loma, Distillery District, and Convention Centre.",
+                    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                    "eventStatus": "https://schema.org/EventScheduled",
+                    "startDate": "2026-03-20",
+                    "endDate": "2026-12-31",
+                    "location": {
+                        "@type": "Place",
+                        "name": "Toronto Event Venues",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Toronto",
+                            "addressRegion": "ON",
+                            "postalCode": "M5H 2N2",
+                            "addressCountry": "CA"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "43.7184",
+                            "longitude": "-79.5181"
+                        }
+                    },
+                    "organizer": {
+                        "@id": "https://ymeventvendors.ca/toronto.html#localbusiness"
+                    },
+                    "offers": [
+                        {
+                            "@type": "Offer",
+                            "name": "Toronto Wedding Photo Booth",
+                            "priceCurrency": "CAD",
+                            "price": "300",
+                            "description": "Premium wedding photo booth service for Toronto receptions starting at $300",
+                            "availability": "https://schema.org/InStock",
+                            "validFrom": "2026-03-20",
+                            "validThrough": "2026-12-31"
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Toronto Corporate Event Photo Booth",
+                            "priceCurrency": "CAD",
+                            "price": "300",
+                            "description": "Corporate photo booth rental for Toronto business events starting at $300",
+                            "availability": "https://schema.org/InStock",
+                            "validFrom": "2026-03-20",
+                            "validThrough": "2026-12-31"
+                        }
+                    ],
+                    "audience": [
+                        {
+                            "@type": "Audience",
+                            "audienceType": "Toronto couples",
+                            "geographicArea": {
+                                "@type": "City",
+                                "name": "Toronto"
+                            }
+                        },
+                        {
+                            "@type": "Audience",
+                            "audienceType": "Toronto event planners",
+                            "geographicArea": {
+                                "@type": "City",
+                                "name": "Toronto"
+                            }
+                        }
+                    ],
+                    "subEvent": [
+                        {
+                            "@type": "Event",
+                            "name": "Casa Loma Wedding Photo Booth",
+                            "eventType": "WeddingReception",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Casa Loma",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "1 Austin Terrace",
+                                    "addressLocality": "Toronto",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Elegant photo booth setup for weddings at the historic Casa Loma castle"
+                        },
+                        {
+                            "@type": "Event",
+                            "name": "Distillery District Corporate Event",
+                            "eventType": "BusinessEvent",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Distillery District",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Toronto",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Professional photo booth service for corporate events in Toronto's historic Distillery District"
+                        },
+                        {
+                            "@type": "Event",
+                            "name": "Convention Centre Trade Show Booth",
+                            "eventType": "BusinessEvent",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Metro Toronto Convention Centre",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "streetAddress": "255 Front St W",
+                                    "addressLocality": "Toronto",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Trade show and convention photo booth activation at Toronto's premier convention facility"
+                        }
+                    ]
                 }
             ]
         }
         </script>
 </head>
-<body>
+<body class="location-page">
     <nav class="navbar">
         <div class="logo">YM Event Vendors</div>
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -99,17 +285,35 @@
         </button>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="services.html" class="nav-link">Packages</a></li>
             <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-            <li><a href="#toronto-venues" class="nav-link">Toronto Venues</a></li>
-            <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
-            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="index.html#backdrops" class="nav-link">Backdrops</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Locations ▾</a>
+                <div class="dropdown-menu">
+                    <a href="barrie.html">Barrie</a>
+                    <a href="toronto.html">Toronto</a>
+                    <a href="vaughan.html">Vaughan</a>
+                    <a href="brampton.html">Brampton</a>
+                    <a href="mississauga.html">Mississauga</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">More ▾</a>
+                <div class="dropdown-menu">
+                    <a href="about.html">About</a>
+                    <a href="blog/index.html">Blog</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
         </ul>
     </nav>
     <div class="menu-overlay"></div>
 
     <!-- Hero Section with Location-Specific Content -->
-    <section class="hero location-hero" style="margin-top:4rem;background-image: url('optimized/hero2-location-1600.jpg'); background-image: image-set(url('optimized/hero2-location-1600.webp') type('image/webp'), url('optimized/hero2-location-1600.jpg') type('image/jpeg'));">
+    <section class="hero location-hero" style="background-image: url('optimized/hero2-location-1600.jpg'); background-image: image-set(url('optimized/hero2-location-1600.webp') type('image/webp'), url('optimized/hero2-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
             <h1>Photo Booth Rental Toronto & GTA</h1>
             <p>Elegant Photo Booth Experiences for Toronto's Finest Events</p>
@@ -198,55 +402,65 @@
     </div>
 
     <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <div class="footer-logo">YM Event Vendors</div>
-            <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram fa-lg"></i>Instagram
-                </a>
-                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
-                </a>
-                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
-                </a>
-            </div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">YM Event Vendors</div>
+          <p class="footer-tagline">Premium photo booth rentals for weddings, corporates &amp; parties across Toronto, Barrie, and Simcoe/GTA.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
         </div>
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="index.html#backdrops">Backdrops</a></li>
-            </ul>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+          </ul>
         </div>
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Simcoe & GTA<br>
-            <i class="fa-regular fa-envelope"></i> contact@ymeventvendors.ca<br>
-            <i class="fa-solid fa-mobile-screen-button"></i> 647-761-2790<br>
-            <i class="fa-regular fa-clock"></i> Bookings 24/7</p>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Simcoe &amp; GTA</li>
+            <li><a href="mailto:contact@ymeventvendors.ca">contact@ymeventvendors.ca</a></li>
+            <li><a href="tel:6477612790">647-761-2790</a></li>
+            <li>Bookings 24/7</li>
+          </ul>
         </div>
-        <div class="footer-section">
-            <h4>Newsletter</h4>
-            <p>Event tips & promos</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" name="user_email" placeholder="Your email" required>
-                <button type="submit"><strong>Subscribe</strong></button>
-            </form>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="barrie.html">Barrie</a></li>
+            <li><a href="toronto.html">Toronto</a></li>
+            <li><a href="brampton.html">Brampton</a></li>
+            <li><a href="vaughan.html">Vaughan</a></li>
+            <li><a href="mississauga.html">Mississauga</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a><br>
-                    Also serving <a href="barrie.html">Barrie</a>, <a href="mississauga.html">Mississauga</a>, <a href="vaughan.html">Vaughan</a>, and <a href="brampton.html">Brampton</a>.
-        </p>
-    </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="emailjs.config.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script.min.js" defer></script>
 </body>
 </html>

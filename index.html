@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,13 +39,19 @@
     <link rel="canonical" href="https://ymeventvendors.ca/" />
 
     <link rel="icon" href="YM.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.min.css" />
     <link
       rel="preload"
       as="image"
       href="optimized/memories-1600.webp"
       type="image/webp"
       fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="video"
+      href="optimized/movie1-web.mp4"
+      type="video/mp4"
     />
 
     <script
@@ -54,7 +60,7 @@
       defer
     ></script>
   </head>
-  <body>
+  <body class="home-page">
     <header>
       <nav class="navbar">
         <div class="logo">YM Event Vendors</div>
@@ -65,8 +71,9 @@
         </button>
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="services.html" class="nav-link">Packages</a></li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
           <li><a href="#backdrops" class="nav-link">Backdrops</a></li>
           <li class="dropdown">
             <a href="#" class="nav-link">Locations ▾</a>
@@ -78,9 +85,15 @@
               <a href="mississauga.html">Mississauga</a>
             </div>
           </li>
-          <li><a href="blog/index.html" class="nav-link">Blog</a></li>
-          <li><a href="#faq" class="nav-link">FAQs</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link">More ▾</a>
+            <div class="dropdown-menu">
+              <a href="about.html">About</a>
+              <a href="blog/index.html">Blog</a>
+              <a href="faq.html">FAQs</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </li>
         </ul>
         <div class="menu-overlay"></div>
       </nav>
@@ -277,84 +290,6 @@
           <p>
             A professional photographer for a red carpet portrait experience.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how-it-works" class="how-it-works">
-      <h2>How do I get started? It's as easy as 1, 2, 3!</h2>
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-image">
-            <img
-              src="contact-us.jpg"
-              alt="A person using their phone to get in contact with someone else."
-              width="700"
-              height="700"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="image-overlay">
-              <p>
-                Fill inquiry form or call for custom quote. Our packages are
-                shown below. We usually do a minimum of 2 hours but for smaller
-                events we can do 1.5 hrs to save cost.
-              </p>
-            </div>
-          </div>
-          <p class="step-caption">1. Contact & Book</p>
-        </div>
-        <div class="step-arrow">➜</div>
-
-        <div class="step">
-          <div class="step-image">
-            <picture>
-              <source
-                srcset="optimized/props-backdrop-900.webp"
-                type="image/webp"
-              />
-              <img
-                src="optimized/props-backdrop-900.jpg"
-                alt="A photobooth setup with a flower wall and prop table."
-                width="700"
-                height="700"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <div class="image-overlay">
-              <p>
-                Choose a template that you want to customize. Want props? Let us
-                know! Choose from our wide array of backdrops or request a
-                different one. If we don't have it, we'll get it. Additional
-                costs may apply.
-              </p>
-            </div>
-          </div>
-          <p class="step-caption">2. Get Creative!</p>
-        </div>
-        <div class="step-arrow">➜</div>
-
-        <div class="step">
-          <div class="step-image">
-            <picture>
-              <source srcset="optimized/pose-2-900.webp" type="image/webp" />
-              <img
-                src="optimized/pose-2-900.jpg"
-                alt="A group of friends in front of a photobooth posing for the photo."
-                width="700"
-                height="700"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <div class="image-overlay">
-              <p>
-                Guests pose, snap photos, get instant prints & digital shares
-              </p>
-            </div>
-          </div>
-          <p class="step-caption">3. Capture Memories</p>
         </div>
       </div>
     </section>
@@ -649,63 +584,6 @@
       </div>
     </section>
 
-    <section class="blog-preview" aria-label="Latest planning resources">
-      <h2>Planning Tips From Our Blog</h2>
-      <p class="pricing-subtitle">
-        Helpful guides for weddings, corporate events, and parties across
-        Toronto, Barrie, and the GTA.
-      </p>
-      <div class="grid">
-        <article class="card blog-preview-card" data-published="2026-02-22">
-          <p class="blog-tag">Mississauga Corporate Events</p>
-          <h3>
-            Corporate Event Photo Booth Ideas in Mississauga That Actually
-            Engage Guests
-          </h3>
-          <p>
-            Discover practical ideas to boost participation and deliver stronger
-            branded moments at corporate events.
-          </p>
-          <a
-            href="blog/corporate-event-photo-booth-ideas-mississauga.html"
-            class="blog-read-more"
-            >Read the guide →</a
-          >
-        </article>
-        <article class="card blog-preview-card" data-published="2026-02-22">
-          <p class="blog-tag">Barrie Venue Guide</p>
-          <h3>
-            Best Barrie Wedding Venues for Photo Booth Setups (2026 Guide)
-          </h3>
-          <p>
-            A local guide to venue layout, guest flow, and setup planning so
-            your Barrie wedding booth runs smoothly and looks premium.
-          </p>
-          <a
-            href="blog/best-barrie-wedding-venues-photo-booth-2026.html"
-            class="blog-read-more"
-            >Read the guide →</a
-          >
-        </article>
-        <article class="card blog-preview-card" data-published="2026-02-22">
-          <p class="blog-tag">Toronto Wedding Guide</p>
-          <h3>Ultimate Wedding Photo Booth Checklist for Toronto Couples</h3>
-          <p>
-            Learn the exact setup, timeline, and design decisions that create a
-            smooth guest experience and better photos.
-          </p>
-          <a
-            href="blog/wedding-photo-booth-checklist-toronto.html"
-            class="blog-read-more"
-            >Read the guide →</a
-          >
-        </article>
-      </div>
-      <p class="blog-preview-all">
-        <a href="blog/index.html">View all articles</a>
-      </p>
-    </section>
-
     <section id="contact" class="contact">
       <h2>Get in Touch</h2>
       <form id="contactForm" name="contactForm">
@@ -727,88 +605,61 @@
     </div>
 
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
+      <div class="footer-inner">
+        <div class="footer-brand">
           <div class="footer-logo">YM Event Vendors</div>
-          <p>
-            Premium photo booth rentals for weddings, corporates & parties
-            across Toronto, Barrie, and Simcoe/GTA.
-          </p>
-          <div class="social-links">
-            <a
-              href="https://www.instagram.com/yourmajestyeventvendors/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-instagram fa-lg"></i>Instagram
+          <p class="footer-tagline">Premium photo booth rentals for weddings, corporates &amp; parties across Toronto, Barrie, and Simcoe/GTA.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
             </a>
-            <a
-              href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
+            <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a
-              href="https://www.tiktok.com/@ymeventvendors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
+            <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
             </a>
           </div>
         </div>
-        <div class="footer-section">
+        <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#backdrops">Backdrops</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQs</a></li>
             <li><a href="blog/index.html">Blog</a></li>
           </ul>
         </div>
-        <div class="footer-section">
+        <div class="footer-col">
           <h4>Contact</h4>
-          <p>
-            <i class="fa-solid fa-location-dot"></i> Simcoe & GTA<br />
-            <i class="fa-regular fa-envelope"></i>
-            contact@ymeventvendors.ca<br />
-            <i class="fa-solid fa-mobile-screen-button"></i> 647-761-2790<br />
-            <i class="fa-regular fa-clock"></i> Bookings 24/7
-          </p>
-          <br />
-          <h4>Service Areas</h4>
           <ul>
-            <li><a href="barrie.html">Photo Booth Rental Barrie</a></li>
-            <li><a href="toronto.html">Photo Booth Rental Toronto</a></li>
-            <li><a href="brampton.html">Photo Booth Rental Brampton</a></li>
-            <li><a href="vaughan.html">Photo Booth Rental Vaughan</a></li>
-            <li>
-              <a href="mississauga.html">Photo Booth Rental Mississauga</a>
-            </li>
+            <li>Simcoe &amp; GTA</li>
+            <li><a href="mailto:contact@ymeventvendors.ca">contact@ymeventvendors.ca</a></li>
+            <li><a href="tel:6477612790">647-761-2790</a></li>
+            <li>Bookings 24/7</li>
           </ul>
         </div>
-        <div class="footer-section">
-          <h4>Newsletter</h4>
-          <p>Event tips & promos</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Your email"
-              required
-            />
-            <button type="submit"><strong>Subscribe</strong></button>
-          </form>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="barrie.html">Barrie</a></li>
+            <li><a href="toronto.html">Toronto</a></li>
+            <li><a href="brampton.html">Brampton</a></li>
+            <li><a href="vaughan.html">Vaughan</a></li>
+            <li><a href="mississauga.html">Mississauga</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>
-          &copy; 2026 Your Majesty Event Vendors. All rights reserved. |
-          <a href="privacy-policy.html">Privacy Policy</a> |
-          <a href="terms.html">Terms & Conditions</a> | Serving GTA & Simcoe.
-        </p>
+        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
       </div>
     </footer>
 
@@ -818,7 +669,7 @@
       defer
     ></script>
     <script src="emailjs.config.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script.min.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -863,8 +714,8 @@
                 "Saturday",
                 "Sunday"
               ],
-              "opens": "00:00",
-              "closes": "23:59"
+              "opens": "09:00",
+              "closes": "18:00"
             },
             "sameAs": [
               "https://instagram.com/yourmajestyeventvendors",
@@ -875,10 +726,88 @@
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5",
-              "reviewCount": "3",
+              "reviewCount": "40",
               "bestRating": "5",
               "worstRating": "1"
-            }
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "@id": "https://ymeventvendors.ca/#review-1",
+                "author": {
+                  "@type": "Person",
+                  "name": "Toronto Wedding Client"
+                },
+                "datePublished": "2026-02-15",
+                "reviewBody": "Great service! Great communication, happy to customize to style I wanted, punctual and quality of product was amazing. Highly recommend!",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "reviewAspect": ["Service Quality", "Communication", "Punctuality", "Product Quality"],
+                "itemReviewed": {
+                  "@id": "https://ymeventvendors.ca/#service-photobooth"
+                }
+              },
+              {
+                "@type": "Review",
+                "@id": "https://ymeventvendors.ca/#review-2",
+                "author": {
+                  "@type": "Person",
+                  "name": "Corporate Event Coordinator"
+                },
+                "datePublished": "2026-01-28",
+                "reviewBody": "Guests were raving about the experience and asking to hire them for their own events. Highly recommend — they truly elevated the night!",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "reviewAspect": ["Guest Experience", "Event Enhancement", "Professional Service"],
+                "itemReviewed": {
+                  "@id": "https://ymeventvendors.ca/#service-photobooth"
+                },
+                "about": {
+                  "@type": "Event",
+                  "name": "Corporate Event in Mississauga",
+                  "location": {
+                    "@type": "City",
+                    "name": "Mississauga"
+                  }
+                }
+              },
+              {
+                "@type": "Review",
+                "@id": "https://ymeventvendors.ca/#review-3",
+                "author": {
+                  "@type": "Person",
+                  "name": "Barrie Reception Host"
+                },
+                "datePublished": "2026-01-10",
+                "reviewBody": "We definitely recommend Your Majesty Event Vendors to anyone who wants to capture those memorable events in the moment. Will definitely use them again.",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "reviewAspect": ["Memory Capture", "Moment Documentation", "Overall Satisfaction"],
+                "itemReviewed": {
+                  "@id": "https://ymeventvendors.ca/#service-photobooth"
+                },
+                "about": {
+                  "@type": "Event",
+                  "name": "Wedding Reception in Barrie",
+                  "location": {
+                    "@type": "City",
+                    "name": "Barrie"
+                  }
+                }
+              }
+            ]
           },
           {
             "@type": "Service",
@@ -920,6 +849,420 @@
                 "availability": "https://schema.org/InStock",
                 "url": "https://ymeventvendors.ca/#pricing",
                 "description": "Everything in Digital plus unlimited 2x6 prints, envelopes, video boomerangs/GIFs, audio guestbook"
+              }
+            ]
+          },
+          {
+            "@type": "Event",
+            "@id": "https://ymeventvendors.ca/#photo-booth-events",
+            "name": "Photo Booth Rental Events",
+            "description": "Professional photo booth services for weddings, corporate events, and private parties across Toronto, Barrie, and the GTA.",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "startDate": "2026-03-20",
+            "endDate": "2026-12-31",
+            "location": [
+              {
+                "@type": "Place",
+                "name": "Toronto Events",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Toronto",
+                  "addressRegion": "ON",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "Place",
+                "name": "Barrie Events",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Barrie",
+                  "addressRegion": "ON",
+                  "addressCountry": "CA"
+                }
+              },
+              {
+                "@type": "Place",
+                "name": "Greater Toronto Area Events",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressRegion": "ON",
+                  "addressCountry": "CA"
+                }
+              }
+            ],
+            "organizer": {
+              "@id": "https://ymeventvendors.ca/#business"
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Wedding Photo Booth Package",
+                "priceCurrency": "CAD",
+                "price": "300",
+                "description": "Complete photo booth service for wedding receptions starting at $300"
+              },
+              {
+                "@type": "Offer",
+                "name": "Corporate Event Photo Booth",
+                "priceCurrency": "CAD",
+                "price": "300",
+                "description": "Professional photo booth for corporate events starting at $300"
+              },
+              {
+                "@type": "Offer",
+                "name": "Private Party Photo Booth",
+                "priceCurrency": "CAD",
+                "price": "300",
+                "description": "Fun photo booth rental for birthdays and celebrations starting at $300"
+              }
+            ],
+            "audience": [
+              {
+                "@type": "Audience",
+                "audienceType": "Couples planning weddings"
+              },
+              {
+                "@type": "Audience",
+                "audienceType": "Corporate event planners"
+              },
+              {
+                "@type": "Audience",
+                "audienceType": "Party hosts"
+              }
+            ],
+            "subEvent": [
+              {
+                "@type": "Event",
+                "name": "Wedding Reception Photo Booth",
+                "eventType": "WeddingReception",
+                "description": "Photo booth service for wedding receptions with elegant backdrops and instant prints"
+              },
+              {
+                "@type": "Event",
+                "name": "Corporate Photo Activation",
+                "eventType": "BusinessEvent",
+                "description": "Branded photo booth experiences for corporate events and product launches"
+              },
+              {
+                "@type": "Event",
+                "name": "Birthday Party Photo Booth",
+                "eventType": "SocialEvent",
+                "description": "Fun photo booth rental for birthday celebrations and private parties"
+              }
+            ]
+          },
+          {
+            "@type": "ImageGallery",
+            "@id": "https://ymeventvendors.ca/#promotional-images",
+            "name": "YM Event Vendors Promotional Gallery",
+            "description": "Professional photo booth rental promotional images showcasing premium service quality across Toronto, Barrie, and the GTA",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/optimized/memories-1600.webp",
+                "url": "https://ymeventvendors.ca/optimized/memories-1600.webp",
+                "contentUrl": "https://ymeventvendors.ca/optimized/memories-1600.webp",
+                "name": "Premium Photo Booth Rental Service Hero Image",
+                "description": "Professional photo booth rental service showcasing elegant setup for weddings, corporate events, and celebrations across Toronto, Barrie, and the GTA",
+                "caption": "Premium photo booth rentals for weddings, corporate events & parties in Toronto, Barrie, & GTA",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["photo booth rental", "Toronto wedding", "GTA events", "professional photo booth"],
+                "width": "1600",
+                "height": "900",
+                "representativeOfPage": true,
+                "about": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors",
+                  "serviceType": "Photo Booth Rental"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                "url": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                "contentUrl": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                "name": "Professional Photo Booth Setup with Elegant Lighting",
+                "description": "Professional photo booth installation featuring elegant lighting, premium equipment, and sophisticated backdrop for luxury events",
+                "caption": "Professional photo booth with elegant lighting and premium equipment setup",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["professional photo booth", "elegant lighting", "luxury events", "premium equipment"],
+                "width": "900",
+                "height": "900",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Service",
+                  "name": "Premium Photo Booth Service",
+                  "serviceType": "Luxury Photo Booth Rental"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/optimized/hero3-900.webp",
+                "url": "https://ymeventvendors.ca/optimized/hero3-900.webp",
+                "contentUrl": "https://ymeventvendors.ca/optimized/hero3-900.webp",
+                "name": "Wedding Reception Photo Booth Experience",
+                "description": "Wedding guests enjoying photo booth experience with instant prints, custom templates, and professional attendant service",
+                "caption": "Event guests enjoying photo booth experience at wedding reception with instant keepsakes",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["wedding photo booth", "instant prints", "guest experience", "wedding reception"],
+                "width": "900",
+                "height": "900",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Event",
+                  "name": "Wedding Reception",
+                  "eventType": "WeddingReception"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "ImageGallery",
+            "@id": "https://ymeventvendors.ca/#backdrop-collection",
+            "name": "Photo Booth Backdrop Collection",
+            "description": "Professional photo booth backdrop collection featuring elegant designs for weddings, corporate events, and parties across Toronto, Barrie, and the GTA",
+            "image": [
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/white.webp",
+                "url": "https://ymeventvendors.ca/backdrops/white.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/white.webp",
+                "name": "Just White Photo Booth Backdrop",
+                "description": "Clean white 8x8 backdrop perfect for elegant weddings, corporate events, and professional photo sessions",
+                "caption": "Classic white backdrop providing timeless elegance for any event",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["white backdrop", "wedding backdrop", "elegant backdrop", "photo booth backdrop", "clean backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "White Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/ivory.webp",
+                "url": "https://ymeventvendors.ca/backdrops/ivory.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/ivory.webp",
+                "name": "Dreamy Ivory Photo Booth Backdrop",
+                "description": "Soft ivory 8x8 backdrop with warm undertones ideal for romantic weddings and intimate celebrations",
+                "caption": "Dreamy ivory backdrop with warm tones for romantic event aesthetics",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["ivory backdrop", "romantic backdrop", "warm backdrop", "wedding backdrop", "soft backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "Ivory Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/marble.webp",
+                "url": "https://ymeventvendors.ca/backdrops/marble.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/marble.webp",
+                "name": "Marble Slab Photo Booth Backdrop",
+                "description": "Luxurious marble pattern 8x8 backdrop perfect for upscale events, corporate galas, and sophisticated celebrations",
+                "caption": "Elegant marble pattern backdrop adding luxury and sophistication to any event",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["marble backdrop", "luxury backdrop", "sophisticated backdrop", "corporate backdrop", "elegant backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "Marble Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/green.webp",
+                "url": "https://ymeventvendors.ca/backdrops/green.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/green.webp",
+                "name": "British Racing Green Photo Booth Backdrop",
+                "description": "Rich green 8x8 backdrop in classic British Racing Green for distinguished events and vintage-themed celebrations",
+                "caption": "Classic British Racing Green backdrop for distinguished and vintage-themed events",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["green backdrop", "British racing green", "vintage backdrop", "classic backdrop", "distinguished backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "British Racing Green Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/sunset.webp",
+                "url": "https://ymeventvendors.ca/backdrops/sunset.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/sunset.webp",
+                "name": "California Sunset Photo Booth Backdrop",
+                "description": "Vibrant pink sunset gradient 8x8 backdrop perfect for summer events, beach weddings, and tropical-themed celebrations",
+                "caption": "California sunset backdrop with pink gradient for vibrant summer and tropical events",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["sunset backdrop", "pink backdrop", "gradient backdrop", "summer backdrop", "tropical backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "California Sunset Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/pink.webp",
+                "url": "https://ymeventvendors.ca/backdrops/pink.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/pink.webp",
+                "name": "It's a Girl Pink Photo Booth Backdrop",
+                "description": "Bright hot pink 8x8 backdrop perfect for baby showers, gender reveals, birthday parties, and feminine celebrations",
+                "caption": "Vibrant hot pink backdrop ideal for baby celebrations and feminine-themed events",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["pink backdrop", "baby shower backdrop", "gender reveal backdrop", "birthday backdrop", "feminine backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "Hot Pink Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/floral.webp",
+                "url": "https://ymeventvendors.ca/backdrops/floral.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/floral.webp",
+                "name": "Eden's Garden Floral Photo Booth Backdrop",
+                "description": "Beautiful floral pattern 8x8 backdrop featuring botanical designs perfect for garden weddings, spring events, and natural celebrations",
+                "caption": "Eden's Garden floral backdrop with botanical patterns for natural and garden-themed events",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["floral backdrop", "botanical backdrop", "garden backdrop", "nature backdrop", "spring backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "Floral Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://ymeventvendors.ca/backdrops/black.webp",
+                "url": "https://ymeventvendors.ca/backdrops/black.webp",
+                "contentUrl": "https://ymeventvendors.ca/backdrops/black.webp",
+                "name": "Black Veil Brides Photo Booth Backdrop",
+                "description": "Dramatic black 8x8 backdrop perfect for formal events, gala dinners, sophisticated celebrations, and dramatic photo sessions",
+                "caption": "Dramatic black backdrop for formal events and sophisticated celebrations",
+                "creditText": "YM Event Vendors",
+                "creator": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "copyrightHolder": {
+                  "@type": "Organization",
+                  "name": "YM Event Vendors"
+                },
+                "keywords": ["black backdrop", "dramatic backdrop", "formal backdrop", "gala backdrop", "sophisticated backdrop"],
+                "width": "1200",
+                "height": "1200",
+                "representativeOfPage": false,
+                "about": {
+                  "@type": "Product",
+                  "name": "Black Photo Booth Backdrop",
+                  "category": "Event Backdrop"
+                }
               }
             ]
           }

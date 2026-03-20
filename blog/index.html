@@ -27,7 +27,7 @@
       defer
     ></script>
   </head>
-  <body>
+  <body class="blog-page">
     <nav class="navbar">
       <div class="logo">YM Event Vendors</div>
       <button class="menu-toggle" aria-label="Toggle menu">
@@ -37,21 +37,46 @@
       </button>
       <ul class="nav-menu">
         <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li><a href="../services.html" class="nav-link">Packages</a></li>
         <li><a href="../index.html#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="index.html" class="nav-link">Blog</a></li>
-        <li><a href="../index.html#faq" class="nav-link">FAQs</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../index.html#backdrops" class="nav-link">Backdrops</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Locations ▾</a>
+          <div class="dropdown-menu">
+            <a href="../barrie.html">Barrie</a>
+            <a href="../toronto.html">Toronto</a>
+            <a href="../vaughan.html">Vaughan</a>
+            <a href="../brampton.html">Brampton</a>
+            <a href="../mississauga.html">Mississauga</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">More ▾</a>
+          <div class="dropdown-menu">
+            <a href="../about.html">About</a>
+            <a href="index.html">Blog</a>
+            <a href="../faq.html">FAQs</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </li>
       </ul>
     </nav>
     <div class="menu-overlay"></div>
 
-    <section class="blog-hero">
-      <h1>Event Planning Blog</h1>
-      <p>
-        Local guides, practical checklists, and photo booth ideas that help you
-        plan better events and book faster.
-      </p>
+    <section class="blog-hero-modern">
+      <div class="blog-hero-inner">
+        <h1>Event Planning Blog</h1>
+        <p>
+          Local guides, practical checklists, and photo booth ideas that help
+          you plan better events and book faster.
+        </p>
+        <div class="blog-hero-meta">
+          <span>Planning Guides</span>
+          <span>Toronto &amp; GTA</span>
+          <span>Photo Booth Tips</span>
+        </div>
+      </div>
     </section>
 
     <section class="blog-index-section" aria-label="Blog posts">
@@ -172,43 +197,13 @@
       <a href="../index.html#contact" class="cta-btn">Get Your Quote</a>
     </section>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <div class="footer-logo">YM Event Vendors</div>
-          <p>
-            Premium photo booth rentals for weddings, corporates & parties
-            across Toronto, Barrie, and Simcoe/GTA.
-          </p>
-        </div>
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#services">Services</a></li>
-            <li><a href="../index.html#pricing">Pricing</a></li>
-            <li><a href="index.html">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Service Areas</h4>
-          <ul>
-            <li><a href="../toronto.html">Toronto</a></li>
-            <li><a href="../barrie.html">Barrie</a></li>
-            <li><a href="../mississauga.html">Mississauga</a></li>
-            <li><a href="../vaughan.html">Vaughan</a></li>
-            <li><a href="../brampton.html">Brampton</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          &copy; 2026 Your Majesty Event Vendors. All rights reserved. |
-          <a href="../privacy-policy.html">Privacy Policy</a> |
-          <a href="../terms.html">Terms & Conditions</a>
-        </p>
-      </div>
-    </footer>
+    <div class="footer-bottom contact-page-footer">
+      <p>
+        &copy; 2026 Your Majesty Event Vendors. All rights reserved. |
+        <a href="../privacy-policy.html">Privacy Policy</a> |
+        <a href="../terms.html">Terms &amp; Conditions</a>
+      </p>
+    </div>
 
     <script src="../emailjs.config.js" defer></script>
     <script src="../script.js" defer></script>

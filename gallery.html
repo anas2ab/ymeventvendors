@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Booth Gallery | YM Event Vendors</title>
+    <meta
+      name="description"
+      content="Browse YM Event Vendors photo booth gallery featuring weddings, corporate events, and parties across Toronto, Barrie, and the GTA."
+    />
+    <meta
+      property="og:title"
+      content="Photo Booth Gallery | YM Event Vendors"
+    />
+    <meta
+      property="og:description"
+      content="See real event setups, backdrops, and guest photo moments from our recent events."
+    />
+    <meta property="og:image" content="https://ymeventvendors.ca/logo.png" />
+    <meta property="og:url" content="https://ymeventvendors.ca/gallery.html" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://ymeventvendors.ca/gallery.html" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="gallery-page">
+    <nav class="navbar">
+      <div class="logo">YM Event Vendors</div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Packages</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="index.html#backdrops" class="nav-link">Backdrops</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Locations ▾</a>
+          <div class="dropdown-menu">
+            <a href="barrie.html">Barrie</a>
+            <a href="toronto.html">Toronto</a>
+            <a href="vaughan.html">Vaughan</a>
+            <a href="brampton.html">Brampton</a>
+            <a href="mississauga.html">Mississauga</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">More ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html">About</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="faq.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="menu-overlay"></div>
+
+    <section class="bento-gallery-section">
+      <div class="bento-gallery-container">
+        <div class="bento-header">
+          <h2 class="bento-title">Curated Moments</h2>
+          <p class="bento-description">
+            A collection of stunning moments from recent events.
+          </p>
+        </div>
+
+        <div class="bento-grid" id="bentoGallery">
+          <!-- Gallery items will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Modal Overlay -->
+      <div class="bento-modal-overlay" id="bentoModalOverlay">
+        <div class="bento-modal-content">
+          <div class="bento-modal-image-wrapper">
+            <img id="bentoModalImage" src="" alt="" />
+          </div>
+          <button
+            class="bento-modal-close"
+            id="bentoModalClose"
+            aria-label="Close image view"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Your Majesty Event Vendors. All rights reserved. |
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms & Conditions</a>
+      </p>
+    </div>
+
+    <script src="emailjs.config.js" defer></script>
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Photo Booth Gallery",
+        "url": "https://ymeventvendors.ca/gallery.html",
+        "about": "Photo booth event gallery featuring weddings and corporate events across Toronto, Barrie, and the GTA",
+        "mainEntity": {
+          "@type": "ImageGallery",
+          "name": "YM Event Vendors Photo Booth Gallery",
+          "description": "Professional photo booth rental gallery showcasing weddings, corporate events, and private parties across Toronto, Barrie, and the Greater Toronto Area",
+          "image": [
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic1.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic1.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic1.webp",
+              "name": "Wedding Photo Booth Memory Creation",
+              "description": "Wedding guests creating joyful memories at professional photo booth with elegant backdrop and props",
+              "caption": "Wedding guests enjoying photo booth experience with instant prints and custom templates",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["wedding photo booth", "Toronto wedding", "photo booth rental", "wedding memories"],
+              "about": {
+                "@type": "Event",
+                "name": "Wedding Reception",
+                "eventType": "WeddingReception"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic2.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic2.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic2.webp",
+              "name": "Corporate Event Photo Booth Activation",
+              "description": "Professional photo booth setup at corporate event with branded backdrop and business networking atmosphere",
+              "caption": "Corporate event photo booth activation with professional lighting and branded elements",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["corporate photo booth", "business event", "corporate activation", "Toronto corporate events"],
+              "about": {
+                "@type": "Event",
+                "name": "Corporate Event",
+                "eventType": "BusinessEvent"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic3.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic3.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic3.webp",
+              "name": "Party Photo Booth Fun Setup",
+              "description": "Colorful party photo booth with fun props and vibrant backdrop perfect for birthday celebrations and private events",
+              "caption": "Party photo booth setup with festive props and entertaining atmosphere for special celebrations",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["party photo booth", "birthday party", "celebration photo booth", "GTA party rentals"],
+              "about": {
+                "@type": "Event",
+                "name": "Private Party",
+                "eventType": "SocialEvent"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic4.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic4.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic4.webp",
+              "name": "Elegant Wedding Photo Booth Lighting",
+              "description": "Sophisticated wedding photo booth with professional lighting setup and elegant white backdrop for luxury wedding receptions",
+              "caption": "Elegant wedding photo booth featuring professional lighting and sophisticated backdrop design",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["elegant wedding photo booth", "luxury wedding", "professional lighting", "wedding photography"],
+              "about": {
+                "@type": "Event",
+                "name": "Luxury Wedding Reception",
+                "eventType": "WeddingReception"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic5.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic5.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic5.webp",
+              "name": "Corporate Group Photo Booth Session",
+              "description": "Professional group photo at corporate event photo booth with team members and colleagues creating business memories",
+              "caption": "Corporate team enjoying group photo session at professional business event photo booth",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["corporate group photos", "business team photos", "corporate photo booth", "team building"],
+              "about": {
+                "@type": "Event",
+                "name": "Corporate Team Event",
+                "eventType": "BusinessEvent"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic6.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic6.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic6.webp",
+              "name": "Birthday Party Photo Booth Celebration",
+              "description": "Festive birthday party photo booth with colorful decorations and fun props creating memorable celebration moments",
+              "caption": "Birthday celebration photo booth with festive atmosphere and joyful party guests",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["birthday photo booth", "party celebration", "birthday party rental", "celebration memories"],
+              "about": {
+                "@type": "Event",
+                "name": "Birthday Celebration",
+                "eventType": "SocialEvent"
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": "https://ymeventvendors.ca/gallery/pic7.webp",
+              "url": "https://ymeventvendors.ca/gallery/pic7.webp",
+              "contentUrl": "https://ymeventvendors.ca/gallery/pic7.webp",
+              "name": "Professional Event Photo Booth Setup",
+              "description": "Professional photo booth installation at premium event venue with high-quality equipment and elegant backdrop presentation",
+              "caption": "Professional photo booth setup showcasing premium equipment and elegant venue presentation",
+              "creditText": "YM Event Vendors",
+              "creator": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "copyrightHolder": {
+                "@type": "Organization",
+                "name": "YM Event Vendors"
+              },
+              "keywords": ["professional photo booth", "event venue", "premium equipment", "photo booth setup"],
+              "about": {
+                "@type": "Event",
+                "name": "Premium Event",
+                "eventType": "BusinessEvent"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+  </body>
+</html>

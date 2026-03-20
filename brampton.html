@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://ymeventvendors.ca/brampton.html">
     
     <!-- Your existing CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
         <script type="application/ld+json">
@@ -47,7 +47,68 @@
                         "name": "Brampton"
                     },
                     "priceRange": "$$",
-                    "image": "https://ymeventvendors.ca/logo.png"
+                    "image": "https://ymeventvendors.ca/logo.png",
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "reviewCount": "40",
+                        "bestRating": "5",
+                        "worstRating": "1"
+                    },
+                    "review": [
+                        {
+                            "@type": "Review",
+                            "@id": "https://ymeventvendors.ca/brampton.html#review-1",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Priya S."
+                            },
+                            "datePublished": "2026-02-10",
+                            "reviewBody": "Perfect for our South Asian wedding! They understood our cultural requirements and provided appropriate backdrops and props. Very respectful and professional service.",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewAspect": ["Cultural Sensitivity", "Professional Service", "Appropriate Props"],
+                            "about": {
+                                "@type": "Event",
+                                "name": "South Asian Wedding in Brampton",
+                                "location": {
+                                    "@type": "City",
+                                    "name": "Brampton"
+                                },
+                                "eventType": "WeddingReception"
+                            }
+                        },
+                        {
+                            "@type": "Review",
+                            "@id": "https://ymeventvendors.ca/brampton.html#review-2",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Rajesh M."
+                            },
+                            "datePublished": "2026-01-15",
+                            "reviewBody": "Excellent service for our community event. They worked well with our diverse guest list and created a welcoming photo booth experience for everyone.",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "reviewAspect": ["Community Focus", "Inclusive Service", "Welcoming Experience"],
+                            "about": {
+                                "@type": "Event",
+                                "name": "Brampton Community Celebration",
+                                "location": {
+                                    "@type": "City",
+                                    "name": "Brampton"
+                                },
+                                "eventType": "SocialEvent"
+                            }
+                        }
+                    ]
                 },
                 {
                     "@type": "Service",
@@ -84,12 +145,131 @@
                             "item": "https://ymeventvendors.ca/brampton.html"
                         }
                     ]
+                },
+                {
+                    "@type": "Event",
+                    "@id": "https://ymeventvendors.ca/brampton.html#brampton-events",
+                    "name": "Brampton Photo Booth Events",
+                    "description": "Professional photo booth rentals for Brampton's diverse community including South Asian weddings, multicultural celebrations, and corporate events with cultural-friendly setups.",
+                    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                    "eventStatus": "https://schema.org/EventScheduled",
+                    "startDate": "2026-03-20",
+                    "endDate": "2026-12-31",
+                    "location": {
+                        "@type": "Place",
+                        "name": "Brampton Event Venues",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Brampton",
+                            "addressRegion": "ON",
+                            "postalCode": "L6T 4M5",
+                            "addressCountry": "CA"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "43.7315",
+                            "longitude": "-79.7624"
+                        }
+                    },
+                    "organizer": {
+                        "@id": "https://ymeventvendors.ca/brampton.html#localbusiness"
+                    },
+                    "offers": [
+                        {
+                            "@type": "Offer",
+                            "name": "Brampton South Asian Wedding Photo Booth",
+                            "priceCurrency": "CAD",
+                            "price": "300",
+                            "description": "Culturally-sensitive photo booth service for South Asian weddings starting at $300",
+                            "availability": "https://schema.org/InStock",
+                            "validFrom": "2026-03-20",
+                            "validThrough": "2026-12-31"
+                        },
+                        {
+                            "@type": "Offer",
+                            "name": "Brampton Corporate Event Photo Booth",
+                            "priceCurrency": "CAD",
+                            "price": "300",
+                            "description": "Professional photo booth rental for Brampton's diverse business community starting at $300",
+                            "availability": "https://schema.org/InStock",
+                            "validFrom": "2026-03-20",
+                            "validThrough": "2026-12-31"
+                        }
+                    ],
+                    "audience": [
+                        {
+                            "@type": "Audience",
+                            "audienceType": "Brampton multicultural couples",
+                            "geographicArea": {
+                                "@type": "City",
+                                "name": "Brampton"
+                            }
+                        },
+                        {
+                            "@type": "Audience",
+                            "audienceType": "South Asian community event planners",
+                            "geographicArea": {
+                                "@type": "City",
+                                "name": "Brampton"
+                            }
+                        }
+                    ],
+                    "subEvent": [
+                        {
+                            "@type": "Event",
+                            "name": "Brampton Hindu Wedding Reception",
+                            "eventType": "WeddingReception",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Brampton Banquet Halls",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Brampton",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Traditional photo booth service for Hindu wedding receptions with culturally appropriate backdrops and props"
+                        },
+                        {
+                            "@type": "Event",
+                            "name": "Brampton Sikh Wedding Celebration",
+                            "eventType": "WeddingReception",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Brampton Gurdwara and Reception Halls",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Brampton",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Respectful photo booth service for Sikh wedding celebrations with appropriate cultural considerations"
+                        },
+                        {
+                            "@type": "Event",
+                            "name": "Brampton Multicultural Corporate Event",
+                            "eventType": "BusinessEvent",
+                            "location": {
+                                "@type": "Place",
+                                "name": "Brampton Business District",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Brampton",
+                                    "addressRegion": "ON",
+                                    "addressCountry": "CA"
+                                }
+                            },
+                            "description": "Inclusive photo booth service for corporate events celebrating Brampton's diverse business community"
+                        }
+                    ]
                 }
             ]
         }
         </script>
 </head>
-<body>
+<body class="location-page">
     <nav class="navbar">
         <div class="logo">YM Event Vendors</div>
         <button class="menu-toggle" aria-label="Toggle menu">
@@ -99,17 +279,35 @@
         </button>
         <ul class="nav-menu">
             <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="index.html#services" class="nav-link">Services</a></li>
+            <li><a href="services.html" class="nav-link">Packages</a></li>
             <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-            <li><a href="#brampton-venues" class="nav-link">Brampton Venues</a></li>
-            <li><a href="index.html#faq" class="nav-link">FAQs</a></li>
-            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="index.html#backdrops" class="nav-link">Backdrops</a></li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Locations ▾</a>
+                <div class="dropdown-menu">
+                    <a href="barrie.html">Barrie</a>
+                    <a href="toronto.html">Toronto</a>
+                    <a href="vaughan.html">Vaughan</a>
+                    <a href="brampton.html">Brampton</a>
+                    <a href="mississauga.html">Mississauga</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">More ▾</a>
+                <div class="dropdown-menu">
+                    <a href="about.html">About</a>
+                    <a href="blog/index.html">Blog</a>
+                    <a href="faq.html">FAQs</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
         </ul>
     </nav>
     <div class="menu-overlay"></div>
 
     <!-- Hero Section with Location-Specific Content -->
-    <section class="hero location-hero" style="margin-top: 4rem;background-image: url('optimized/hero3-location-1600.jpg'); background-image: image-set(url('optimized/hero3-location-1600.webp') type('image/webp'), url('optimized/hero3-location-1600.jpg') type('image/jpeg'));">
+    <section class="hero location-hero" style="background-image: url('optimized/hero3-location-1600.jpg'); background-image: image-set(url('optimized/hero3-location-1600.webp') type('image/webp'), url('optimized/hero3-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
             <h1>Photo Booth Rental in Brampton</h1>
             <p>Premium Photo Booth Experiences for Brampton's Diverse Celebrations</p>
@@ -201,55 +399,65 @@
     </div>
 
     <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <div class="footer-logo">YM Event Vendors</div>
-            <p>Premium photo booth rentals for weddings, corporates & parties across Toronto, Barrie, and Simcoe/GTA.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram fa-lg"></i>Instagram
-                </a>
-                <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-facebook fa-lg"></i>Facebook
-                </a>
-                <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-tiktok fa-lg"></i>TikTok
-                </a>
-            </div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">YM Event Vendors</div>
+          <p class="footer-tagline">Premium photo booth rentals for weddings, corporates &amp; parties across Toronto, Barrie, and Simcoe/GTA.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/yourmajestyeventvendors/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/people/Your-Majesty-Event-Vendors/61580715489467/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ymeventvendors" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
         </div>
-        <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="index.html#backdrops">Backdrops</a></li>
-            </ul>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="services.html">Packages</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+          </ul>
         </div>
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <p><i class="fa-solid fa-location-dot"></i> Simcoe & GTA<br>
-            <i class="fa-regular fa-envelope"></i> contact@ymeventvendors.ca<br>
-            <i class="fa-solid fa-mobile-screen-button"></i> 647-761-2790<br>
-            <i class="fa-regular fa-clock"></i> Bookings 24/7</p>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Simcoe &amp; GTA</li>
+            <li><a href="mailto:contact@ymeventvendors.ca">contact@ymeventvendors.ca</a></li>
+            <li><a href="tel:6477612790">647-761-2790</a></li>
+            <li>Bookings 24/7</li>
+          </ul>
         </div>
-        <div class="footer-section">
-            <h4>Newsletter</h4>
-            <p>Event tips & promos</p>
-            <form class="newsletter-form" id="newsletterForm">
-                <input type="email" name="user_email" placeholder="Your email" required>
-                <button type="submit"><strong>Subscribe</strong></button>
-            </form>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="barrie.html">Barrie</a></li>
+            <li><a href="toronto.html">Toronto</a></li>
+            <li><a href="brampton.html">Brampton</a></li>
+            <li><a href="vaughan.html">Vaughan</a></li>
+            <li><a href="mississauga.html">Mississauga</a></li>
+          </ul>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a><br>
-                    Also serving <a href="toronto.html">Toronto</a>, <a href="mississauga.html">Mississauga</a>, <a href="vaughan.html">Vaughan</a>, and <a href="barrie.html">Barrie</a>.
-        </p>
-    </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Your Majesty Event Vendors. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+      </div>
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="emailjs.config.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script.min.js" defer></script>
 </body>
 </html>

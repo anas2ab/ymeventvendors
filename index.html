@@ -39,6 +39,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/" />
 
     <link rel="icon" href="YM.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css" />
     <link
       rel="preload"
@@ -167,16 +171,32 @@
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
+        <p class="hero-eyebrow">The Gold Standard</p>
         <h1>PREMIER PHOTO BOOTH RENTALS</h1>
         <p>Serving Toronto, Barrie, Simcoe County & the GTA</p>
         <button onclick="document.getElementById('contact').scrollIntoView()">
-          <strong>Book Now</strong>
+          <strong>Reserve Your Date</strong>
         </button>
+        <div class="hero-proof-bar" aria-label="Service highlights">
+          <span class="hero-proof-item"
+            ><i class="fa-solid fa-camera-retro" aria-hidden="true"></i>DSLR
+            Quality</span
+          >
+          <span class="hero-proof-item"
+            ><i class="fa-solid fa-user-group" aria-hidden="true"></i>On-Site
+            Attendants</span
+          >
+          <span class="hero-proof-item"
+            ><i class="fa-solid fa-images" aria-hidden="true"></i>Instant
+            Prints + Digital</span
+          >
+        </div>
       </div>
     </section>
 
     <section class="trust-section" aria-label="Client trust highlights">
       <div class="trust-intro">
+        <p class="section-eyebrow">What Our Clients Say</p>
         <h2>Trusted Across Toronto, Barrie & the GTA</h2>
         <p>
           Professional execution, premium photo quality, and a guest experience
@@ -230,6 +250,7 @@
     </section>
 
     <section id="services" class="services">
+      <p class="section-eyebrow">What We Offer</p>
       <h2>Our Services</h2>
       <div class="grid">
         <div class="card">
@@ -295,6 +316,7 @@
     </section>
 
     <section id="pricing" class="pricing">
+      <p class="section-eyebrow">All Inclusive and No Surprises</p>
       <h2>Simple Transparent Pricing</h2>
       <p class="pricing-subtitle">
         Choose your perfect package. Custom quotes available.
@@ -302,9 +324,9 @@
       <div class="pricing-container">
         <div class="tier-card basic">
           <div class="tier-header">
-            <h3>Digital</h3>
+            <h3>Essentials</h3>
             <div class="price">$300</div>
-            <p>2 Hours | 50$ per extra hour</p>
+            <p>2 Hours | $50 per extra hour</p>
           </div>
           <ul class="features">
             <li>Digital photos/shares</li>
@@ -317,14 +339,14 @@
             class="cta-btn"
             onclick="document.getElementById('contact').scrollIntoView()"
           >
-            Select Digital
+            Reserve Essentials
           </button>
         </div>
         <div class="tier-card premium featured">
           <div class="tier-header">
-            <h3>Unlimited Prints</h3>
+            <h3>Signature Prints</h3>
             <div class="price">$400</div>
-            <p>2 Hours | 100$ per extra hour</p>
+            <p>2 Hours | $100 per extra hour</p>
           </div>
           <ul class="features">
             <li>Everything in Digital</li>
@@ -337,17 +359,18 @@
             class="cta-btn popular"
             onclick="document.getElementById('contact').scrollIntoView()"
           >
-            Most Popular
+            Reserve Signature
           </button>
         </div>
       </div>
       <p class="pricing-note">
         Travel fees apply outside of Simcoe/GTA Regions.
-        <a href="#contact">Get A Custom Quote.</a>
+        <a href="#contact">Reserve Your Date.</a>
       </p>
     </section>
 
     <section id="backdrops" class="backdrops">
+      <p class="section-eyebrow">Set the Scene</p>
       <h2>Backdrop Catalogue</h2>
       <p>
         From floral designs to beautiful solid colours, elevate your booth with
@@ -600,7 +623,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-      <a href="#contact" class="mobile-cta-quote">Get Quote</a>
+      <a href="#contact" class="mobile-cta-quote">Reserve Your Date</a>
       <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 
@@ -746,10 +769,7 @@
                   "bestRating": "5",
                   "worstRating": "1"
                 },
-                "reviewAspect": ["Service Quality", "Communication", "Punctuality", "Product Quality"],
-                "itemReviewed": {
-                  "@id": "https://ymeventvendors.ca/#service-photobooth"
-                }
+                "reviewAspect": ["Service Quality", "Communication", "Punctuality", "Product Quality"]
               },
               {
                 "@type": "Review",
@@ -767,16 +787,9 @@
                   "worstRating": "1"
                 },
                 "reviewAspect": ["Guest Experience", "Event Enhancement", "Professional Service"],
-                "itemReviewed": {
-                  "@id": "https://ymeventvendors.ca/#service-photobooth"
-                },
                 "about": {
-                  "@type": "Event",
-                  "name": "Corporate Event in Mississauga",
-                  "location": {
-                    "@type": "City",
-                    "name": "Mississauga"
-                  }
+                  "@type": "Thing",
+                  "name": "Corporate Event in Mississauga"
                 }
               },
               {
@@ -795,16 +808,9 @@
                   "worstRating": "1"
                 },
                 "reviewAspect": ["Memory Capture", "Moment Documentation", "Overall Satisfaction"],
-                "itemReviewed": {
-                  "@id": "https://ymeventvendors.ca/#service-photobooth"
-                },
                 "about": {
-                  "@type": "Event",
-                  "name": "Wedding Reception in Barrie",
-                  "location": {
-                    "@type": "City",
-                    "name": "Barrie"
-                  }
+                  "@type": "Thing",
+                  "name": "Wedding Reception in Barrie"
                 }
               }
             ]
@@ -857,6 +863,7 @@
             "@id": "https://ymeventvendors.ca/#photo-booth-events",
             "name": "Photo Booth Rental Events",
             "description": "Professional photo booth services for weddings, corporate events, and private parties across Toronto, Barrie, and the GTA.",
+            "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
             "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
             "eventStatus": "https://schema.org/EventScheduled",
             "startDate": "2026-03-20",
@@ -893,6 +900,9 @@
               }
             ],
             "organizer": {
+              "@id": "https://ymeventvendors.ca/#business"
+            },
+            "performer": {
               "@id": "https://ymeventvendors.ca/#business"
             },
             "offers": [
@@ -937,19 +947,88 @@
                 "@type": "Event",
                 "name": "Wedding Reception Photo Booth",
                 "eventType": "WeddingReception",
-                "description": "Photo booth service for wedding receptions with elegant backdrops and instant prints"
+                "description": "Photo booth service for wedding receptions with elegant backdrops and instant prints",
+                "startDate": "2026-03-20",
+                "endDate": "2026-12-31",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "image": "https://ymeventvendors.ca/gallery/pic1.webp",
+                "location": {
+                  "@type": "Place",
+                  "name": "Toronto, Barrie, and Greater Toronto Area",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "ON",
+                    "addressCountry": "CA"
+                  }
+                },
+                "performer": {
+                  "@id": "https://ymeventvendors.ca/#business"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "CAD",
+                  "price": "300",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://ymeventvendors.ca/contact.html"
+                }
               },
               {
                 "@type": "Event",
                 "name": "Corporate Photo Activation",
                 "eventType": "BusinessEvent",
-                "description": "Branded photo booth experiences for corporate events and product launches"
+                "description": "Branded photo booth experiences for corporate events and product launches",
+                "startDate": "2026-03-20",
+                "endDate": "2026-12-31",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "image": "https://ymeventvendors.ca/gallery/pic2.webp",
+                "location": {
+                  "@type": "Place",
+                  "name": "Toronto, Barrie, and Greater Toronto Area",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "ON",
+                    "addressCountry": "CA"
+                  }
+                },
+                "performer": {
+                  "@id": "https://ymeventvendors.ca/#business"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "CAD",
+                  "price": "300",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://ymeventvendors.ca/contact.html"
+                }
               },
               {
                 "@type": "Event",
                 "name": "Birthday Party Photo Booth",
                 "eventType": "SocialEvent",
-                "description": "Fun photo booth rental for birthday celebrations and private parties"
+                "description": "Fun photo booth rental for birthday celebrations and private parties",
+                "startDate": "2026-03-20",
+                "endDate": "2026-12-31",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "image": "https://ymeventvendors.ca/gallery/pic6.webp",
+                "location": {
+                  "@type": "Place",
+                  "name": "Toronto, Barrie, and Greater Toronto Area",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressRegion": "ON",
+                    "addressCountry": "CA"
+                  }
+                },
+                "performer": {
+                  "@id": "https://ymeventvendors.ca/#business"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "CAD",
+                  "price": "300",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://ymeventvendors.ca/contact.html"
+                }
               }
             ]
           },
@@ -976,6 +1055,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["photo booth rental", "Toronto wedding", "GTA events", "professional photo booth"],
                 "width": "1600",
                 "height": "900",
@@ -1003,6 +1085,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["professional photo booth", "elegant lighting", "luxury events", "premium equipment"],
                 "width": "900",
                 "height": "900",
@@ -1030,14 +1115,16 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["wedding photo booth", "instant prints", "guest experience", "wedding reception"],
                 "width": "900",
                 "height": "900",
                 "representativeOfPage": false,
                 "about": {
-                  "@type": "Event",
-                  "name": "Wedding Reception",
-                  "eventType": "WeddingReception"
+                  "@type": "Thing",
+                  "name": "Wedding Reception"
                 }
               }
             ]
@@ -1065,6 +1152,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["white backdrop", "wedding backdrop", "elegant backdrop", "photo booth backdrop", "clean backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1092,6 +1182,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["ivory backdrop", "romantic backdrop", "warm backdrop", "wedding backdrop", "soft backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1119,6 +1212,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["marble backdrop", "luxury backdrop", "sophisticated backdrop", "corporate backdrop", "elegant backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1146,6 +1242,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["green backdrop", "British racing green", "vintage backdrop", "classic backdrop", "distinguished backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1173,6 +1272,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["sunset backdrop", "pink backdrop", "gradient backdrop", "summer backdrop", "tropical backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1200,6 +1302,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["pink backdrop", "baby shower backdrop", "gender reveal backdrop", "birthday backdrop", "feminine backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1227,6 +1332,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["floral backdrop", "botanical backdrop", "garden backdrop", "nature backdrop", "spring backdrop"],
                 "width": "1200",
                 "height": "1200",
@@ -1254,6 +1362,9 @@
                   "@type": "Organization",
                   "name": "YM Event Vendors"
                 },
+                "copyrightNotice": "Copyright 2026 YM Event Vendors. All rights reserved.",
+                "license": "https://ymeventvendors.ca/terms.html",
+                "acquireLicensePage": "https://ymeventvendors.ca/contact.html",
                 "keywords": ["black backdrop", "dramatic backdrop", "formal backdrop", "gala backdrop", "sophisticated backdrop"],
                 "width": "1200",
                 "height": "1200",

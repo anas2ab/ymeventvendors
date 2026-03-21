@@ -17,6 +17,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/brampton.html">
     
     <!-- Your existing CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
@@ -73,13 +77,8 @@
                             },
                             "reviewAspect": ["Cultural Sensitivity", "Professional Service", "Appropriate Props"],
                             "about": {
-                                "@type": "Event",
-                                "name": "South Asian Wedding in Brampton",
-                                "location": {
-                                    "@type": "City",
-                                    "name": "Brampton"
-                                },
-                                "eventType": "WeddingReception"
+                                "@type": "Thing",
+                                "name": "South Asian Wedding in Brampton"
                             }
                         },
                         {
@@ -99,13 +98,8 @@
                             },
                             "reviewAspect": ["Community Focus", "Inclusive Service", "Welcoming Experience"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Brampton Community Celebration",
-                                "location": {
-                                    "@type": "City",
-                                    "name": "Brampton"
-                                },
-                                "eventType": "SocialEvent"
+                                "@type": "Thing",
+                                "name": "Brampton Community Celebration"
                             }
                         }
                     ]
@@ -151,6 +145,7 @@
                     "@id": "https://ymeventvendors.ca/brampton.html#brampton-events",
                     "name": "Brampton Photo Booth Events",
                     "description": "Professional photo booth rentals for Brampton's diverse community including South Asian weddings, multicultural celebrations, and corporate events with cultural-friendly setups.",
+                    "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
                     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                     "eventStatus": "https://schema.org/EventScheduled",
                     "startDate": "2026-03-20",
@@ -172,6 +167,9 @@
                         }
                     },
                     "organizer": {
+                        "@id": "https://ymeventvendors.ca/brampton.html#localbusiness"
+                    },
+                    "performer": {
                         "@id": "https://ymeventvendors.ca/brampton.html#localbusiness"
                     },
                     "offers": [
@@ -219,6 +217,21 @@
                             "@type": "Event",
                             "name": "Brampton Hindu Wedding Reception",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Brampton Banquet Halls",
@@ -235,6 +248,21 @@
                             "@type": "Event",
                             "name": "Brampton Sikh Wedding Celebration",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Brampton Gurdwara and Reception Halls",
@@ -251,6 +279,21 @@
                             "@type": "Event",
                             "name": "Brampton Multicultural Corporate Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Brampton Business District",
@@ -309,9 +352,10 @@
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="background-image: url('optimized/hero3-location-1600.jpg'); background-image: image-set(url('optimized/hero3-location-1600.webp') type('image/webp'), url('optimized/hero3-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
+            <p class="hero-eyebrow">Brampton &amp; Peel Region</p>
             <h1>Photo Booth Rental in Brampton</h1>
             <p>Premium Photo Booth Experiences for Brampton's Diverse Celebrations</p>
-<button onclick="window.location.href='index.html#contact'"><strong>Get Your Free Quote</strong></button>
+<button onclick="window.location.href='index.html#contact'"><strong>Reserve Your Date</strong></button>
 </div>
     </section>
 
@@ -338,20 +382,20 @@
                 <div class="card">
                     <h3 class="location-card-title">Wedding Venues</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Pearson Convention Centre</li>
-                        <li>📍 Balmoral Hall</li>
-                        <li>📍 Hazelton Manor</li>
-                        <li>📍 Royal Ambassador</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Pearson Convention Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Balmoral Hall</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Hazelton Manor</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Royal Ambassador</li>
                     </ul>
                 </div>
                 
                 <div class="card">
                     <h3 class="location-card-title">Corporate & Events</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Alainnah Banquet Hall</li>
-                        <li>📍 Terrace Banquet Centre</li>
-                        <li>📍 Rose Theatre Events</li>
-                        <li>📍 Corporate Event Spaces Brampton</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Alainnah Banquet Hall</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Terrace Banquet Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Rose Theatre Events</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Corporate Event Spaces Brampton</li>
                     </ul>
                 </div>
             </div>
@@ -364,15 +408,15 @@
             <h2>Why Brampton Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="location-card-title">🎊 Cultural Expertise</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-hands-clapping" style="color:#ffb000;margin-right:0.5rem;"></i>Cultural Expertise</h3>
                     <p>Experience with South Asian, Caribbean, and multicultural weddings. We respect traditions and work seamlessly with your vendors.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">👥 High-Volume Ready</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-users" style="color:#ffb000;margin-right:0.5rem;"></i>High-Volume Ready</h3>
                     <p>Equipped for Brampton's large celebrations—handle 300+ guests efficiently with quick print speeds and smooth guest flow.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🎨 Custom Backdrops</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-palette" style="color:#ffb000;margin-right:0.5rem;"></i>Custom Backdrops</h3>
                     <p>Vibrant backdrop options that complement colorful wedding décor. Work with your theme, colors, and cultural aesthetics.</p>
                 </div>
             </div>
@@ -394,7 +438,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="index.html#contact" class="mobile-cta-quote">Reserve Your Date</a>
         <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 

@@ -17,6 +17,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/vaughan.html">
     
     <!-- Your existing CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
@@ -73,18 +77,8 @@
                             },
                             "reviewAspect": ["Venue Coordination", "Timeline Management", "Seamless Experience"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Woodbridge Wedding Reception",
-                                "location": {
-                                    "@type": "Place",
-                                    "name": "Woodbridge",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "addressLocality": "Woodbridge",
-                                        "addressRegion": "ON"
-                                    }
-                                },
-                                "eventType": "WeddingReception"
+                                "@type": "Thing",
+                                "name": "Woodbridge Wedding Reception"
                             }
                         },
                         {
@@ -104,18 +98,8 @@
                             },
                             "reviewAspect": ["Corporate Professionalism", "Business Environment Fit", "Networking Enhancement"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Thornhill Business Networking Event",
-                                "location": {
-                                    "@type": "Place",
-                                    "name": "Thornhill Business District",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "addressLocality": "Thornhill",
-                                        "addressRegion": "ON"
-                                    }
-                                },
-                                "eventType": "BusinessEvent"
+                                "@type": "Thing",
+                                "name": "Thornhill Business Networking Event"
                             }
                         }
                     ]
@@ -161,6 +145,7 @@
                     "@id": "https://ymeventvendors.ca/vaughan.html#vaughan-events",
                     "name": "Vaughan Photo Booth Events",
                     "description": "Professional photo booth rentals for Vaughan and York Region weddings, corporate events, and celebrations in Woodbridge, Thornhill, and Maple communities.",
+                    "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
                     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                     "eventStatus": "https://schema.org/EventScheduled",
                     "startDate": "2026-03-20",
@@ -182,6 +167,9 @@
                         }
                     },
                     "organizer": {
+                        "@id": "https://ymeventvendors.ca/vaughan.html#localbusiness"
+                    },
+                    "performer": {
                         "@id": "https://ymeventvendors.ca/vaughan.html#localbusiness"
                     },
                     "offers": [
@@ -229,6 +217,21 @@
                             "@type": "Event",
                             "name": "Woodbridge Wedding Reception",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Woodbridge Wedding Venues",
@@ -245,6 +248,21 @@
                             "@type": "Event",
                             "name": "Thornhill Corporate Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Thornhill Business District",
@@ -261,6 +279,21 @@
                             "@type": "Event",
                             "name": "Maple Community Celebration",
                             "eventType": "SocialEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Maple Community Venues",
@@ -319,9 +352,10 @@
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="background-image: url('optimized/hero4-location-1600.jpg'); background-image: image-set(url('optimized/hero4-location-1600.webp') type('image/webp'), url('optimized/hero4-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
+            <p class="hero-eyebrow">Vaughan &amp; York Region</p>
             <h1>Photo Booth Rental in Vaughan & York Region</h1>
             <p>Premium Photo Booth Experiences for Vaughan's Celebrations</p>
-<button onclick="window.location.href='index.html#contact'"><strong>Get Your Free Quote</strong></button>
+<button onclick="window.location.href='index.html#contact'"><strong>Reserve Your Date</strong></button>
         </div>
     </section>
 
@@ -348,20 +382,20 @@
                 <div class="card">
                     <h3 class="location-card-title">Wedding Venues</h3>
                     <ul class="location-venue-list">
-                        <li>📍 The Doctor's House</li>
-                        <li>📍 Kortright Centre for Conservation</li>
-                        <li>📍 Paradise Banquet Hall</li>
-                        <li>📍 Copper Creek Golf Club</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>The Doctor's House</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Kortright Centre for Conservation</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Paradise Banquet Hall</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Copper Creek Golf Club</li>
                     </ul>
                 </div>
                 
                 <div class="card">
                     <h3 class="location-card-title">Corporate & Events</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Grand Luxe Event Boutique</li>
-                        <li>📍 Corporate Venues in Vaughan</li>
-                        <li>📍 Vaughan Mills Area Events</li>
-                        <li>📍 Carrying Place Golf & Country Club</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Grand Luxe Event Boutique</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Corporate Venues in Vaughan</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Vaughan Mills Area Events</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Carrying Place Golf & Country Club</li>
                     </ul>
                 </div>
             </div>
@@ -374,15 +408,15 @@
             <h2>Why Vaughan Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="location-card-title">🌳 Suburban Excellence</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-award" style="color:#ffb000;margin-right:0.5rem;"></i>Suburban Excellence</h3>
                     <p>Perfect for Vaughan's spacious venues and banquet halls. We understand York Region's event scene and community.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🎭 Cultural Celebrations</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-masks-theater" style="color:#ffb000;margin-right:0.5rem;"></i>Cultural Celebrations</h3>
                     <p>Experience with Vaughan's diverse cultural weddings—Italian, Jewish, South Asian, and more. Custom backdrops for any tradition.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🚗 Easy Access</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-car" style="color:#ffb000;margin-right:0.5rem;"></i>Easy Access</h3>
                     <p>Convenient service to Woodbridge, Thornhill, Maple, and all Vaughan neighborhoods with ample parking.</p>
                 </div>
             </div>
@@ -404,7 +438,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="index.html#contact" class="mobile-cta-quote">Reserve Your Date</a>
         <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 

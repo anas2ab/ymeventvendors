@@ -17,6 +17,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/toronto.html">
     
     <!-- Your existing CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
@@ -73,12 +77,8 @@
                             },
                             "reviewAspect": ["Service Quality", "Communication", "Customization", "Punctuality"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Toronto Wedding Reception",
-                                "location": {
-                                    "@type": "City",
-                                    "name": "Toronto"
-                                }
+                                "@type": "Thing",
+                                "name": "Toronto Wedding Reception"
                             }
                         },
                         {
@@ -98,18 +98,8 @@
                             },
                             "reviewAspect": ["Venue Expertise", "Professional Setup", "Elegant Experience"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Casa Loma Wedding",
-                                "location": {
-                                    "@type": "Place",
-                                    "name": "Casa Loma",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "1 Austin Terrace",
-                                        "addressLocality": "Toronto",
-                                        "addressRegion": "ON"
-                                    }
-                                }
+                                "@type": "Thing",
+                                "name": "Casa Loma Wedding"
                             }
                         }
                     ]
@@ -155,6 +145,7 @@
                     "@id": "https://ymeventvendors.ca/toronto.html#toronto-events",
                     "name": "Toronto Photo Booth Events",
                     "description": "Professional photo booth rentals for Toronto weddings, corporate events, and parties at premier venues including Casa Loma, Distillery District, and Convention Centre.",
+                    "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
                     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                     "eventStatus": "https://schema.org/EventScheduled",
                     "startDate": "2026-03-20",
@@ -176,6 +167,9 @@
                         }
                     },
                     "organizer": {
+                        "@id": "https://ymeventvendors.ca/toronto.html#localbusiness"
+                    },
+                    "performer": {
                         "@id": "https://ymeventvendors.ca/toronto.html#localbusiness"
                     },
                     "offers": [
@@ -223,6 +217,21 @@
                             "@type": "Event",
                             "name": "Casa Loma Wedding Photo Booth",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Casa Loma",
@@ -240,6 +249,21 @@
                             "@type": "Event",
                             "name": "Distillery District Corporate Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Distillery District",
@@ -256,6 +280,21 @@
                             "@type": "Event",
                             "name": "Convention Centre Trade Show Booth",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Metro Toronto Convention Centre",
@@ -315,9 +354,10 @@
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="background-image: url('optimized/hero2-location-1600.jpg'); background-image: image-set(url('optimized/hero2-location-1600.webp') type('image/webp'), url('optimized/hero2-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
+            <p class="hero-eyebrow">Toronto &amp; the GTA</p>
             <h1>Photo Booth Rental Toronto & GTA</h1>
             <p>Elegant Photo Booth Experiences for Toronto's Finest Events</p>
-            <button onclick="window.location.href='index.html#contact'"><strong>Book Your Toronto Event</strong></button></div>
+            <button onclick="window.location.href='index.html#contact'"><strong>Reserve Your Date</strong></button></div>
     </section>
 
     <!-- Location-Specific Introduction -->
@@ -341,19 +381,19 @@
                 <div class="card">
                     <h3 class="location-card-title">Historic Venues</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Casa Loma</li>
-                        <li>📍 The Distillery District</li>
-                        <li>📍 Royal York Hotel</li>
-                        <li>📍 Liberty Grand</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Casa Loma</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>The Distillery District</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Royal York Hotel</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Liberty Grand</li>
                     </ul>
                 </div>
                 <div class="card">
                     <h3 class="location-card-title">Modern Spaces</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Toronto Convention Centre</li>
-                        <li>📍 Evergreen Brick Works</li>
-                        <li>📍 Downtown Lofts & Galleries</li>
-                        <li>📍 Waterfront Venues</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Toronto Convention Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Evergreen Brick Works</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Downtown Lofts & Galleries</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Waterfront Venues</li>
                     </ul>
                 </div>
             </div>
@@ -367,15 +407,15 @@
             <h2>Why Toronto Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="location-card-title">🏙️ Downtown Expertise</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-building" style="color:#ffb000;margin-right:0.5rem;"></i>Downtown Expertise</h3>
                     <p>Experienced navigating Toronto's downtown venues, parking, and logistics. We handle the complexities so you don't have to.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🎨 Upscale Sophistication</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-star" style="color:#ffb000;margin-right:0.5rem;"></i>Upscale Sophistication</h3>
                     <p>Premium equipment and elegant backdrops that match Toronto's high-end wedding and corporate event standards.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🚚 Space-Conscious Setup</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-truck" style="color:#ffb000;margin-right:0.5rem;"></i>Space-Conscious Setup</h3>
                     <p>Compact booth options perfect for Toronto's lofts, galleries, and venues where space is at a premium.</p>
                 </div>
             </div>
@@ -397,7 +437,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="index.html#contact" class="mobile-cta-quote">Reserve Your Date</a>
         <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 

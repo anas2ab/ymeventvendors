@@ -1,1 +1,17 @@
 emailjs.config.js
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# VS Code workspace settings
+.vscode/
+
+# OS/editor noise
+.DS_Store

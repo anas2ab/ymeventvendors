@@ -17,6 +17,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/mississauga.html">
     
     <!-- Your existing CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
@@ -73,13 +77,8 @@
                             },
                             "reviewAspect": ["Guest Experience", "Event Enhancement", "Professional Service"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Corporate Event in Mississauga",
-                                "location": {
-                                    "@type": "City",
-                                    "name": "Mississauga"
-                                },
-                                "eventType": "BusinessEvent"
+                                "@type": "Thing",
+                                "name": "Corporate Event in Mississauga"
                             }
                         },
                         {
@@ -99,19 +98,8 @@
                             },
                             "reviewAspect": ["High Traffic Handling", "Trade Show Expertise", "Major Event Draw"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Trade Show at Pearson Convention Centre",
-                                "location": {
-                                    "@type": "Place",
-                                    "name": "Pearson Convention Centre",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "2638 Sheridan Park Dr",
-                                        "addressLocality": "Mississauga",
-                                        "addressRegion": "ON"
-                                    }
-                                },
-                                "eventType": "BusinessEvent"
+                                "@type": "Thing",
+                                "name": "Trade Show at Pearson Convention Centre"
                             }
                         }
                     ]
@@ -157,6 +145,7 @@
                     "@id": "https://ymeventvendors.ca/mississauga.html#mississauga-events",
                     "name": "Mississauga Photo Booth Events",
                     "description": "Professional photo booth rentals for Mississauga weddings, corporate events, and parties at venues including Pearson Convention Centre, Living Arts Centre, and corporate headquarters.",
+                    "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
                     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                     "eventStatus": "https://schema.org/EventScheduled",
                     "startDate": "2026-03-20",
@@ -178,6 +167,9 @@
                         }
                     },
                     "organizer": {
+                        "@id": "https://ymeventvendors.ca/mississauga.html#localbusiness"
+                    },
+                    "performer": {
                         "@id": "https://ymeventvendors.ca/mississauga.html#localbusiness"
                     },
                     "offers": [
@@ -225,6 +217,21 @@
                             "@type": "Event",
                             "name": "Pearson Convention Centre Corporate Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Pearson Convention Centre",
@@ -242,6 +249,21 @@
                             "@type": "Event",
                             "name": "Living Arts Centre Wedding Reception",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Living Arts Centre",
@@ -259,6 +281,21 @@
                             "@type": "Event",
                             "name": "Mississauga Corporate Headquarters Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Mississauga Corporate District",
@@ -317,9 +354,10 @@
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="background-image: url('optimized/hero5-location-1600.jpg'); background-image: image-set(url('optimized/hero5-location-1600.webp') type('image/webp'), url('optimized/hero5-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
+            <p class="hero-eyebrow">Mississauga &amp; Peel Region</p>
             <h1>Photo Booth Rental in Mississauga & Peel Region</h1>
             <p>Premium Photo Booth Experiences for Mississauga's Finest Events</p>
-            <button onclick="window.location.href='index.html#contact'"><strong>Get Your Free Quote</strong></button>
+            <button onclick="window.location.href='index.html#contact'"><strong>Reserve Your Date</strong></button>
         </div>
     </section>
 
@@ -346,20 +384,20 @@
                 <div class="card">
                     <h3 class="location-card-title">Wedding Venues</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Belcroft Estates</li>
-                        <li>📍 Hazelton Manor Mississauga</li>
-                        <li>📍 Port Credit Waterfront Venues</li>
-                        <li>📍 Paradise Banquets</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Belcroft Estates</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Hazelton Manor Mississauga</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Port Credit Waterfront Venues</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Paradise Banquets</li>
                     </ul>
                 </div>
                 
                 <div class="card">
                     <h3 class="location-card-title">Corporate & Events</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Mississauga Convention Centre</li>
-                        <li>📍 Living Arts Centre</li>
-                        <li>📍 Pearson Convention Centre</li>
-                        <li>📍 Corporate Hotels & Conference Centers</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Mississauga Convention Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Living Arts Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Pearson Convention Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Corporate Hotels & Conference Centers</li>
                     </ul>
                 </div>
             </div>
@@ -372,15 +410,15 @@
             <h2>Why Mississauga Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="location-card-title">🌊 Venue Versatility</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.5rem;"></i>Venue Versatility</h3>
                     <p>From Port Credit's waterfront charm to Square One's urban sophistication—we adapt to any Mississauga venue style.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">💼 Corporate Excellence</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-briefcase" style="color:#ffb000;margin-right:0.5rem;"></i>Corporate Excellence</h3>
                     <p>Extensive experience with Mississauga's corporate events—professional, punctual, and seamless integration with your event.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🎯 Strategic Location</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-map-pin" style="color:#ffb000;margin-right:0.5rem;"></i>Strategic Location</h3>
                     <p>Centrally located to serve all Mississauga neighborhoods—Streetsville, Port Credit, Erin Mills, Churchill Meadows, and more.</p>
                 </div>
             </div>
@@ -402,7 +440,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="index.html#contact" class="mobile-cta-quote">Reserve Your Date</a>
         <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 

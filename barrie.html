@@ -17,6 +17,10 @@
     <link rel="canonical" href="https://ymeventvendors.ca/barrie.html">
     
     <!-- Your existing CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.min.css">
     <script src="https://kit.fontawesome.com/6430c153a4.js" crossorigin="anonymous" defer></script>
     <!-- Schema Markup for Local SEO -->
@@ -73,13 +77,8 @@
                             },
                             "reviewAspect": ["Memory Capture", "Memorable Moments", "Overall Satisfaction"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Wedding Reception in Barrie",
-                                "location": {
-                                    "@type": "City",
-                                    "name": "Barrie"
-                                },
-                                "eventType": "WeddingReception"
+                                "@type": "Thing",
+                                "name": "Wedding Reception in Barrie"
                             }
                         },
                         {
@@ -99,19 +98,8 @@
                             },
                             "reviewAspect": ["High Volume Handling", "Professional Service", "Fun Experience"],
                             "about": {
-                                "@type": "Event",
-                                "name": "Georgian College Graduation",
-                                "location": {
-                                    "@type": "Place",
-                                    "name": "Georgian College",
-                                    "address": {
-                                        "@type": "PostalAddress",
-                                        "streetAddress": "1 Georgian Dr",
-                                        "addressLocality": "Barrie",
-                                        "addressRegion": "ON"
-                                    }
-                                },
-                                "eventType": "BusinessEvent"
+                                "@type": "Thing",
+                                "name": "Georgian College Graduation"
                             }
                         }
                     ]
@@ -157,6 +145,7 @@
                     "@id": "https://ymeventvendors.ca/barrie.html#barrie-events",
                     "name": "Barrie Photo Booth Events",
                     "description": "Professional photo booth rentals for Barrie and Simcoe County weddings, corporate events, and celebrations at premier venues including MacLaren Art Centre and Georgian College.",
+                    "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
                     "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                     "eventStatus": "https://schema.org/EventScheduled",
                     "startDate": "2026-03-20",
@@ -178,6 +167,9 @@
                         }
                     },
                     "organizer": {
+                        "@id": "https://ymeventvendors.ca/barrie.html#localbusiness"
+                    },
+                    "performer": {
                         "@id": "https://ymeventvendors.ca/barrie.html#localbusiness"
                     },
                     "offers": [
@@ -225,6 +217,21 @@
                             "@type": "Event",
                             "name": "MacLaren Art Centre Wedding Photo Booth",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "MacLaren Art Centre",
@@ -242,6 +249,21 @@
                             "@type": "Event",
                             "name": "Georgian College Corporate Event",
                             "eventType": "BusinessEvent",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Georgian College",
@@ -259,6 +281,21 @@
                             "@type": "Event",
                             "name": "Simcoe County Rural Wedding",
                             "eventType": "WeddingReception",
+                            "startDate": "2026-03-20",
+                            "endDate": "2026-12-31",
+                            "eventStatus": "https://schema.org/EventScheduled",
+                            "image": "https://ymeventvendors.ca/optimized/hero2-900.webp",
+                            "performer": {
+                                "@type": "Organization",
+                                "name": "Your Majesty Event Vendors"
+                            },
+                            "offers": {
+                                "@type": "Offer",
+                                "priceCurrency": "CAD",
+                                "price": "300",
+                                "availability": "https://schema.org/InStock",
+                                "url": "https://ymeventvendors.ca/contact.html"
+                            },
                             "location": {
                                 "@type": "Place",
                                 "name": "Simcoe County Rural Venues",
@@ -317,9 +354,10 @@
     <!-- Hero Section with Location-Specific Content -->
     <section class="hero location-hero" style="background-image: url('optimized/hero1-location-1600.jpg'); background-image: image-set(url('optimized/hero1-location-1600.webp') type('image/webp'), url('optimized/hero1-location-1600.jpg') type('image/jpeg'));">
         <div class="location-hero-content">
+            <p class="hero-eyebrow">Barrie &amp; Simcoe County</p>
             <h1>Photo Booth Rental in Barrie & Simcoe County</h1>
             <p>Premium Photo Booth Experiences for Barrie's Most Memorable Events</p>
-            <button onclick="window.location.href='index.html#contact'"><strong>Book Your Barrie Event</strong></button>
+            <button onclick="window.location.href='index.html#contact'"><strong>Reserve Your Date</strong></button>
         </div>
     </section>
 
@@ -346,20 +384,20 @@
                 <div class="card">
                     <h3 class="location-card-title">Wedding Venues</h3>
                     <ul class="location-venue-list">
-                        <li>📍 MacLaren Art Centre</li>
-                        <li>📍 Tangle Creek Golf & Country Club</li>
-                        <li>📍 Barrie Waterfront Venues</li>
-                        <li>📍 Local Banquet Halls</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>MacLaren Art Centre</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Tangle Creek Golf & Country Club</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Barrie Waterfront Venues</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Local Banquet Halls</li>
                     </ul>
                 </div>
                 
                 <div class="card">
                     <h3 class="location-card-title">Corporate & Events</h3>
                     <ul class="location-venue-list">
-                        <li>📍 Georgian College Events</li>
-                        <li>📍 Downtown Barrie Venues</li>
-                        <li>📍 Donaleigh's Irish Public House</li>
-                        <li>📍 Private Venues</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Georgian College Events</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Downtown Barrie Venues</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Donaleigh's Irish Public House</li>
+                        <li><i class="fa-solid fa-location-dot" style="color:#ffb000;margin-right:0.4rem;font-size:0.85em;"></i>Private Venues</li>
                     </ul>
                 </div>
             </div>
@@ -372,15 +410,15 @@
             <h2>Why Barrie Chooses Your Majesty Event Vendors</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="location-card-title">🚗 Local Service</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-car" style="color:#ffb000;margin-right:0.5rem;"></i>Local Service</h3>
                     <p>Free delivery throughout Barrie and Simcoe County. We understand Barrie's venues and logistics.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">❄️ All-Season Ready</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-snowflake" style="color:#ffb000;margin-right:0.5rem;"></i>All-Season Ready</h3>
                     <p>Experienced with Barrie's weather—indoor and outdoor setups for any season, from summer waterfront events to winter weddings.</p>
                 </div>
                 <div class="card">
-                    <h3 class="location-card-title">🎓 Community Connected</h3>
+                    <h3 class="location-card-title"><i class="fa-solid fa-graduation-cap" style="color:#ffb000;margin-right:0.5rem;"></i>Community Connected</h3>
                     <p>Proud to serve Georgian College events, local businesses, and Barrie families celebrating life's special moments.</p>
                 </div>
             </div>
@@ -402,7 +440,7 @@
     </section>
 
     <div class="mobile-cta-bar" aria-label="Quick contact actions">
-        <a href="index.html#contact" class="mobile-cta-quote">Get Quote</a>
+        <a href="index.html#contact" class="mobile-cta-quote">Reserve Your Date</a>
         <a href="tel:6477612790" class="mobile-cta-call">Call Now</a>
     </div>
 

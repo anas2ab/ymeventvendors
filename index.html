@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="stylesheet" href="styles.min.css?v=1.0.0" />
     <link
       rel="preload"
       as="image"
@@ -249,68 +249,84 @@
       </div>
     </section>
 
-    <section id="services" class="services">
-      <p class="section-eyebrow">What We Offer</p>
-      <h2>Our Services</h2>
-      <div class="grid">
-        <div class="card">
+    <section id="services" class="services services-bento">
+      <div class="services-bento-header">
+        <div class="services-bento-header-left">
+          <p class="section-eyebrow">What We Offer</p>
+          <h2>Curation of Experiences</h2>
+          <p class="services-bento-subtitle">From high-fashion glam to classic prints, we offer the most technologically advanced and aesthetically pleasing photo booths in the industry.</p>
+        </div>
+        <a href="services.html" class="services-bento-explore">Explore All Services &#8594;</a>
+      </div>
+      <div class="services-bento-grid">
+        <div class="services-bento-card services-bento-digital">
           <picture>
             <source srcset="optimized/digital-900.webp" type="image/webp" />
             <img
               src="optimized/digital-900.jpg"
-              alt="A photo of a photobooth in front of a white backdrop."
-              width="1200"
-              height="1200"
+              alt="A photo of a digital photo booth in front of a backdrop."
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Digital Booth</h3>
-          <p>High quality DSLR photos available right away.</p>
+          <div class="services-bento-overlay">
+            <span class="services-bento-tag">Instantly Viral</span>
+            <h3>Digital Booth</h3>
+            <p>Sleek, modern, and built for social media. Instant SMS and QR sharing.</p>
+          </div>
         </div>
-        <div class="card">
+        <div class="services-bento-card services-bento-print">
           <picture>
             <source srcset="optimized/print-900.webp" type="image/webp" />
             <img
               src="optimized/print-900.jpg"
-              alt="A print from a DNP RX1HS printer."
-              width="1200"
-              height="1200"
+              alt="Printed photo booth strips from a DNP RX1HS printer."
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Print Booth</h3>
-          <p>Unlimited prints plus digital photos.</p>
+          <div class="services-bento-overlay">
+            <h3>Print Booth</h3>
+            <p>Timeless physical keepsakes. Custom designs for every guest to take home.</p>
+          </div>
         </div>
-        <div class="card">
+        <div class="services-bento-card services-bento-glam">
           <picture>
-            <source srcset="optimized/hero2-900.webp" type="image/webp" />
+            <source srcset="optimized/bwglam.webp" type="image/webp" />
             <img
-              src="optimized/hero2-900.jpg"
-              alt="A group of people posing for a photo. Shown in Black and White Glam Style."
-              width="1200"
-              height="1200"
+              src="optimized/bwglam.jpg"
+              alt="A portrait in black and white glam style."
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Glam Booth</h3>
-          <p>A touch of timeless elegance. Available in Digital or Print.</p>
+          <div class="services-bento-overlay">
+            <h3>Glam Booth</h3>
+            <p>The &#8220;Kardashian&#8221; look. Flawless skin-smoothing filters and high-contrast B&amp;W imagery.</p>
+          </div>
         </div>
-        <div class="card">
-          <img
-            src="studio.jpg"
-            alt="A person posing for a photographer in a studio setting."
-            width="1200"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Studio Booth</h3>
-          <p>
-            A professional photographer for a red carpet portrait experience.
-          </p>
+        <div class="services-bento-card services-bento-studio">
+          <div class="services-bento-studio-inner">
+            <div class="services-bento-studio-text">
+              <h3>Studio Booth</h3>
+              <p>A professional photography studio transported to your event. Perfect for red carpets and high-end galas requiring professional lighting and backdrops.</p>
+              <a href="contact.html" class="services-bento-studio-cta">Book Studio &#8594;</a>
+            </div>
+            <div class="services-bento-studio-imgs">
+              <img
+                src="studio.jpg"
+                alt="Professional studio lighting setup"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="optimized/studio.jpg"
+                alt="Studio backdrop and props"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -692,7 +708,7 @@
       defer
     ></script>
     <script src="emailjs.config.js" defer></script>
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?v=1.0.0" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

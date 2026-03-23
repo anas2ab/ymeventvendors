@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://ymeventvendors.ca/services.html" />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://ymeventvendors.ca/services.html" />
-    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="stylesheet" href="styles.min.css?ver=1.0.0" />
   </head>
   <body class="home-page services-page">
     <nav class="navbar">
@@ -183,62 +183,82 @@
       </p>
     </section>
 
-    <section class="services">
-      <h2>Booth Types and Visual Style</h2>
-      <div class="grid services-booth-grid">
-        <article class="card">
+    <section class="services services-bento services-bento-page">
+      <div class="services-bento-header">
+        <div class="services-bento-header-left">
+          <h2>Booth Types and Visual Style</h2>
+          <p class="services-bento-subtitle">Each booth type delivers a distinct look and experience. Choose based on your event aesthetic and guest experience goals.</p>
+        </div>
+      </div>
+      <div class="services-bento-grid services-bento-grid-packages">
+        <article class="services-bento-card services-bento-digital">
           <picture>
             <source srcset="optimized/digital-900.webp" type="image/webp" />
             <img
               src="optimized/digital-900.jpg"
               alt="Digital photo booth setup"
-              width="1200"
-              height="1200"
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Digital Booth</h3>
-          <p>
-            Fast DSLR photos and share-ready delivery. Great for social-first
-            events and high guest throughput.
-          </p>
+          <div class="services-bento-overlay">
+            <span class="services-bento-tag">Social-First</span>
+            <h3>Digital Booth</h3>
+            <p>Fast DSLR photos and share-ready delivery. Great for social-first events and high guest throughput.</p>
+          </div>
         </article>
-        <article class="card">
+        <article class="services-bento-card services-bento-print">
           <picture>
             <source srcset="optimized/print-900.webp" type="image/webp" />
             <img
               src="optimized/print-900.jpg"
-              alt="Print photo booth setup"
-              width="1200"
-              height="1200"
+              alt="Print photo booth with instant prints"
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Print Booth</h3>
-          <p>
-            Physical keepsakes for every guest session with reliable print
-            output and quick turnaround.
-          </p>
+          <div class="services-bento-overlay">
+            <h3>Print Booth</h3>
+            <p>Physical keepsakes for every guest session with reliable print output and quick turnaround.</p>
+          </div>
         </article>
-        <article class="card">
+        <article class="services-bento-card services-bento-glam">
           <picture>
             <source srcset="optimized/hero2-900.webp" type="image/webp" />
             <img
               src="optimized/hero2-900.jpg"
-              alt="Glam style booth portrait"
-              width="1200"
-              height="1200"
+              alt="Glam style booth portrait in black and white"
               loading="lazy"
               decoding="async"
             />
           </picture>
-          <h3>Glam Booth</h3>
-          <p>
-            Elevated lighting and tone treatment for premium wedding or formal
-            brand event aesthetics.
-          </p>
+          <div class="services-bento-overlay">
+            <h3>Glam Booth</h3>
+            <p>Elevated lighting and tone treatment for premium wedding or formal brand event aesthetics.</p>
+          </div>
+        </article>
+        <article class="services-bento-card services-bento-studio services-bento-studio-pkg">
+          <div class="services-bento-studio-inner">
+            <div class="services-bento-studio-text">
+              <h3>Studio Booth</h3>
+              <p>A professional photography studio brought to your event. Perfect for red carpets, galas, and brand activations requiring elevated portraiture.</p>
+              <a href="contact.html" class="services-bento-studio-cta">Enquire about Studio &#8594;</a>
+            </div>
+            <div class="services-bento-studio-imgs">
+              <img
+                src="studio.jpg"
+                alt="Professional studio lighting setup"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src="optimized/studio.jpg"
+                alt="Studio backdrop and props"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
         </article>
       </div>
     </section>
@@ -386,7 +406,7 @@
     </div>
 
     <script src="emailjs.config.js" defer></script>
-    <script src="script.min.js" defer></script>
+    <script src="script.min.js?ver=1.0.0" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

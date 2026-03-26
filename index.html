@@ -39,11 +39,30 @@
     <link rel="canonical" href="https://ymeventvendors.ca/" />
 
     <link rel="icon" href="YM.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.min.css?v=1.0.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
+    <style>
+      *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px;overflow-x:hidden}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;color:#222;background:#faf9f6;overflow-x:hidden;width:100%;position:relative}.navbar{display:flex;justify-content:space-between;align-items:center;width:min(1120px,calc(100% - 2rem));margin:0 auto;padding:.85rem 1.4rem;background:rgba(255,255,255,.95);border:1px solid rgba(17,24,39,.08);border-radius:999px;position:fixed;top:1rem;left:50%;transform:translateX(-50%);z-index:1000;backdrop-filter:blur(12px);box-shadow:0 16px 38px rgba(15,23,42,.12)}.logo{color:#111827;font-family:"Playfair Display",Georgia,serif;font-size:1.35rem;font-weight:700;display:inline-flex;align-items:center;gap:.65rem}.logo::before{content:"";width:30px;height:30px;border-radius:50%;background:url("YM.png") center/100% 100% no-repeat;box-shadow:0 0 0 1px rgba(17,24,39,.1);flex:0 0 30px}.menu-toggle{display:none;flex-direction:column;background:none;border:none;cursor:pointer;padding:.5rem;gap:4px}.menu-toggle span{width:22px;height:2px;background:#0f172a;transition:.3s;border-radius:999px}.nav-menu{display:flex;list-style:none;gap:1.5rem;margin:0;padding:0}.nav-link{color:#111827;text-decoration:none;font-weight:600;font-size:.92rem;padding:.3rem 0}.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);opacity:0;visibility:hidden;z-index:999}.dropdown{position:relative;display:inline-block}.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:200px;box-shadow:0 18px 32px rgba(15,23,42,.14);border-radius:12px;border:1px solid rgba(17,24,39,.08);padding:.5rem 0;z-index:1001}.dropdown:hover .dropdown-menu{display:block}.dropdown-menu a{color:#111827;padding:.75rem 1.5rem;text-decoration:none;display:block;white-space:nowrap}.hero{height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;flex-direction:column;position:relative;overflow:hidden;padding-top:4.75rem}.video-carousel-container{position:absolute;inset:0;overflow:hidden;z-index:-2}.video-carousel-track{display:flex;height:100%}.video-slide{min-width:100%;height:100%;opacity:0}.video-slide.active{opacity:1}.video-slide video{width:100%;height:100%;object-fit:cover;object-position:100% 40%}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.25) 0%,rgba(0,0,0,.6) 70%,rgba(10,26,23,.85) 100%);z-index:-1}.hero-content{max-width:900px;padding:0 1rem}.hero-eyebrow{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;margin-bottom:1.1rem;opacity:.9}.hero h1{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,10vw,5.2rem);margin-bottom:.8rem;letter-spacing:.04em;line-height:1.08;font-weight:700;color:#fff}.hero h1::after{content:"";display:block;width:60px;height:2px;background:linear-gradient(135deg,#A8863A 0%,#C9A84C 50%,#D4B85A 100%);margin:.75rem auto 0;border-radius:2px}.hero p{font-size:1.06rem;line-height:1.5;margin-bottom:1.2rem;color:rgba(255,249,235,.96);text-shadow:0 1px 6px rgba(0,0,0,.45)}button{padding:1rem 2rem;background:linear-gradient(135deg,#A8863A 0%,#C9A84C 50%,#D4B85A 100%);color:#13332e;border:none;font-size:.88rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-radius:5px}.hero-content>button{width:min(92vw,300px);min-height:48px;padding:.9rem 1.2rem;font-size:.82rem;letter-spacing:.09em}.hero-proof-bar{margin-top:1.35rem;display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem}.hero-proof-item{display:inline-flex;align-items:center;gap:.42rem;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,248,232,.92);border:1px solid rgba(240,216,151,.38);background:rgba(10,26,23,.42);padding:.42rem .78rem;border-radius:999px;backdrop-filter:blur(4px)}.hero-proof-item i{font-size:.78rem;color:#d9be76;opacity:.95}.carousel-dots{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;gap:.6rem;z-index:10}.dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45);border:1px solid rgba(255,255,255,.3)}.dot.active{background:linear-gradient(135deg,#A8863A 0%,#C9A84C 50%,#D4B85A 100%);width:24px;border-radius:999px;box-shadow:0 0 10px rgba(201,168,76,.7);border-color:transparent}.carousel-btn{display:none}@media (max-width:768px){.navbar{left:.65rem;right:.65rem;width:auto;top:.55rem;padding:.8rem 1rem;transform:none;box-shadow:none;border:none;background:rgba(255,255,255,.98)}.menu-toggle{display:flex;z-index:1001;border:1px solid rgba(15,23,42,.12);border-radius:999px;width:40px;height:40px;align-items:center;justify-content:center;gap:3px;background:#fff}.nav-menu{position:fixed;top:0;left:0;right:0;height:100vh;background:#fff;display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-start;gap:1.6rem;padding:7.2rem 2rem 2rem;transform:translateX(100%);z-index:1000;visibility:hidden}.nav-link{font-size:1.3rem}.dropdown-menu{position:static;display:none;box-shadow:none;border:0;background:#f3f4f6;margin:.5rem 0;padding:.5rem 0;border-radius:10px;width:100%}.hero-content{max-width:640px;transform:translateY(-.9rem)}.hero-eyebrow{font-size:.66rem;margin-bottom:.75rem}}
+    </style>
+    <link
+      rel="preload"
+      as="style"
+      href="styles.min.css?v=1.0.0"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles.min.css?v=1.0.0" /></noscript>
     <link
       rel="preload"
       as="image"
@@ -93,7 +112,7 @@
             <a href="#" class="nav-link">More ▾</a>
             <div class="dropdown-menu">
               <a href="about.html">About</a>
-              <a href="blog/index.html">Blog</a>
+              <a href="/blog/">Blog</a>
               <a href="faq.html">FAQs</a>
               <a href="contact.html">Contact</a>
             </div>
@@ -663,14 +682,14 @@
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
             <li><a href="services.html">Packages</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="faq.html">FAQs</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="/blog/">Blog</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -871,180 +890,6 @@
                 "availability": "https://schema.org/InStock",
                 "url": "https://ymeventvendors.ca/#pricing",
                 "description": "Everything in Digital plus unlimited 2x6 prints, envelopes, video boomerangs/GIFs, audio guestbook"
-              }
-            ]
-          },
-          {
-            "@type": "Event",
-            "@id": "https://ymeventvendors.ca/#photo-booth-events",
-            "name": "Photo Booth Rental Events",
-            "description": "Professional photo booth services for weddings, corporate events, and private parties across Toronto, Barrie, and the GTA.",
-            "image": "https://ymeventvendors.ca/optimized/memories-1600.webp",
-            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-            "eventStatus": "https://schema.org/EventScheduled",
-            "startDate": "2026-03-20",
-            "endDate": "2026-12-31",
-            "location": [
-              {
-                "@type": "Place",
-                "name": "Toronto Events",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Toronto",
-                  "addressRegion": "ON",
-                  "addressCountry": "CA"
-                }
-              },
-              {
-                "@type": "Place",
-                "name": "Barrie Events",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Barrie",
-                  "addressRegion": "ON",
-                  "addressCountry": "CA"
-                }
-              },
-              {
-                "@type": "Place",
-                "name": "Greater Toronto Area Events",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressRegion": "ON",
-                  "addressCountry": "CA"
-                }
-              }
-            ],
-            "organizer": {
-              "@id": "https://ymeventvendors.ca/#business"
-            },
-            "performer": {
-              "@id": "https://ymeventvendors.ca/#business"
-            },
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "Wedding Photo Booth Package",
-                "priceCurrency": "CAD",
-                "price": "300",
-                "description": "Complete photo booth service for wedding receptions starting at $300"
-              },
-              {
-                "@type": "Offer",
-                "name": "Corporate Event Photo Booth",
-                "priceCurrency": "CAD",
-                "price": "300",
-                "description": "Professional photo booth for corporate events starting at $300"
-              },
-              {
-                "@type": "Offer",
-                "name": "Private Party Photo Booth",
-                "priceCurrency": "CAD",
-                "price": "300",
-                "description": "Fun photo booth rental for birthdays and celebrations starting at $300"
-              }
-            ],
-            "audience": [
-              {
-                "@type": "Audience",
-                "audienceType": "Couples planning weddings"
-              },
-              {
-                "@type": "Audience",
-                "audienceType": "Corporate event planners"
-              },
-              {
-                "@type": "Audience",
-                "audienceType": "Party hosts"
-              }
-            ],
-            "subEvent": [
-              {
-                "@type": "Event",
-                "name": "Wedding Reception Photo Booth",
-                "eventType": "WeddingReception",
-                "description": "Photo booth service for wedding receptions with elegant backdrops and instant prints",
-                "startDate": "2026-03-20",
-                "endDate": "2026-12-31",
-                "eventStatus": "https://schema.org/EventScheduled",
-                "image": "https://ymeventvendors.ca/gallery/pic1.webp",
-                "location": {
-                  "@type": "Place",
-                  "name": "Toronto, Barrie, and Greater Toronto Area",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "ON",
-                    "addressCountry": "CA"
-                  }
-                },
-                "performer": {
-                  "@id": "https://ymeventvendors.ca/#business"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "CAD",
-                  "price": "300",
-                  "availability": "https://schema.org/InStock",
-                  "url": "https://ymeventvendors.ca/contact.html"
-                }
-              },
-              {
-                "@type": "Event",
-                "name": "Corporate Photo Activation",
-                "eventType": "BusinessEvent",
-                "description": "Branded photo booth experiences for corporate events and product launches",
-                "startDate": "2026-03-20",
-                "endDate": "2026-12-31",
-                "eventStatus": "https://schema.org/EventScheduled",
-                "image": "https://ymeventvendors.ca/gallery/pic2.webp",
-                "location": {
-                  "@type": "Place",
-                  "name": "Toronto, Barrie, and Greater Toronto Area",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "ON",
-                    "addressCountry": "CA"
-                  }
-                },
-                "performer": {
-                  "@id": "https://ymeventvendors.ca/#business"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "CAD",
-                  "price": "300",
-                  "availability": "https://schema.org/InStock",
-                  "url": "https://ymeventvendors.ca/contact.html"
-                }
-              },
-              {
-                "@type": "Event",
-                "name": "Birthday Party Photo Booth",
-                "eventType": "SocialEvent",
-                "description": "Fun photo booth rental for birthday celebrations and private parties",
-                "startDate": "2026-03-20",
-                "endDate": "2026-12-31",
-                "eventStatus": "https://schema.org/EventScheduled",
-                "image": "https://ymeventvendors.ca/gallery/pic6.webp",
-                "location": {
-                  "@type": "Place",
-                  "name": "Toronto, Barrie, and Greater Toronto Area",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressRegion": "ON",
-                    "addressCountry": "CA"
-                  }
-                },
-                "performer": {
-                  "@id": "https://ymeventvendors.ca/#business"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "priceCurrency": "CAD",
-                  "price": "300",
-                  "availability": "https://schema.org/InStock",
-                  "url": "https://ymeventvendors.ca/contact.html"
-                }
               }
             ]
           },

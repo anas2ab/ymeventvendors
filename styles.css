@@ -1067,20 +1067,21 @@ textarea:focus {
 }
 
 .pricing-container {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  max-width: 1320px;
   margin: 0 auto 3rem;
-  flex-wrap: wrap;
 }
 
 .tier-card {
-  flex: 1;
-  min-width: 350px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 20px;
-  padding: 3rem 2rem;
+  padding: clamp(2.2rem, 2.7vw, 3rem) clamp(1.25rem, 2vw, 2rem);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s,
@@ -1280,9 +1281,17 @@ button:hover {
   color: #fff2cc;
 }
 
+@media (max-width: 980px) {
+  .pricing-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 760px;
+  }
+}
+
 @media (max-width: 768px) {
   .pricing-container {
-    flex-direction: column;
+    grid-template-columns: minmax(0, min(100%, 420px));
+    justify-content: center;
     align-items: center;
     gap: 2rem;
   }
@@ -3274,7 +3283,7 @@ button.loading {
 .services-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 680px;
+  min-width: 900px;
 }
 
 .services-table thead th {
@@ -3308,7 +3317,7 @@ button.loading {
 .services-table tbody th {
   color: #13332e;
   font-weight: 700;
-  width: 38%;
+  width: 30%;
 }
 
 .services-table tbody tr:nth-child(even) {
@@ -3401,7 +3410,7 @@ button.loading {
   }
 
   .services-table {
-    min-width: 620px;
+    min-width: 900px;
   }
 
   .services-step {

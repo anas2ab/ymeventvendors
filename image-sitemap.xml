@@ -20,6 +20,31 @@
       <image:caption>Event guests enjoying photo booth experience at wedding reception</image:caption>
       <image:title>Wedding Photo Booth Experience</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://ymeventvendors.ca/backdrops/white.webp</image:loc>
+      <image:caption>Elegant white backdrop for weddings and formal events</image:caption>
+      <image:title>White Wedding Backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ymeventvendors.ca/backdrops/floral.webp</image:loc>
+      <image:caption>Beautiful floral backdrop for spring and garden weddings</image:caption>
+      <image:title>Floral Wedding Backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ymeventvendors.ca/backdrops/marble.webp</image:loc>
+      <image:caption>Sophisticated marble backdrop for luxury events</image:caption>
+      <image:title>Marble Luxury Backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ymeventvendors.ca/backdrops/sunset.webp</image:loc>
+      <image:caption>Romantic sunset backdrop for evening celebrations</image:caption>
+      <image:title>Sunset Evening Backdrop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://ymeventvendors.ca/backdrops/black.webp</image:loc>
+      <image:caption>Sleek black backdrop for corporate and formal events</image:caption>
+      <image:title>Black Corporate Backdrop</image:title>
+    </image:image>
   </url>
 
   <!-- Gallery Page Images -->
@@ -72,43 +97,13 @@
     </image:image>
     <image:image>
       <image:loc>https://ymeventvendors.ca/optimized/print-900.webp</image:loc>
-      <image:caption>Print photo booth with instant photo keepsakes</image:caption>
-      <image:title>Print Photo Booth Package</image:title>
+      <image:caption>Signature Prints photo booth package with instant guest keepsakes</image:caption>
+      <image:title>Signature Prints Photo Booth Package</image:title>
     </image:image>
     <image:image>
       <image:loc>https://ymeventvendors.ca/optimized/hero2-900.webp</image:loc>
       <image:caption>Glam photo booth with premium lighting and styling</image:caption>
       <image:title>Glam Photo Booth Package</image:title>
-    </image:image>
-  </url>
-
-  <!-- Backdrop Collection -->
-  <url>
-    <loc>https://ymeventvendors.ca/</loc>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/backdrops/white.webp</image:loc>
-      <image:caption>Elegant white backdrop for weddings and formal events</image:caption>
-      <image:title>White Wedding Backdrop</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/backdrops/floral.webp</image:loc>
-      <image:caption>Beautiful floral backdrop for spring and garden weddings</image:caption>
-      <image:title>Floral Wedding Backdrop</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/backdrops/marble.webp</image:loc>
-      <image:caption>Sophisticated marble backdrop for luxury events</image:caption>
-      <image:title>Marble Luxury Backdrop</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/backdrops/sunset.webp</image:loc>
-      <image:caption>Romantic sunset backdrop for evening celebrations</image:caption>
-      <image:title>Sunset Evening Backdrop</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/backdrops/black.webp</image:loc>
-      <image:caption>Sleek black backdrop for corporate and formal events</image:caption>
-      <image:title>Black Corporate Backdrop</image:title>
     </image:image>
   </url>
 

@@ -820,13 +820,13 @@ const bentoGalleryContainer = document.getElementById("bentoGallery");
 if (bentoGalleryContainer) {
   // Gallery data — jpg is full-quality fallback, webp is preferred format
   const galleryItems = [
-    { id: 1, jpg: "gallery/pic1.jpg", webp: "gallery/pic1.webp", alt: "Family posing at the photobooth" },
-    { id: 2, jpg: "gallery/pic2.jpg", webp: "gallery/pic2.webp", alt: "Four friends enjoying the event" },
-    { id: 3, jpg: "gallery/pic3.jpg", webp: "gallery/pic3.webp", alt: "Baby pointing at a baby bump" },
-    { id: 4, jpg: "gallery/pic4.jpg", webp: "gallery/pic4.webp", alt: "Couple posing in a glam booth" },
-    { id: 5, jpg: "gallery/pic5.jpg", webp: "gallery/pic5.webp", alt: "Christmas family fun with grandpa" },
-    { id: 6, jpg: "gallery/pic6.jpg", webp: "gallery/pic6.webp", alt: "Desi wedding photo of the bride and groom" },
-    { id: 7, jpg: "gallery/pic7.jpg", webp: "gallery/pic7.webp", alt: "Scenic outdoor shot by the lake" },
+    { id: 1, jpg: "gallery/pic1.jpg", webp: "gallery/pic1.webp", alt: "Family posing at the photo booth" },
+    { id: 2, jpg: "gallery/pic2.jpg", webp: "gallery/pic2.webp", alt: "Friends enjoying an event photo booth" },
+    { id: 3, jpg: "gallery/pic3.jpg", webp: "gallery/pic3.webp", alt: "Guest pointing during a celebration photo booth moment" },
+    { id: 4, jpg: "gallery/pic4.jpg", webp: "gallery/pic4.webp", alt: "Couple posing in a glam photo booth" },
+    { id: 5, jpg: "gallery/pic5.jpg", webp: "gallery/pic5.webp", alt: "Family taking a festive photo booth picture" },
+    { id: 6, jpg: "gallery/pic6.jpg", webp: "gallery/pic6.webp", alt: "Bride and groom posing for a wedding photo booth picture" },
+    { id: 7, jpg: "gallery/pic7.jpg", webp: "gallery/pic7.webp", alt: "Outdoor event photo booth moment by the water" },
   ];
 
   // Populate gallery

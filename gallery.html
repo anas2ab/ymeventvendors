@@ -16,11 +16,11 @@
       property="og:description"
       content="See real event setups, backdrops, and guest photo moments from our recent events."
     />
-    <meta property="og:image" content="https://ymeventvendors.ca/logo.png" />
+    <meta property="og:image" content="https://ymeventvendors.ca/YM.png" />
     <meta property="og:url" content="https://ymeventvendors.ca/gallery.html" />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://ymeventvendors.ca/gallery.html" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.min.css?ver=1.0.0" />
   </head>
   <body class="gallery-page">
     <nav class="navbar">
@@ -62,14 +62,56 @@
     <section class="bento-gallery-section">
       <div class="bento-gallery-container">
         <div class="bento-header">
-          <h2 class="bento-title">Curated Moments</h2>
+          <h1 class="bento-title">Photo Booth Gallery</h1>
           <p class="bento-description">
-            A collection of stunning moments from recent events.
+            Real wedding, corporate, and party photo booth moments from events
+            across Toronto, Barrie, and the GTA.
           </p>
         </div>
 
         <div class="bento-grid" id="bentoGallery">
-          <!-- Gallery items will be populated by JavaScript -->
+          <div class="bento-item" tabindex="0" data-id="1" data-index="0">
+            <picture>
+              <source srcset="gallery/pic1.webp" type="image/webp" />
+              <img src="gallery/pic1.jpg" alt="Family posing at the photo booth" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="2" data-index="1">
+            <picture>
+              <source srcset="gallery/pic2.webp" type="image/webp" />
+              <img src="gallery/pic2.jpg" alt="Friends enjoying an event photo booth" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="3" data-index="2">
+            <picture>
+              <source srcset="gallery/pic3.webp" type="image/webp" />
+              <img src="gallery/pic3.jpg" alt="Guest pointing during a celebration photo booth moment" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="4" data-index="3">
+            <picture>
+              <source srcset="gallery/pic4.webp" type="image/webp" />
+              <img src="gallery/pic4.jpg" alt="Couple posing in a glam photo booth" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="5" data-index="4">
+            <picture>
+              <source srcset="gallery/pic5.webp" type="image/webp" />
+              <img src="gallery/pic5.jpg" alt="Family taking a festive photo booth picture" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="6" data-index="5">
+            <picture>
+              <source srcset="gallery/pic6.webp" type="image/webp" />
+              <img src="gallery/pic6.jpg" alt="Bride and groom posing for a wedding photo booth picture" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <div class="bento-item" tabindex="0" data-id="7" data-index="6">
+            <picture>
+              <source srcset="gallery/pic7.webp" type="image/webp" />
+              <img src="gallery/pic7.jpg" alt="Outdoor event photo booth moment by the water" class="bento-item-image" loading="lazy" decoding="async" />
+            </picture>
+          </div>
         </div>
       </div>
 
@@ -109,7 +151,7 @@
     </div>
 
     <script src="emailjs.config.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script.min.js?ver=1.0.0" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

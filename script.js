@@ -126,8 +126,52 @@ if (videoCarousel) {
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
+  const queryParams = new URLSearchParams(window.location.search);
+  const requestedInterest = queryParams.get("interest");
+
+  if (requestedInterest) {
+    const interestField = contactForm.querySelector('[name="service_interest"]');
+    const inquiryTypeField = contactForm.querySelector('[name="inquiry_type"]');
+    const messageField = contactForm.querySelector('[name="message"]');
+
+    if (interestField) interestField.value = requestedInterest;
+
+    if (inquiryTypeField) {
+      const normalizedInterest = requestedInterest.toLowerCase();
+      if (normalizedInterest.includes("machine") || normalizedInterest.includes("granules") || normalizedInterest.includes("product")) {
+        inquiryTypeField.value = "Product Purchase";
+      } else if (normalizedInterest.includes("combined")) {
+        inquiryTypeField.value = "Combined Event Package";
+      } else if (normalizedInterest.includes("spark") || normalizedInterest.includes("fog") || normalizedInterest.includes("cloud")) {
+        inquiryTypeField.value = "Cold Sparks and Fog Rental";
+      }
+    }
+
+    if (messageField && !messageField.value) {
+      messageField.value = `I'm interested in ${requestedInterest}.\n\n`;
+    }
+  }
+
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const messageField = this.querySelector('[name="message"]');
+    if (messageField && !messageField.dataset.contextAdded) {
+      const context = [
+        ["Inquiry", this.querySelector('[name="inquiry_type"]')?.value],
+        ["Interest", this.querySelector('[name="service_interest"]')?.value],
+        ["Event date", this.querySelector('[name="event_date"]')?.value],
+        ["Location", this.querySelector('[name="event_location"]')?.value],
+      ]
+        .filter(([, value]) => value)
+        .map(([label, value]) => `${label}: ${value}`)
+        .join("\n");
+
+      if (context) {
+        messageField.value = `${context}\n\n${messageField.value}`;
+        messageField.dataset.contextAdded = "true";
+      }
+    }
 
     const btn = this.querySelector('button[type="submit"]');
     if (!btn) return;
@@ -162,6 +206,7 @@ if (contactForm) {
         console.log("SUCCESS!", result.text);
 
         this.reset();
+        if (messageField) delete messageField.dataset.contextAdded;
 
         btn.textContent = "Sent!";
         btn.style.background = "#13332e";
@@ -391,7 +436,10 @@ const revealGroups = [
   { selector: ".contact form", stagger: 0 },
 ];
 
-const revealElements = [];
+// Include elements that declare their reveal treatment in the HTML as well as
+// the component groups enhanced below. Pages such as effects.html use the
+// class directly on whole sections.
+const revealElements = Array.from(document.querySelectorAll(".scroll-reveal"));
 
 revealGroups.forEach(({ selector, stagger }) => {
   const elements = Array.from(document.querySelectorAll(selector));
@@ -399,7 +447,7 @@ revealGroups.forEach(({ selector, stagger }) => {
   elements.forEach((element, index) => {
     element.classList.add("scroll-reveal");
     element.style.setProperty("--reveal-delay", `${index * stagger}ms`);
-    revealElements.push(element);
+    if (!revealElements.includes(element)) revealElements.push(element);
   });
 });
 

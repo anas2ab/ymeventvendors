@@ -7,7 +7,7 @@ const locationData = {
     region: "Simcoe County",
     h1: "Photo Booth Rental Barrie - Weddings & Corporate Events",
     metaTitle: "Photo Booth Rental Barrie, Simcoe County | Your Majesty Events",
-    metaDescription: "Premium photo booth rentals in Barrie & Simcoe County. Serving weddings at MacLaren Art Centre, Georgian College events & more. From $300. Book now!",
+    metaDescription: "Premium photo booth rentals in Barrie & Simcoe County. Serving weddings at MacLaren Art Centre, Georgian College events & more. From $400. Book now!",
     heroText: "Barrie's Premier Photo Booth Experience",
     heroSubtext: "Serving Simcoe County's most memorable celebrations since 2023",
 

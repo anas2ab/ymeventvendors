@@ -4,26 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Contact YM Event Vendors | Photo Booth Rentals Toronto, Barrie, GTA
+      Contact YM Event Vendors | Photo Booths, Cold Sparks &amp; Fog
     </title>
     <meta
       name="description"
-      content="Contact YM Event Vendors for wedding, corporate, and party photo booth rentals in Toronto, Barrie, and the GTA. Request a custom quote today."
+      content="Request a quote for photo booths, cold-spark and low-fog rentals, combined event packages, or event-effects product information in Ontario."
     />
     <meta
       property="og:title"
-      content="Contact YM Event Vendors | Photo Booth Rentals"
+      content="Contact YM Event Vendors | Rentals &amp; Product Inquiries"
     />
     <meta
       property="og:description"
-      content="Get a fast quote for your event. Serving Toronto, Barrie, and the GTA."
+      content="Get a tailored quote for photo booths, event effects, combined packages, or equipment inquiries."
     />
     <meta property="og:image" content="https://ymeventvendors.ca/YM.png" />
     <meta property="og:url" content="https://ymeventvendors.ca/contact.html" />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://ymeventvendors.ca/contact.html" />
-    <link rel="stylesheet" href="styles.min.css?ver=1.0.0" />
-  </head>
+    <link rel="stylesheet" href="styles.min.css?v=20260802" />
+    <!-- Social sharing metadata -->
+  <meta property="og:site_name" content="YM Event Vendors">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact YM Event Vendors | Photo Booths, Cold Sparks &amp; Fog">
+  <meta name="twitter:description" content="Request a quote for photo booths, cold-spark and low-fog rentals, combined event packages, or event-effects product information in Ontario.">
+  <meta name="twitter:image" content="https://ymeventvendors.ca/YM.png">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+</head>
   <body class="contact-page">
     <nav class="navbar">
       <div class="logo">YM Event Vendors</div>
@@ -34,10 +42,10 @@
       </button>
       <ul class="nav-menu">
         <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="services.html" class="nav-link">Packages</a></li>
-        <li><a href="/#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="services.html" class="nav-link">Photo Booth</a></li>
+        <li><a href="effects.html" class="nav-link">Cold Sparks &amp; Fog</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
         <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="/#backdrops" class="nav-link">Backdrops</a></li>
         <li class="dropdown">
           <a href="#" class="nav-link">Locations ▾</a>
           <div class="dropdown-menu">
@@ -64,10 +72,10 @@
     <section class="contact-hero-modern">
       <div class="contact-hero-inner">
         <p class="page-kicker">Start Your Inquiry</p>
-        <h1>Plan Your Photo Booth Experience</h1>
+        <h1>Plan Your Event Experience</h1>
         <p>
-          Share your event date, venue, and vision. We will reply with package
-          options, pricing, and availability.
+          Share your event or product needs. We will reply with relevant
+          options, pricing, availability, and next steps.
         </p>
         <div class="contact-hero-meta" aria-label="Response highlights">
           <span>Replies within 24 hours</span>
@@ -83,7 +91,7 @@
           <h2>Let's build your quote</h2>
           <p>
             Tell us what matters most, from guest count to setup style. We will
-            recommend the right booth and add-ons for your venue.
+            recommend the right experience, effects setup, or product path.
           </p>
 
           <div class="contact-quick-grid">
@@ -120,7 +128,7 @@
             <ul>
               <li>Event date and venue location</li>
               <li>Estimated guest count and event type</li>
-              <li>Preferred booth style or backdrop direction</li>
+              <li>Photo booth, effects, combined package, or product interest</li>
             </ul>
           </div>
         </aside>
@@ -136,26 +144,46 @@
             tailored quote.
           </p>
           <form id="contactForm" name="contactForm">
-            <input
-              type="text"
-              name="user_name"
-              placeholder="Your name"
-              required
-            />
-            <input
-              type="email"
-              name="user_email"
-              placeholder="Email address"
-              required
-            />
-            <input
-              type="tel"
-              name="user_phone"
-              placeholder="Phone (optional)"
-            />
+            <select name="inquiry_type" aria-label="Inquiry type" required>
+              <option value="">Select inquiry type</option>
+              <option value="Photo Booth Rental">Photo booth rental</option>
+              <option value="Cold Sparks and Fog Rental">Cold sparks and fog rental</option>
+              <option value="Combined Event Package">Combined event package</option>
+              <option value="Product Purchase">Product purchase inquiry</option>
+            </select>
+            <div class="contact-field-row">
+              <input
+                type="text"
+                name="service_interest"
+                placeholder="Service or product of interest"
+              />
+              <input
+                type="tel"
+                name="user_phone"
+                placeholder="Phone (optional)"
+              />
+            </div>
+            <div class="contact-field-row">
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Your name"
+                required
+              />
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div class="contact-field-row">
+              <input type="date" name="event_date" aria-label="Event date" />
+              <input type="text" name="event_location" placeholder="Venue or Ontario city" />
+            </div>
             <textarea
               name="message"
-              placeholder="Event type, date, venue, guest count"
+              placeholder="Event details, required effects, product quantity, or intended use"
               required
             ></textarea>
             <button type="submit"><strong>Send Inquiry</strong></button>
@@ -177,8 +205,8 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       defer
     ></script>
-    <script src="emailjs.config.js" defer></script>
-    <script src="script.min.js?ver=1.0.0" defer></script>
+    <script src="emailjs.config.js?v=20260802" defer></script>
+    <script src="script.min.js?v=20260802" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

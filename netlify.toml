@@ -1,0 +1,4 @@
+# Keep deployed links consistent with the existing .html canonical URLs and
+# sitemap. Otherwise Netlify's Pretty URLs post-processing rewrites anchors.
+[build.processing.html]
+  pretty_urls = false

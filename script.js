@@ -29,8 +29,11 @@ if (videoCarousel) {
   const lowBandwidthConnection =
     navigator.connection &&
     /(^|\b)(slow-2g|2g)(\b|$)/.test(navigator.connection.effectiveType || "");
+  // Use the preloaded poster on small screens. The decorative carousel should
+  // not download every video while a mobile visitor is reading or booking.
+  const smallScreen = window.matchMedia("(max-width: 768px)").matches;
   const shouldMinimizeVideoLoad =
-    prefersReducedMotion || prefersReducedData || lowBandwidthConnection;
+    prefersReducedMotion || prefersReducedData || lowBandwidthConnection || smallScreen;
 
   const videoTrack = document.querySelector(".video-carousel-track");
   const videoSlides = document.querySelectorAll(".video-slide");
@@ -136,16 +139,7 @@ if (contactForm) {
 
     if (interestField) interestField.value = requestedInterest;
 
-    if (inquiryTypeField) {
-      const normalizedInterest = requestedInterest.toLowerCase();
-      if (normalizedInterest.includes("machine") || normalizedInterest.includes("granules") || normalizedInterest.includes("product")) {
-        inquiryTypeField.value = "Product Purchase";
-      } else if (normalizedInterest.includes("combined")) {
-        inquiryTypeField.value = "Combined Event Package";
-      } else if (normalizedInterest.includes("spark") || normalizedInterest.includes("fog") || normalizedInterest.includes("cloud")) {
-        inquiryTypeField.value = "Cold Sparks and Fog Rental";
-      }
-    }
+    if (inquiryTypeField) inquiryTypeField.value = "Photo Booth Rental";
 
     if (messageField && !messageField.value) {
       messageField.value = `I'm interested in ${requestedInterest}.\n\n`;
@@ -437,8 +431,7 @@ const revealGroups = [
 ];
 
 // Include elements that declare their reveal treatment in the HTML as well as
-// the component groups enhanced below. Pages such as effects.html use the
-// class directly on whole sections.
+// the component groups enhanced below.
 const revealElements = Array.from(document.querySelectorAll(".scroll-reveal"));
 
 revealGroups.forEach(({ selector, stagger }) => {

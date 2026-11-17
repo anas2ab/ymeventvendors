@@ -8,7 +8,7 @@
     <image:image>
       <image:loc>https://ymeventvendors.ca/optimized/memories-1600.webp</image:loc>
       <image:caption>Premium photo booth rental for weddings and events in Toronto, Barrie and GTA</image:caption>
-      <image:title>YM Event Vendors Photo Booth Service</image:title>
+      <image:title>Your Majesty Event Vendors Photo Booth Service</image:title>
     </image:image>
     <image:image>
       <image:loc>https://ymeventvendors.ca/optimized/hero2-900.webp</image:loc>
@@ -104,21 +104,6 @@
       <image:loc>https://ymeventvendors.ca/optimized/hero2-900.webp</image:loc>
       <image:caption>Glam photo booth with premium lighting and styling</image:caption>
       <image:title>Glam Photo Booth Package</image:title>
-    </image:image>
-  </url>
-
-  <!-- Shop Page Images -->
-  <url>
-    <loc>https://ymeventvendors.ca/shop.html</loc>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/optimized/shop/wireless-cold-spark-machine.jpg</image:loc>
-      <image:caption>Wireless 350W cold-spark machines for event, wedding, stage, and DJ setups in Ontario</image:caption>
-      <image:title>Wireless 350W Cold-Spark Machine</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://ymeventvendors.ca/optimized/shop/cold-spark-powder.jpg</image:loc>
-      <image:caption>Compatible 200g cold-spark refill for professional cold-spark machines</image:caption>
-      <image:title>200g Cold-Spark Refill</image:title>
     </image:image>
   </url>
 
